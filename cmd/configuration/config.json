@@ -1,0 +1,59 @@
+{
+    "urlInsertMessage":"http://localhost:2121/insertMessage",
+    "insertMessageMethod":"POST",
+    "url_smsgateway": "http://localhost:1111/",
+    "smsgatewayMethod": "POST",
+    "url_portabilidad": "http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/",
+    "portabilidadMethod":"POST",
+    "portabilidad_user": "inswitch",
+    "portabilidad_password": "1234",
+    "max_message_length": 500,
+    "mobil_regex": "^09\\d{7}$",
+    "raven": [
+        {
+            "name": "testing",
+            "sendMail": false,
+            "shortNumber": 88277
+        },
+        {
+            "name": "pronto",
+            "sendMail": false,
+            "shortNumber": 17800
+        },
+        {
+            "name": "oca",
+            "sendMail": false,
+            "shortNumber": 1730
+        },
+        {
+            "name": "creditel",
+            "sendMail": false,
+            "shortNumber": 4242
+        },
+        {
+            "name": "itau",
+            "sendMail": false,
+            "shortNumber": 1784
+        },
+        {
+            "name": "facilcel",
+            "sendMail": false,
+            "shortNumber": 3031
+        },
+        {
+            "name": "santander",
+            "sendMail": false,
+            "shortNumber": 1320
+        },
+        {
+            "name": "creditosDirectos",
+            "sendMail": false,
+            "shortNumber": 18919
+        },
+        {
+            "name": "firstdata",
+            "sendMail": false,
+            "shortNumber": 2992
+        }
+    ]
+}
