@@ -1,14 +1,34 @@
 {
-    "urlInsertMessage":"http://localhost:2121/insertMessage",
-    "insertMessageMethod":"POST",
-    "url_smsgateway": "http://localhost:1111/",
-    "smsgatewayMethod": "POST",
-    "url_portabilidad": "http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/",
-    "portabilidadMethod":"POST",
-    "portabilidad_user": "inswitch",
-    "portabilidad_password": "1234",
     "max_message_length": 500,
     "mobil_regex": "^09\\d{7}$",
+    "server_port": ":1000",
+    "getUserDomain":{
+        "url":"http://localhost:2121/userdomain",
+        "method":"GET",
+        "timeout":10000
+    },
+    "getFilterDatabase":{
+        "url":"http://localhost:2121/filter",
+        "method":"GET",
+        "timeout":10000
+    },
+    "inserMessage":{
+        "url":"http://localhost:2121/insertMessage",
+        "method":"POST",
+        "timeout":10000
+    },
+    "smsGateway":{
+        "url":"http://localhost:1111/",
+        "method":"POST",
+        "timeout":10000
+    },
+    "portabilidad":{
+        "url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/",
+        "method":"POST",
+        "timeout":10000,
+        "portabilidad_user": "inswitch",
+        "portabilidad_password": "1234"
+    },
     "raven": [
         {
             "name": "testing",
@@ -54,6 +74,11 @@
             "name": "firstdata",
             "sendMail": false,
             "shortNumber": 2992
+        },
+        {
+            "name": "Micropagos",
+            "sendMail": false,
+            "shortNumber": 88277
         }
     ]
 }
