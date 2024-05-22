@@ -1,5 +1,7 @@
 package constants
 
+type contextKey string
+
 const (
 	PATH               = "ws/SendMessageService"
 	MESSAGE_REGEX      = "[áéíóúÁÉÍÓÚñÑ]"
@@ -39,4 +41,7 @@ const (
 	RESULT_FILTERED              = "FILTERED"
 	RESULT_PENDING               = "PENDING"
 	RESULT_SENT                  = "SENT"
+
+	//package name
+	PACKAGE_NAME_KEY contextKey = "packageName"
 )

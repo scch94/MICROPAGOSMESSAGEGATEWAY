@@ -12,23 +12,24 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
 	"github.com/scch94/ins_log"
 )
 
-//lint:ignore SA1029 "Using built-in type string as key for context value intentionally"
-var ctx = context.WithValue(context.Background(), "packageName", "client")
+func CallPortabilidad(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.PortabilidadResult {
 
-func CallPortabilidad(validationStruct *helper.ToValidate, utfi string) helper.PortabilidadResult {
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
 
 	//creamos el struct para controlar la respuesta de portabilidad
 	portabilidadResult := helper.PortabilidadResult{}
 
 	//vamos a prepareRequest para llenar el request antes de enviarlo
 	ins_log.Infof(ctx, "PETITION[%v], startin to prepare the call to portability whit number %s", utfi, validationStruct.Mobile)
-	req, err := prepareRequest(validationStruct.Mobile, utfi)
+	req, err := prepareRequest(validationStruct.Mobile, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareRequest()", utfi)
 		portabilidadResult.PassedPortabilidad = false
@@ -37,7 +38,7 @@ func CallPortabilidad(validationStruct *helper.ToValidate, utfi string) helper.P
 	}
 
 	//hacemos el llamado y ontenemos el nombre de la telco, lo devolvemos directo por que la funcion ya devuelve la palabra y un error
-	validationStruct.Telco, err = callToPortabilidad(req, utfi)
+	validationStruct.Telco, err = callToPortabilidad(req, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to call to portabiliad()", utfi)
 		portabilidadResult.PassedPortabilidad = false
@@ -50,7 +51,7 @@ func CallPortabilidad(validationStruct *helper.ToValidate, utfi string) helper.P
 
 }
 
-func prepareRequest(msisdn string, utfi string) (*http.Request, error) {
+func prepareRequest(msisdn string, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//generamos el cuerpo de la solicitud de la portabilidad
 	bodyToPortabildiad, err := request.CreateBodyToPortabilidad(msisdn)
@@ -78,7 +79,7 @@ func prepareRequest(msisdn string, utfi string) (*http.Request, error) {
 	return req, nil
 }
 
-func callToPortabilidad(req *http.Request, utfi string) (string, error) {
+func callToPortabilidad(req *http.Request, utfi string, ctx context.Context) (string, error) {
 
 	//creamos la variable que obtendra la respuesta de portabilidad
 	var portabiliadResponse response.PortabilidadResponse

@@ -1,6 +1,7 @@
 package client
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -8,6 +9,7 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
@@ -15,7 +17,10 @@ import (
 	"github.com/scch94/ins_log"
 )
 
-func CallToGetUserDomain(validationStruct *helper.ToValidate, utfi string) helper.UserDomainResult {
+func CallToGetUserDomain(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.UserDomainResult {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
 
 	//cramos el struct que nos ayudara a contraolar la respuesta del GETUSERDOMAIN en la base de datos
 	getUserDomainResult := helper.UserDomainResult{}
@@ -25,7 +30,7 @@ func CallToGetUserDomain(validationStruct *helper.ToValidate, utfi string) helpe
 	params := request.NewGetUserDomainRequest(validationStruct.Username)
 
 	//preparamos el request pasando los params de la peticion para insertarlos en la
-	req, err := prepareGetUserReq(*params, utfi)
+	req, err := prepareGetUserReq(*params, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareGetUserReq()", utfi)
 		getUserDomainResult.UserDomainError = err
@@ -35,7 +40,7 @@ func CallToGetUserDomain(validationStruct *helper.ToValidate, utfi string) helpe
 	}
 
 	//hacemos el llamado y obtenemos el resultado
-	getUserDomainresponse, err := callToMicropagosGetUserDomainDatabase(req, utfi)
+	getUserDomainresponse, err := callToMicropagosGetUserDomainDatabase(req, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to  callToMicropagosGetUserDomainDatabase()", utfi)
 		getUserDomainResult.UserDomainError = err
@@ -51,7 +56,7 @@ func CallToGetUserDomain(validationStruct *helper.ToValidate, utfi string) helpe
 
 }
 
-func prepareGetUserReq(params request.GetUserDomainRequest, utfi string) (*http.Request, error) {
+func prepareGetUserReq(params request.GetUserDomainRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//armaremos la url para agregar los params a la url
 	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the URL to the petition", utfi)
@@ -73,7 +78,7 @@ func prepareGetUserReq(params request.GetUserDomainRequest, utfi string) (*http.
 	return req, nil
 }
 
-func callToMicropagosGetUserDomainDatabase(req *http.Request, utfi string) (response.UserDomainResponse, error) {
+func callToMicropagosGetUserDomainDatabase(req *http.Request, utfi string, ctx context.Context) (response.UserDomainResponse, error) {
 
 	var UserDomainResponse response.UserDomainResponse
 

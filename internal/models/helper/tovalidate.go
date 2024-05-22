@@ -11,9 +11,6 @@ import (
 	"github.com/scch94/ins_log"
 )
 
-//lint:ignore SA1029 "Using built-in type string as key for context value intentionally"
-var ctx = context.WithValue(context.Background(), "packageName", "validation")
-
 type ToValidate struct {
 	Username        string
 	Mobile          string
@@ -71,7 +68,11 @@ func (p *ToValidate) ToString() string {
 	return data
 }
 
-func (p *ToValidate) ValidateMobileRegex(utfi string) error {
+func (p *ToValidate) ValidateMobileRegex(utfi string, ctx context.Context) error {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "validation")
+
 	ins_log.Infof(ctx, "PETITION[%v], starting to validate a regex expression", utfi)
 	ins_log.Tracef(ctx, "PETITION[%v], regex expression: %v value to validate %v", utfi, config.Config.MobileRegex, p.Mobile)
 	regex, err := regexp.Compile(config.Config.MobileRegex)
@@ -86,11 +87,11 @@ func (p *ToValidate) ValidateMobileRegex(utfi string) error {
 	//si llegamos aca la expresion regular si valido todo.
 	ins_log.Tracef(ctx, "PETITION[%v], value match with the regex expression", utfi)
 	//formateamos el numero recordemos que tanto para el sms gateway como para el modulo de portabilidad el numero ira con el formato internacional
-	p.Mobile = formatNumber(p.Mobile)
+	p.Mobile = formatNumber(p.Mobile, ctx)
 	return nil
 }
 
-func formatNumber(number string) string {
+func formatNumber(number string, ctx context.Context) string {
 	ins_log.Debug(ctx, "starting to format number")
 	if number[0] == '0' {
 		number = number[1:]
@@ -100,7 +101,11 @@ func formatNumber(number string) string {
 
 }
 
-func (p *ToValidate) ValidateMessageLength(utfi string) error {
+func (p *ToValidate) ValidateMessageLength(utfi string, ctx context.Context) error {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "validation")
+
 	var finalMessage string
 	ins_log.Infof(ctx, "PETITION[%v], starting to validate th message length", utfi)
 	ins_log.Tracef(ctx, "PETITION[%v], max length: %v message to validate %v", utfi, config.Config.MaxMessageLength, p.Message)
@@ -120,7 +125,10 @@ func (p *ToValidate) ValidateMessageLength(utfi string) error {
 	return nil
 }
 
-func (p *ToValidate) ValidateSendAfterAndSendBefore(utfi string) WhenSendResult {
+func (p *ToValidate) ValidateSendAfterAndSendBefore(utfi string, ctx context.Context) WhenSendResult {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "validation")
 
 	whenSendResult := WhenSendResult{}
 	//validaremos el send after si alguno falta el mensaje se enviara automaticamente al igual que si alguno de los dos no estan en el formato adecuado

@@ -1,6 +1,7 @@
 package client
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -8,13 +9,17 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
 	"github.com/scch94/ins_log"
 )
 
-func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string) helper.FilterResult {
+func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.FilterResult {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
 
 	//cramos el struct que nos ayudara a contraolar la respuesta del filter en la base de datos
 	filterResult := helper.FilterResult{}
@@ -24,7 +29,7 @@ func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string) helper.Fi
 	params := request.NewFilterRequest(validationStruct.Mobile, validationStruct.ShortNumber)
 
 	//preparamos el request pasando los params de la peticion para insertarlos en la
-	req, err := prepareFilterReq(*params, utfi)
+	req, err := prepareFilterReq(*params, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareInsertMessageRequest()", utfi)
 		filterResult.IsFilter = false
@@ -34,7 +39,7 @@ func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string) helper.Fi
 	}
 
 	//hacemos el llamado y obtenemos el resultado
-	filterMessageResponse, err := callToMicropagosFilterDatabase(req, utfi)
+	filterMessageResponse, err := callToMicropagosFilterDatabase(req, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to callToMicropagosFilterDatabase()", utfi)
 		filterResult.IsFilter = false
@@ -50,7 +55,7 @@ func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string) helper.Fi
 
 }
 
-func prepareFilterReq(params request.FilterRequest, utfi string) (*http.Request, error) {
+func prepareFilterReq(params request.FilterRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//armaremos la url para agregar los params a la url
 	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the URL to the petition", utfi)
@@ -72,7 +77,7 @@ func prepareFilterReq(params request.FilterRequest, utfi string) (*http.Request,
 	return req, nil
 }
 
-func callToMicropagosFilterDatabase(req *http.Request, utfi string) (response.FilterResponse, error) {
+func callToMicropagosFilterDatabase(req *http.Request, utfi string, ctx context.Context) (response.FilterResponse, error) {
 
 	var filterMessageResponse response.FilterResponse
 

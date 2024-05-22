@@ -1,0 +1,165 @@
+[2024-05-22 12:02:19.050] [not_specified] [config] [info] [] starting to get the config struct 
+[2024-05-22 12:02:19.050] [Gconfiguration] [configuration] [info] [] starting gconfiguration Versión:%!(EXTRA string=1.0.0)
+[2024-05-22 12:02:19.050] [Gconfiguration] [configuration] [info] [] ubication of the configurationfile C:\golang\proyectos\micropagosmessagateway\cmd\configuration\config.json
+[2024-05-22 12:02:19.056] [Gconfiguration] [configuration] [info] [] ending to get the configuration
+[2024-05-22 12:02:19.056] [Gconfiguration] [configuration] [trace] [] this is the data that we have in the configuration {"getUserDomain":{"url":"http://localhost:2121/userdomain","method":"GET","timeout":10000},"server_port":":1000","getFilterDatabase":{"url":"http://localhost:2121/filter","method":"GET","timeout":10000},"inserMessage":{"url":"http://localhost:2121/insertMessage","method":"POST","timeout":10000},"smsGateway":{"url":"http://localhost:1111/","method":"POST","timeout":10000},"portabilidad":{"url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/","method":"POST","timeout":10000,"portabilidad_user":"inswitch","portabilidad_password":"1234"},"max_message_length":500,"mobil_regex":"^09\\d{7}$","raven":[{"name":"testing","sendMail":false,"shortNumber":88277},{"name":"pronto","sendMail":false,"shortNumber":17800},{"name":"oca","sendMail":false,"shortNumber":1730},{"name":"creditel","sendMail":false,"shortNumber":4242},{"name":"itau","sendMail":false,"shortNumber":1784},{"name":"facilcel","sendMail":false,"shortNumber":3031},{"name":"santander","sendMail":false,"shortNumber":1320},{"name":"creditosDirectos","sendMail":false,"shortNumber":18919},{"name":"firstdata","sendMail":false,"shortNumber":2992},{"name":"Micropagos","sendMail":false,"shortNumber":88277}]}
+[2024-05-22 12:02:19.057] [micropagosmessagegateway] [main] [info] [] starting micropagos message gateway version: 1.0.0
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [middleware] [info] [4b73fa97b2ce] New petition received
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [middleware] [trace] [4b73fa97b2ce] url: /ws/SendMessageService, method: POST
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [middleware] [info] [4b73fa97b2ce] starting to validate the ahutentication
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [middleware] [info] [4b73fa97b2ce] starting Authentication proccess for eaguerre
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [middleware] [info] [4b73fa97b2ce] the user:eaguerre is already authenticated
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [handler] [info] [4b73fa97b2ce] starting to sendMessage method to the user eaguerre
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [handler] [debug] [4b73fa97b2ce] starting to get the xml
+[2024-05-22 12:02:37.887] [micropagosmessagegateway] [handler] [trace] [4b73fa97b2ce] this is the body of the petition <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.ravenws.micropagos.com.uy/">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <web:send>\n         <!--Optional:-->\n         <mobile>099111111</mobile>\n         <!--Optional:-->\n         <message>tes</message>\n         <useOriginName></useOriginName>\n      </web:send>\n   </soapenv:Body>\n</soapenv:Envelope>
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [handler] [info] [4b73fa97b2ce] method: send indivuald message, starting to validate the petition 
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [handler] [debug] [4b73fa97b2ce] PETITION[4b73fa97b2ce] this is the data that we are going to validate : Mobile: 099111111, Message: tes, 
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], starting to validate a regex expression
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], regex expression: ^09\d{7}$ value to validate 099111111
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], value match with the regex expression
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [debug] [4b73fa97b2ce] starting to format number
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [handler] [debug] [4b73fa97b2ce] PETITION[4b73fa97b2ce], the mobile number pass the regex expression and the formatted number is 59899111111
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], starting to validate th message length
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], max length: 500 message to validate tes
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [validation] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], using normal message
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [handler] [debug] [4b73fa97b2ce] PETITION[4b73fa97b2ce], the message pass the validateMessageLength this is the final message: tes
+[2024-05-22 12:02:37.888] [micropagosmessagegateway] [handler] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], checking short number
+[2024-05-22 12:02:37.889] [micropagosmessagegateway] [handler] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], using short number of the config
+[2024-05-22 12:02:37.889] [micropagosmessagegateway] [client] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], startin to prepare the call to databasegateway GetUserDomain
+[2024-05-22 12:02:37.890] [micropagosmessagegateway] [client] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], starting to prepare the URL to the petition
+[2024-05-22 12:02:37.896] [micropagosmessagegateway] [client] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], petition http created
+[2024-05-22 12:02:37.896] [micropagosmessagegateway] [client] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], Final url : http://localhost:2121/userdomain/eaguerre/4b73fa97b2ce
+[2024-05-22 12:02:37.944] [micropagosmessagegateway] [client] [error] [4b73fa97b2ce] PETITION[4b73fa97b2ce], Error when we do the petition to micropagos databse: Get "http://localhost:2121/userdomain/eaguerre/4b73fa97b2ce": dial tcp [::1]:2121: connectex: No connection could be made because the target machine actively refused it.
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [client] [error] [4b73fa97b2ce] PETITION[4b73fa97b2ce], error when we try to  callToMicropagosGetUserDomainDatabase()
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [handler] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], have an error when we try to CallToGetUserDomain() 
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [handler] [error] [4b73fa97b2ce] PETITION[4b73fa97b2ce], error when we try to getshortnumber(): 
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [handler] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:Get "http://localhost:2121/userdomain/eaguerre/4b73fa97b2ce": dial tcp [::1]:2121: connectex: No connection could be made because the target machine actively refused it. UserDomainMessage:have an error when we try to CallToGetUserDomain() UserDomainError:have an error when we try to CallToGetUserDomain()} PortabilidadResult:{PassedPortabilidad:false PortabilidadMessage:} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:false SendMessage:} SmsgatewayResult:{PassedSmsgateway:false SmsgatewayResult: SmsgatewayDescription:}}
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [handler] [debug] [4b73fa97b2ce] PETITION[4b73fa97b2ce], error when we try to procees the message time to insert the message into the database with err: have an error when we try to CallToGetUserDomain()
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [client] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], startin to prepare the call to databasegateway to INSERT message
+[2024-05-22 12:02:37.946] [micropagosmessagegateway] [client] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], starting to prepare the body of the petition
+[2024-05-22 12:02:37.947] [micropagosmessagegateway] [client] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce], petition http created
+[2024-05-22 12:02:37.947] [micropagosmessagegateway] [client] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], Final url : http://localhost:2121/insertMessage
+[2024-05-22 12:02:37.947] [micropagosmessagegateway] [client] [info] [4b73fa97b2ce] PETITION[4b73fa97b2ce], Final BODY: {"utfi":"4b73fa97b2ce","type":"OutboundSMS","content":"tes","mobile_number":"59899111111","mobile_country_iso_code":"UY","short_number":"","telco":"","created":"2024-05-22T12:02:37.8881647-05:00","session_action":"NONE","processed":"2024-05-22T12:02:37.9469471-05:00","session_application_name":"micropagos 2.0","sendafter":"","sendbefore":"","sent":"0001-01-01T00:00:00Z","status":"ERROR","origin_name":""}
+[2024-05-22 12:02:37.949] [micropagosmessagegateway] [client] [error] [4b73fa97b2ce] PETITION[4b73fa97b2ce], Error when we do the petition to micropagos databse: Post "http://localhost:2121/insertMessage": dial tcp [::1]:2121: connectex: No connection could be made because the target machine actively refused it.
+[2024-05-22 12:02:37.949] [micropagosmessagegateway] [client] [error] [4b73fa97b2ce] PETITION[4b73fa97b2ce], error when we try to callToMicropagosDatabase
+[2024-05-22 12:02:37.949] [micropagosmessagegateway] [handler] [error] [4b73fa97b2ce] PETITION[4b73fa97b2ce], error calling database err: have an error when we try to CallToGetUserDomain()
+[2024-05-22 12:02:37.949] [micropagosmessagegateway] [handler] [trace] [4b73fa97b2ce] PETITION[4b73fa97b2ce] Ended
+[2024-05-22 12:02:37.950] [micropagosmessagegateway] [middleware] [info] [4b73fa97b2ce] Request took 63.0127ms
+[2024-05-22 12:05:43.947] [micropagosmessagegateway] [middleware] [info] [b237788b2844] New petition received
+[2024-05-22 12:05:43.947] [micropagosmessagegateway] [middleware] [trace] [b237788b2844] url: /ws/SendMessageService, method: POST
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [middleware] [info] [b237788b2844] starting to validate the ahutentication
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [middleware] [info] [b237788b2844] starting Authentication proccess for eaguerre
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [middleware] [info] [b237788b2844] the user:eaguerre is already authenticated
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [handler] [info] [b237788b2844] starting to sendMessage method to the user eaguerre
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [handler] [debug] [b237788b2844] starting to get the xml
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [handler] [trace] [b237788b2844] this is the body of the petition <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.ravenws.micropagos.com.uy/">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <web:send>\n         <!--Optional:-->\n         <mobile>099111111</mobile>\n         <!--Optional:-->\n         <message>tes</message>\n         <useOriginName></useOriginName>\n      </web:send>\n   </soapenv:Body>\n</soapenv:Envelope>
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [handler] [info] [b237788b2844] method: send indivuald message, starting to validate the petition 
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [handler] [debug] [b237788b2844] PETITION[b237788b2844] this is the data that we are going to validate : Mobile: 099111111, Message: tes, 
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [validation] [info] [b237788b2844] PETITION[b237788b2844], starting to validate a regex expression
+[2024-05-22 12:05:43.948] [micropagosmessagegateway] [validation] [trace] [b237788b2844] PETITION[b237788b2844], regex expression: ^09\d{7}$ value to validate 099111111
+[2024-05-22 12:05:43.949] [micropagosmessagegateway] [validation] [trace] [b237788b2844] PETITION[b237788b2844], value match with the regex expression
+[2024-05-22 12:05:43.949] [micropagosmessagegateway] [validation] [debug] [b237788b2844] starting to format number
+[2024-05-22 12:05:43.949] [micropagosmessagegateway] [handler] [debug] [b237788b2844] PETITION[b237788b2844], the mobile number pass the regex expression and the formatted number is 59899111111
+[2024-05-22 12:05:43.949] [micropagosmessagegateway] [validation] [info] [b237788b2844] PETITION[b237788b2844], starting to validate th message length
+[2024-05-22 12:05:43.949] [micropagosmessagegateway] [validation] [trace] [b237788b2844] PETITION[b237788b2844], max length: 500 message to validate tes
+[2024-05-22 12:05:43.949] [micropagosmessagegateway] [validation] [trace] [b237788b2844] PETITION[b237788b2844], using normal message
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [handler] [debug] [b237788b2844] PETITION[b237788b2844], the message pass the validateMessageLength this is the final message: tes
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [handler] [info] [b237788b2844] PETITION[b237788b2844], checking short number
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [handler] [trace] [b237788b2844] PETITION[b237788b2844], using short number of the config
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], startin to prepare the call to databasegateway GetUserDomain
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [client] [trace] [b237788b2844] PETITION[b237788b2844], starting to prepare the URL to the petition
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [client] [trace] [b237788b2844] PETITION[b237788b2844], petition http created
+[2024-05-22 12:05:43.950] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], Final url : http://localhost:2121/userdomain/eaguerre/b237788b2844
+[2024-05-22 12:05:43.977] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], Request to Micropagos_database tooks 27.0264ms
+[2024-05-22 12:05:43.977] [micropagosmessagegateway] [client] [error] [b237788b2844] PETITION[b237788b2844], error due to non-200 status code: received non-200 status code: 500
+[2024-05-22 12:05:43.978] [micropagosmessagegateway] [client] [error] [b237788b2844] PETITION[b237788b2844], error when we try to  callToMicropagosGetUserDomainDatabase()
+[2024-05-22 12:05:43.978] [micropagosmessagegateway] [handler] [trace] [b237788b2844] PETITION[b237788b2844], have an error when we try to CallToGetUserDomain() 
+[2024-05-22 12:05:43.978] [micropagosmessagegateway] [handler] [error] [b237788b2844] PETITION[b237788b2844], error when we try to getshortnumber(): 
+[2024-05-22 12:05:43.978] [micropagosmessagegateway] [handler] [trace] [b237788b2844] PETITION[b237788b2844], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:received non-200 status code: 500 UserDomainMessage:have an error when we try to CallToGetUserDomain() UserDomainError:have an error when we try to CallToGetUserDomain()} PortabilidadResult:{PassedPortabilidad:false PortabilidadMessage:} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:false SendMessage:} SmsgatewayResult:{PassedSmsgateway:false SmsgatewayResult: SmsgatewayDescription:}}
+[2024-05-22 12:05:43.978] [micropagosmessagegateway] [handler] [debug] [b237788b2844] PETITION[b237788b2844], error when we try to procees the message time to insert the message into the database with err: have an error when we try to CallToGetUserDomain()
+[2024-05-22 12:05:43.978] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], startin to prepare the call to databasegateway to INSERT message
+[2024-05-22 12:05:43.979] [micropagosmessagegateway] [client] [trace] [b237788b2844] PETITION[b237788b2844], starting to prepare the body of the petition
+[2024-05-22 12:05:43.979] [micropagosmessagegateway] [client] [trace] [b237788b2844] PETITION[b237788b2844], petition http created
+[2024-05-22 12:05:43.979] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], Final url : http://localhost:2121/insertMessage
+[2024-05-22 12:05:43.979] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], Final BODY: {"utfi":"b237788b2844","type":"OutboundSMS","content":"tes","mobile_number":"59899111111","mobile_country_iso_code":"UY","short_number":"","telco":"","created":"2024-05-22T12:05:43.9489629-05:00","session_action":"NONE","processed":"2024-05-22T12:05:43.9791272-05:00","session_application_name":"micropagos 2.0","sendafter":"","sendbefore":"","sent":"0001-01-01T00:00:00Z","status":"ERROR","origin_name":""}
+[2024-05-22 12:05:43.986] [micropagosmessagegateway] [client] [info] [b237788b2844] PETITION[b237788b2844], Request to database tooks 6.8292ms
+[2024-05-22 12:05:43.986] [micropagosmessagegateway] [client] [error] [b237788b2844] PETITION[b237788b2844], error due to non-200 status code: received non-200 status code: 500
+[2024-05-22 12:05:43.986] [micropagosmessagegateway] [client] [error] [b237788b2844] PETITION[b237788b2844], error when we try to callToMicropagosDatabase
+[2024-05-22 12:05:43.987] [micropagosmessagegateway] [handler] [error] [b237788b2844] PETITION[b237788b2844], error calling database err: have an error when we try to CallToGetUserDomain()
+[2024-05-22 12:05:43.987] [micropagosmessagegateway] [handler] [trace] [b237788b2844] PETITION[b237788b2844] Ended
+[2024-05-22 12:05:43.987] [micropagosmessagegateway] [middleware] [info] [b237788b2844] Request took 39.2847ms
+[2024-05-22 12:07:37.316] [micropagosmessagegateway] [middleware] [info] [862a24acf129] New petition received
+[2024-05-22 12:07:37.316] [micropagosmessagegateway] [middleware] [trace] [862a24acf129] url: /ws/SendMessageService, method: POST
+[2024-05-22 12:07:37.316] [micropagosmessagegateway] [middleware] [info] [862a24acf129] starting to validate the ahutentication
+[2024-05-22 12:07:37.316] [micropagosmessagegateway] [middleware] [info] [862a24acf129] starting Authentication proccess for eaguerre
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [middleware] [info] [862a24acf129] the user:eaguerre is already authenticated
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [handler] [info] [862a24acf129] starting to sendMessage method to the user eaguerre
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [handler] [debug] [862a24acf129] starting to get the xml
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [handler] [trace] [862a24acf129] this is the body of the petition <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.ravenws.micropagos.com.uy/">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <web:send>\n         <!--Optional:-->\n         <mobile>099111111</mobile>\n         <!--Optional:-->\n         <message>tes</message>\n         <useOriginName></useOriginName>\n      </web:send>\n   </soapenv:Body>\n</soapenv:Envelope>
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [handler] [info] [862a24acf129] method: send indivuald message, starting to validate the petition 
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [handler] [debug] [862a24acf129] PETITION[862a24acf129] this is the data that we are going to validate : Mobile: 099111111, Message: tes, 
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [validation] [info] [862a24acf129] PETITION[862a24acf129], starting to validate a regex expression
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [validation] [trace] [862a24acf129] PETITION[862a24acf129], regex expression: ^09\d{7}$ value to validate 099111111
+[2024-05-22 12:07:37.317] [micropagosmessagegateway] [validation] [trace] [862a24acf129] PETITION[862a24acf129], value match with the regex expression
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [validation] [debug] [862a24acf129] starting to format number
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [handler] [debug] [862a24acf129] PETITION[862a24acf129], the mobile number pass the regex expression and the formatted number is 59899111111
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [validation] [info] [862a24acf129] PETITION[862a24acf129], starting to validate th message length
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [validation] [trace] [862a24acf129] PETITION[862a24acf129], max length: 500 message to validate tes
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [validation] [trace] [862a24acf129] PETITION[862a24acf129], using normal message
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [handler] [debug] [862a24acf129] PETITION[862a24acf129], the message pass the validateMessageLength this is the final message: tes
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [handler] [info] [862a24acf129] PETITION[862a24acf129], checking short number
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129], using short number of the config
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], startin to prepare the call to databasegateway GetUserDomain
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], starting to prepare the URL to the petition
+[2024-05-22 12:07:37.318] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], petition http created
+[2024-05-22 12:07:37.319] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final url : http://localhost:2121/userdomain/eaguerre/862a24acf129
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Request to Micropagos_database tooks 458.0186ms
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], HTTP Status Response: 200
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], RESPONSE BODY: {"result":0,"message":"the domain name is: Micropagos","domain":"Micropagos"}
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [client] [debug] [862a24acf129] the user domain is: Micropagos
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [handler] [info] [862a24acf129] PETITION[862a24acf129] this is the originNumber 88277
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], startin to prepare the call to portability whit number 59899111111
+[2024-05-22 12:07:37.777] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], petition http created
+[2024-05-22 12:07:37.778] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-05-22 12:07:37.778] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59899111111</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-05-22 12:07:38.569] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Request to PORTABILIDAD tooks 791.5523ms
+[2024-05-22 12:07:38.569] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], HTTP Status Response: 200
+[2024-05-22 12:07:38.569] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>1</xsd:telcoCode><xsd:telcoName>ANCEL</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-05-22 12:07:38.570] [micropagosmessagegateway] [handler] [info] [862a24acf129] PETITION[862a24acf129], TELCONAME: ANCEL
+[2024-05-22 12:07:38.570] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129], starting to validate if the the origin number and destiny are filters
+[2024-05-22 12:07:38.570] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], startin to prepare the call to databasegateway checking FILTER
+[2024-05-22 12:07:38.570] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], starting to prepare the URL to the petition
+[2024-05-22 12:07:38.570] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], petition http created
+[2024-05-22 12:07:38.570] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final url : http://localhost:2121/filter/99111111/88277/862a24acf129
+[2024-05-22 12:07:39.032] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Request to database tooks 461.1089ms
+[2024-05-22 12:07:39.032] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], HTTP Status Response: 200
+[2024-05-22 12:07:39.032] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], RESPONSE BODY: {"result":false,"message":""}
+[2024-05-22 12:07:39.032] [micropagosmessagegateway] [client] [debug] [862a24acf129] the filter message response was: shortnumber and destinity are filter? : false
+[2024-05-22 12:07:39.032] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129], starting to check send after and send before data
+[2024-05-22 12:07:39.032] [micropagosmessagegateway] [validation] [debug] [862a24acf129] PETITION[862a24acf129], checking send after and send before 
+[2024-05-22 12:07:39.033] [micropagosmessagegateway] [validation] [trace] [862a24acf129] PETITION[862a24acf129] senfafter or sendbefore are empity or didnt match with the expected fomat HH:mm
+[2024-05-22 12:07:39.033] [micropagosmessagegateway] [validation] [debug] [862a24acf129] PETITION[862a24acf129]: sendBefore:  sendAfter: 
+[2024-05-22 12:07:39.033] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], startin to prepare the call to telcoGateway
+[2024-05-22 12:07:39.033] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], starting to prepare the body of the petition
+[2024-05-22 12:07:39.034] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], petition http created
+[2024-05-22 12:07:39.034] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final url : http://localhost:1111/
+[2024-05-22 12:07:39.034] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final BODY: {"utfi":"862a24acf129","serviceType":"","origin.number":"88277","destination.number":"59899111111","validity_period":"","schedule_delivery_time":"","protocol_id":0,"esmeClass":0,"priority_flag":3,"registered_delivery":0,"replace_if_present_flag":0,"data":"746573","data_header_indicator":0,"data_coding_scheme":0,"data_length":3,"messagetype":4,"TLV_tag":515,"TLV_length":5,"TLV_value":"ANCEL"}
+[2024-05-22 12:07:39.045] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Request to SMSGATEWAY tooks 11.1772ms
+[2024-05-22 12:07:39.045] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], HTTP Status Response: 200
+[2024-05-22 12:07:39.045] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], RESPONSE BODY: {"Description":"No errors","forwardRef":"3","status":"0"}
+[2024-05-22 12:07:39.045] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], this is the code of the response: 0
+[2024-05-22 12:07:39.045] [micropagosmessagegateway] [handler] [info] [862a24acf129] PETITION[862a24acf129], TelcoGatewayResponse: 0
+[2024-05-22 12:07:39.045] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:Micropagos UserDomainMessage:the domain name is: Micropagos UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:true SendMessage:message is going to send now} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:No errors}}
+[2024-05-22 12:07:39.046] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129], No error time to insert the message into the database
+[2024-05-22 12:07:39.046] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], startin to prepare the call to databasegateway to INSERT message
+[2024-05-22 12:07:39.046] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], starting to prepare the body of the petition
+[2024-05-22 12:07:39.046] [micropagosmessagegateway] [client] [trace] [862a24acf129] PETITION[862a24acf129], petition http created
+[2024-05-22 12:07:39.046] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final url : http://localhost:2121/insertMessage
+[2024-05-22 12:07:39.046] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Final BODY: {"utfi":"862a24acf129","type":"OutboundSMS","content":"tes","mobile_number":"99111111","mobile_country_iso_code":"UY","short_number":"88277","telco":"ANCEL","created":"2024-05-22T12:07:37.3176478-05:00","session_action":"NONE","processed":"2024-05-22T12:07:39.0464107-05:00","session_application_name":"micropagos 2.0","sendafter":"","sendbefore":"","sent":"2024-05-22T12:07:39.0458875-05:00","status":"SENT","origin_name":""}
+[2024-05-22 12:07:39.517] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], Request to database tooks 470.7772ms
+[2024-05-22 12:07:39.517] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], HTTP Status Response: 200
+[2024-05-22 12:07:39.518] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19719189","Id":19719189}
+[2024-05-22 12:07:39.518] [micropagosmessagegateway] [client] [info] [862a24acf129] PETITION[862a24acf129], this is the id of the message in the database: 19719189
+[2024-05-22 12:07:39.518] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129], transaction with id 19719189 inserted correctly!
+[2024-05-22 12:07:39.519] [micropagosmessagegateway] [handler] [trace] [862a24acf129] PETITION[862a24acf129] Ended
+[2024-05-22 12:07:39.519] [micropagosmessagegateway] [middleware] [info] [862a24acf129] Request took 2.202692s

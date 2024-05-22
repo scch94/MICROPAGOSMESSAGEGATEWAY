@@ -2,6 +2,7 @@ package client
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -10,13 +11,17 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
 	"github.com/scch94/ins_log"
 )
 
-func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string) helper.InsertResult {
+func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.InsertResult {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
 
 	//creamos el struct para controlar la respuesta del smsgateway
 	insertResult := helper.InsertResult{}
@@ -26,7 +31,7 @@ func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string) hel
 	insertRequest := request.NewInsertMessageRequest(validationStruct, utfi)
 
 	//preparamos el request pasando el struct que tiene el json a enviar la info
-	req, err := prepareInsertMessageRequest(*insertRequest, utfi)
+	req, err := prepareInsertMessageRequest(*insertRequest, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareInsertMessageRequest()", utfi)
 		insertResult.Id = ""
@@ -36,7 +41,7 @@ func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string) hel
 	}
 
 	//hacemos el llamado y obtenemos el resultado
-	insertMessageResponse, err := callToMicropagosInsertMessageDatabase(req, utfi)
+	insertMessageResponse, err := callToMicropagosInsertMessageDatabase(req, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to callToMicropagosDatabase", utfi)
 		insertResult.Id = ""
@@ -51,7 +56,7 @@ func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string) hel
 
 	return insertResult
 }
-func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageRequest, utfi string) (*http.Request, error) {
+func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//generamos el cuerpo de la solicitud para insertar el mensaje
 	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the body of the petition", utfi)
@@ -77,7 +82,7 @@ func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageReque
 	ins_log.Infof(ctx, "PETITION[%v], Final BODY: %s", utfi, body)
 	return req, nil
 }
-func callToMicropagosInsertMessageDatabase(req *http.Request, utfi string) (response.InsertMessageResponse, error) {
+func callToMicropagosInsertMessageDatabase(req *http.Request, utfi string, ctx context.Context) (response.InsertMessageResponse, error) {
 
 	//creamos la variable que obtendra la respuesta de portabilidad
 	var insertMessageResponse response.InsertMessageResponse

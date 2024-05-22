@@ -12,17 +12,18 @@ import (
 	"github.com/scch94/ins_log"
 )
 
-//lint:ignore SA1029 "Using built-in type string as key for context value intentionally"
-var ctx = context.WithValue(context.Background(), "packageName", "routes")
+func SetupRouter(ctx context.Context) *gin.Engine {
 
-func SetupRouter() *gin.Engine {
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "routes")
+
 	// create a new gin router and register the handlers
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.New()
 
 	// Agregar middlewares global
-	router.Use(middleware.GlobalMiddleware())
-	router.Use(middleware.Authenticathormidldleware())
+	router.Use(middleware.GlobalMiddleware(ctx))
+	router.Use(middleware.Authenticathormidldleware(ctx))
 	router.Use(gin.Recovery())
 
 	h := handler.NewHandler()
@@ -36,6 +37,10 @@ func SetupRouter() *gin.Engine {
 
 // Controlador para manejar rutas no encontradas
 func notFoundHandler(c *gin.Context) {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx := c.Request.Context()
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "handler")
 
 	ins_log.Errorf(ctx, "Route  not found: url: %v, method: %v", c.Request.RequestURI, c.Request.Method)
 	c.JSON(http.StatusNotFound, nil)

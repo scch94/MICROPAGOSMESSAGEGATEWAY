@@ -5,16 +5,17 @@ import (
 	"net/http"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/routes"
 	"github.com/scch94/ins_log"
 )
 
-//lint:ignore SA1029 "Using built-in type string as key for context value intentionally"
-var ctx = context.WithValue(context.Background(), "packageName", "server")
-
-func StartServer() error {
-
-	router := routes.SetupRouter()
+func StartServer(ctx context.Context) error {
+	// actualizamos contexto y logueamos el puerto
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "server")
+	ins_log.Infof(ctx, "Starting server on address: %s", config.Config.ServPort)
+	//usamos las rutas
+	router := routes.SetupRouter(ctx)
 	serverConfig := &http.Server{
 		Addr:    config.Config.ServPort,
 		Handler: router,

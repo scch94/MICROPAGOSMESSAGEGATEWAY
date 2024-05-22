@@ -2,6 +2,7 @@ package client
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -9,13 +10,17 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
 	"github.com/scch94/ins_log"
 )
 
-func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string) helper.SmsgatewayResult {
+func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.SmsgatewayResult {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
 
 	//creamos el struct para controlar la respuesta del smsgateway
 	telcoGatewayResullt := helper.SmsgatewayResult{}
@@ -27,7 +32,7 @@ func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string) helper.S
 	smsGatewayRequest.TLVLength = len(validationStruct.Telco)
 
 	//preparamos el request pasando el struct que tiene el json a enviar la info
-	req, err := prepareTelcoGatewayRequest(*smsGatewayRequest, utfi)
+	req, err := prepareTelcoGatewayRequest(*smsGatewayRequest, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareTelcoGatewayRequest()", utfi)
 		telcoGatewayResullt.PassedSmsgateway = false
@@ -37,7 +42,7 @@ func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string) helper.S
 	}
 
 	//hacemos el llamado y obtenemos el resultado
-	responseGateway, err := calltoTelcoGatewayRequest(req, utfi)
+	responseGateway, err := calltoTelcoGatewayRequest(req, utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to call to calltoTelcoGatewayRequest()", utfi)
 		telcoGatewayResullt.PassedSmsgateway = false
@@ -51,7 +56,7 @@ func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string) helper.S
 	return telcoGatewayResullt
 	// return calltoTelcoGatewayRequest(req)
 }
-func prepareTelcoGatewayRequest(smsGatewayRequest request.SmsGatewayRequest, utfi string) (*http.Request, error) {
+func prepareTelcoGatewayRequest(smsGatewayRequest request.SmsGatewayRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//generamos el cuerpo de la solicitud para el gateway que enviara el mensaje
 	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the body of the petition", utfi)
@@ -78,7 +83,7 @@ func prepareTelcoGatewayRequest(smsGatewayRequest request.SmsGatewayRequest, utf
 	return req, nil
 }
 
-func calltoTelcoGatewayRequest(req *http.Request, utfi string) (response.SmsGatewayResponse, error) {
+func calltoTelcoGatewayRequest(req *http.Request, utfi string, ctx context.Context) (response.SmsGatewayResponse, error) {
 
 	//creamos la variable que obtendra la respuesta de portabilidad
 	var smsGatewayResponse response.SmsGatewayResponse

@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"context"
 	"encoding/xml"
 	"errors"
 	"io"
@@ -22,6 +23,10 @@ import (
 )
 
 func (h *Handler) SendMessageService(c *gin.Context) {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx := c.Request.Context()
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "handler")
 
 	//traemos el usuarios desde el contexto no usamos el error por que si llegamos hasta aca el username debe existir
 	username, _ := c.Get("username")
@@ -81,7 +86,7 @@ func (h *Handler) SendMessageService(c *gin.Context) {
 	if method == constants.SEND {
 
 		//vamos al send method que nos devolvera una structura con el resultado de cada una de las operaciones del envio de mensajes
-		result := sendMethod(&SendMessageRequest, usernameString)
+		result := sendMethod(&SendMessageRequest, usernameString, ctx)
 
 		//como la funcion createdinsertresults pide un slice hacemos un slice de una unica posision
 		results := []helper.Result{result}
@@ -96,7 +101,7 @@ func (h *Handler) SendMessageService(c *gin.Context) {
 	} else {
 
 		//vamos al send massive method el cual nos devolvera un chan
-		results := sendmassiveMessage(&SendMessageRequest, usernameString)
+		results := sendmassiveMessage(&SendMessageRequest, usernameString, ctx)
 
 		//como el createdinsertresults recibe un slice de results volvemos el chan en un slice
 		var resultsSlice []helper.Result
@@ -112,7 +117,7 @@ func (h *Handler) SendMessageService(c *gin.Context) {
 	}
 }
 
-func sendmassiveMessage(r *request.SendMessageRequest, username string) chan helper.Result {
+func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx context.Context) chan helper.Result {
 
 	//creamos la structura que guardara los resultados de cada proceso-> slices
 	ins_log.Info(ctx, "starting to send massive message")
@@ -124,7 +129,7 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string) chan hel
 	for identifier, p := range r.Body.SendMassiveMessages.MobileMessageDto {
 
 		//additional utfi para identiicar los distintos proceso
-		utfi := ins_log.GenerateAdditionalUtfi()
+		utfi := ins_log.GenerateUTFI()
 		ins_log.Infof(ctx, "this is the identifier of this petition %v", utfi)
 		i = identifier
 		// Creamos el helper de validación
@@ -148,7 +153,7 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string) chan hel
 			ins_log.Infof(ctx, "PETITION[%v], starting to validate the petition #%v", utfi)
 
 			// Validamos el mensaje
-			validationResult := sendSingleMessage(&validationStruct, utfi)
+			validationResult := sendSingleMessage(&validationStruct, utfi, ctx)
 			ins_log.Tracef(ctx, "PETITION[%v], this is the data of the validation result %+v", utfi, validationResult)
 			module, err := validationResult.SearchValidationResultError()
 			if err != nil {
@@ -162,7 +167,7 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string) chan hel
 			validationStruct.Result = module
 
 			//ahora vamos a insertar el mensaje a la base de datos !
-			insertResult := client.CallToInsertMessageDB(&validationStruct, utfi)
+			insertResult := client.CallToInsertMessageDB(&validationStruct, utfi, ctx)
 			if insertResult.Id == "" {
 				ins_log.Errorf(ctx, "PETITION[%v], error calling database err: %v", utfi, err)
 			} else {
@@ -184,10 +189,10 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string) chan hel
 	return responseErrors
 }
 
-func sendMethod(r *request.SendMessageRequest, username string) helper.Result {
+func sendMethod(r *request.SendMessageRequest, username string, ctx context.Context) helper.Result {
 
 	//guardamos el utfi que vamos a utilizar para seguir la sesion
-	utfi := ins_log.GetUtfi()
+	utfi := ins_log.GenerateUTFI()
 
 	//creamos la structura de guardar errores
 	result := helper.Result{}
@@ -197,7 +202,7 @@ func sendMethod(r *request.SendMessageRequest, username string) helper.Result {
 	validationStruct := helper.NewPetition(username, r.Body.Send.Mobile, r.Body.Send.Message, r.Body.Send.UseOriginName)
 
 	// Validamos el mensaje
-	validationResult := sendSingleMessage(validationStruct, utfi)
+	validationResult := sendSingleMessage(validationStruct, utfi, ctx)
 	ins_log.Tracef(ctx, "PETITION[%v], this is the data of the validation result %+v", utfi, validationResult)
 	status, err := validationResult.SearchValidationResultError()
 	if err != nil {
@@ -211,7 +216,7 @@ func sendMethod(r *request.SendMessageRequest, username string) helper.Result {
 	validationStruct.Result = status
 
 	//ahora vamos a insertar el mensaje a la base de datos !
-	insertResult := client.CallToInsertMessageDB(validationStruct, utfi)
+	insertResult := client.CallToInsertMessageDB(validationStruct, utfi, ctx)
 	if insertResult.Id == "" {
 		ins_log.Errorf(ctx, "PETITION[%v], error calling database err: %v", utfi, err)
 	} else {
@@ -222,7 +227,7 @@ func sendMethod(r *request.SendMessageRequest, username string) helper.Result {
 	ins_log.Tracef(ctx, "PETITION[%v] Ended", utfi)
 	return result
 }
-func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.ValidationResult {
+func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Context) helper.ValidationResult {
 
 	//creamos la struct devalidacion
 	validationResult := helper.ValidationResult{}
@@ -230,7 +235,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 	ins_log.Debugf(ctx, "PETITION[%v] this is the data that we are going to validate : %s", utfi, validate.ToString())
 
 	//1era validacion mobileregex
-	err := validate.ValidateMobileRegex(utfi)
+	err := validate.ValidateMobileRegex(utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error in the function validateMobileRegex()", utfi)
 		validationResult.PassedValidation = false
@@ -240,7 +245,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 	ins_log.Debugf(ctx, "PETITION[%v], the mobile number pass the regex expression and the formatted number is %v", utfi, validate.Mobile)
 
 	//2do validamos el largo del mensaje y vemos si usa el massive message o si tiene un mensaje definido
-	err = validate.ValidateMessageLength(utfi)
+	err = validate.ValidateMessageLength(utfi, ctx)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error in ValidateMessageLengt(): ", utfi)
 		validationResult.PassedValidation = false
@@ -252,7 +257,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 	validationResult.ValidationMessage = ""
 
 	//3ero validateShortNumber si el shortnumber esta en la peticion no vamos a la base y si no esta vamos a la base !
-	userDomainResult := GetShortNumber(validate, utfi)
+	userDomainResult := GetShortNumber(validate, utfi, ctx)
 	if userDomainResult.UserDomainError != nil {
 
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to getshortnumber(): ", utfi)
@@ -263,7 +268,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 	ins_log.Infof(ctx, "PETITION[%v] this is the originNumber %v", utfi, validate.ShortNumber)
 
 	//4to Obtenemos el telcoName llamando a portabilidad, internamente llamara tambien a
-	portabilidadResult := client.CallPortabilidad(validate, utfi)
+	portabilidadResult := client.CallPortabilidad(validate, utfi, ctx)
 	if !portabilidadResult.PassedPortabilidad {
 		ins_log.Errorf(ctx, "PETITION[%v], error in callportabilidad()", utfi)
 		validationResult.PortabilidadResult = portabilidadResult
@@ -275,7 +280,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 
 	//5TO FILTERED VEMOS SI EL ORIGIN Y DESTINO ESTAN FILTRADOS!
 	ins_log.Tracef(ctx, "PETITION[%v], starting to validate if the the origin number and destiny are filters", utfi)
-	filterResult := client.CallToFiltersDB(validate, utfi)
+	filterResult := client.CallToFiltersDB(validate, utfi, ctx)
 	validationResult.FilterResult = filterResult
 	if filterResult.Error != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error in callFilterdb():", utfi)
@@ -300,7 +305,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 
 	//6to sendafter and sendbefore esta no devuelve error si encuentra algun problema los valores de sendafter o senfbefore estaran vacios
 	ins_log.Tracef(ctx, "PETITION[%v], starting to check send after and send before data", utfi)
-	whenSendResult := validate.ValidateSendAfterAndSendBefore(utfi)
+	whenSendResult := validate.ValidateSendAfterAndSendBefore(utfi, ctx)
 	if validate.SendAfter != "" || validate.SendBefore != "" {
 		telcoGatewayResullt := helper.SmsgatewayResult{
 			PassedSmsgateway:      true,
@@ -314,7 +319,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string) helper.Validati
 	validationResult.WhenSendResult = whenSendResult
 
 	//6to llamamos al gateway de envio de mensajes
-	telcoGatewayResullt := client.CallTelcoGateway(validate, utfi)
+	telcoGatewayResullt := client.CallTelcoGateway(validate, utfi, ctx)
 	if telcoGatewayResullt.SmsgatewayResult != "0" {
 		ins_log.Errorf(ctx, "PETITION[%v], error in CallTelcoGateway()", utfi)
 		validationResult.SmsgatewayResult = telcoGatewayResullt
@@ -364,7 +369,7 @@ func createdInsertResults(results []helper.Result) []response.Result {
 	return responses
 }
 
-func GetShortNumber(validate *helper.ToValidate, utfi string) helper.UserDomainResult {
+func GetShortNumber(validate *helper.ToValidate, utfi string, ctx context.Context) helper.UserDomainResult {
 
 	ins_log.Infof(ctx, "PETITION[%v], checking short number", utfi)
 	if validate.ShortNumber != "" {
@@ -383,7 +388,7 @@ func GetShortNumber(validate *helper.ToValidate, utfi string) helper.UserDomainR
 		ins_log.Tracef(ctx, "PETITION[%v], using short number of the config", utfi)
 
 		//primero tenemos que ir a la base a ver que dominio tiene el usuario
-		userDomainResult := client.CallToGetUserDomain(validate, utfi)
+		userDomainResult := client.CallToGetUserDomain(validate, utfi, ctx)
 		if userDomainResult.UserDomainResult == "" || userDomainResult.UserDomainError != nil {
 			ins_log.Tracef(ctx, "PETITION[%v], have an error when we try to CallToGetUserDomain() ", utfi)
 			userDomainResult.UserDomainError = errors.New("have an error when we try to CallToGetUserDomain()")

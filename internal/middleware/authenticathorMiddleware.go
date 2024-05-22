@@ -1,6 +1,7 @@
 package middleware
 
 import (
+	"context"
 	"encoding/base64"
 	"net/http"
 	"strings"
@@ -11,7 +12,8 @@ import (
 )
 
 // Authenticathormidldleware extrae y valida la autenticación básica del encabezado de la petición.
-func Authenticathormidldleware() gin.HandlerFunc {
+func Authenticathormidldleware(ctx context.Context) gin.HandlerFunc {
+	ctx = context.WithValue(context.Background(), "packageName", "middleware")
 	return func(c *gin.Context) {
 		ins_log.Infof(ctx, "starting to validate the ahutentication")
 		authHeader := c.GetHeader("Authorization")

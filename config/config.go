@@ -6,14 +6,17 @@ import (
 	"fmt"
 
 	"github.com/scch94/Gconfiguration"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/ins_log"
 )
 
-//lint:ignore SA1029 "Using built-in type string as key for context value intentionally"
-var ctx = context.WithValue(context.Background(), "packageName", "config")
 var Config MicropagosConfiguration
 
-func Upconfig() error {
+func Upconfig(ctx context.Context) error {
+
+	//traemos el contexto y le setiamos el contexto actual
+	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "config")
+
 	ins_log.Info(ctx, "starting to get the config struct ")
 	err := Gconfiguration.GetConfig(&Config)
 	if err != nil {
