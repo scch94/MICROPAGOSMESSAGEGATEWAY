@@ -1,4 +1,5 @@
 {
+    "log_level":"info",
     "max_message_length": 500,
     "mobil_regex": "^09\\d{7}$",
     "server_port": ":1000",

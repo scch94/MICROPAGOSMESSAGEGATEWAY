@@ -40,6 +40,7 @@ func main() {
 
 	// Inicializamos el logger
 	ins_log.SetService("micropagosmessagegateway")
+	ins_log.SetLevel(config.Config.LogLevel)
 
 	// Agregamos el valor "packageName" al contexto
 	ctx = ins_log.SetPackageNameInContext(ctx, "main")
