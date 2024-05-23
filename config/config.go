@@ -6,7 +6,6 @@ import (
 	"fmt"
 
 	"github.com/scch94/Gconfiguration"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/ins_log"
 )
 
@@ -15,7 +14,8 @@ var Config MicropagosConfiguration
 func Upconfig(ctx context.Context) error {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "config")
+	// Agregamos el valor "packageName" al contexto
+	ctx = ins_log.SetPackageNameInContext(ctx, "config")
 
 	ins_log.Info(ctx, "starting to get the config struct ")
 	err := Gconfiguration.GetConfig(&Config)

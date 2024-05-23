@@ -14,8 +14,8 @@ import (
 
 func SetupRouter(ctx context.Context) *gin.Engine {
 
-	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "routes")
+	// Agregar el valor "packageName" al contexto
+	ctx = ins_log.SetPackageNameInContext(ctx, "routes")
 
 	// create a new gin router and register the handlers
 	gin.SetMode(gin.ReleaseMode)
@@ -40,7 +40,7 @@ func notFoundHandler(c *gin.Context) {
 
 	//traemos el contexto y le setiamos el contexto actual
 	ctx := c.Request.Context()
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "handler")
+	ctx = ins_log.SetPackageNameInContext(ctx, "handler")
 
 	ins_log.Errorf(ctx, "Route  not found: url: %v, method: %v", c.Request.RequestURI, c.Request.Method)
 	c.JSON(http.StatusNotFound, nil)

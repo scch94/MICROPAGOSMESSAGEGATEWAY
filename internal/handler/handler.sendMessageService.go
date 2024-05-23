@@ -26,7 +26,7 @@ func (h *Handler) SendMessageService(c *gin.Context) {
 
 	//traemos el contexto y le setiamos el contexto actual
 	ctx := c.Request.Context()
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "handler")
+	ctx = ins_log.SetPackageNameInContext(ctx, "handler")
 
 	//traemos el usuarios desde el contexto no usamos el error por que si llegamos hasta aca el username debe existir
 	username, _ := c.Get("username")

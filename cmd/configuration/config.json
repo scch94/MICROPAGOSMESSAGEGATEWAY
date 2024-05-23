@@ -5,27 +5,27 @@
     "getUserDomain":{
         "url":"http://localhost:2121/userdomain",
         "method":"GET",
-        "timeout":10000
+        "timeout":40000
     },
     "getFilterDatabase":{
         "url":"http://localhost:2121/filter",
         "method":"GET",
-        "timeout":10000
+        "timeout":40000
     },
     "inserMessage":{
         "url":"http://localhost:2121/insertMessage",
         "method":"POST",
-        "timeout":10000
+        "timeout":40000
     },
     "smsGateway":{
         "url":"http://localhost:1111/",
         "method":"POST",
-        "timeout":10000
+        "timeout":40000
     },
     "portabilidad":{
         "url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/",
         "method":"POST",
-        "timeout":10000,
+        "timeout":40000,
         "portabilidad_user": "inswitch",
         "portabilidad_password": "1234"
     },

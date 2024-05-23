@@ -5,14 +5,14 @@ import (
 	"net/http"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/routes"
 	"github.com/scch94/ins_log"
 )
 
 func StartServer(ctx context.Context) error {
-	// actualizamos contexto y logueamos el puerto
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "server")
+	// Agregamos el valor "packageName" al contexto
+	ctx = ins_log.SetPackageNameInContext(ctx, "server")
+
 	ins_log.Infof(ctx, "Starting server on address: %s", config.Config.ServPort)
 	//usamos las rutas
 	router := routes.SetupRouter(ctx)

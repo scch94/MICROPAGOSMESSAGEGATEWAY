@@ -65,6 +65,10 @@ github.com/scch94/ins_log v0.0.0-20240522153131-7186433ce4dc h1:rIhhn2afsvvtKgqR
 github.com/scch94/ins_log v0.0.0-20240522153131-7186433ce4dc/go.mod h1:Ye7266CglnRW8IHSXFOcGLJqm9sQL98u8UsQbc23Qvs=
 github.com/scch94/ins_log v0.0.0-20240522161841-4c079f6c044f h1:9HAtrKNKzthkDS28vKuqeGuoRuw4bQ1ZM2iKVoM1UEM=
 github.com/scch94/ins_log v0.0.0-20240522161841-4c079f6c044f/go.mod h1:Ye7266CglnRW8IHSXFOcGLJqm9sQL98u8UsQbc23Qvs=
+github.com/scch94/ins_log v0.0.0-20240523013935-057d867b573b h1:wjQlBmTGvO/qZ+lg8kKBe4WhwZzAUMu166h7ISxQTQU=
+github.com/scch94/ins_log v0.0.0-20240523013935-057d867b573b/go.mod h1:Ye7266CglnRW8IHSXFOcGLJqm9sQL98u8UsQbc23Qvs=
+github.com/scch94/ins_log v0.0.0-20240523020353-9090a3e11ceb h1:sfvLM/QbiaiK1Rz2cUXDVGly7/C6AI3S5ut8xvG18Hs=
+github.com/scch94/ins_log v0.0.0-20240523020353-9090a3e11ceb/go.mod h1:Ye7266CglnRW8IHSXFOcGLJqm9sQL98u8UsQbc23Qvs=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
 github.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=

@@ -11,7 +11,6 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
@@ -21,7 +20,7 @@ import (
 func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.InsertResult {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
+	ctx = ins_log.SetPackageNameInContext(ctx, "client")
 
 	//creamos el struct para controlar la respuesta del smsgateway
 	insertResult := helper.InsertResult{}
@@ -59,7 +58,11 @@ func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string, ctx
 func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//generamos el cuerpo de la solicitud para insertar el mensaje
-	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the body of the petition", utfi)
+	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the URL and the body of the petition", utfi)
+
+	//agregamos lo params de la solicitud
+	finalURL := fmt.Sprintf("%s/%s", config.Config.InsertMessage.URL, utfi)
+
 	body, err := json.Marshal(insertMessageRequest)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], error when we try to generate the body json.marshal()", utfi)
@@ -67,7 +70,7 @@ func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageReque
 	}
 
 	//creamos la solicitud para ir a insetart el mensaje
-	req, err := http.NewRequest(config.Config.InsertMessage.Method, config.Config.InsertMessage.URL, bytes.NewReader(body))
+	req, err := http.NewRequest(config.Config.InsertMessage.Method, finalURL, bytes.NewReader(body))
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], Error creating request to telcogateway: %v", err.Error(), utfi)
 		return nil, err
@@ -78,7 +81,7 @@ func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageReque
 	req.Header.Set("Content-Type", "application/json")
 
 	//logueamos la url y el body final de la peticion
-	ins_log.Infof(ctx, "PETITION[%v], Final url : %s", utfi, config.Config.InsertMessage.URL)
+	ins_log.Infof(ctx, "PETITION[%v], Final url : %s", utfi, finalURL)
 	ins_log.Infof(ctx, "PETITION[%v], Final BODY: %s", utfi, body)
 	return req, nil
 }

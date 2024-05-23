@@ -9,7 +9,6 @@ import (
 )
 
 type InsertMessageRequest struct {
-	Utfi                          *string    `json:"utfi,omitempty"`
 	Id                            *uint64    `json:"id,omitempty"`
 	Type                          *string    `json:"type,omitempty"` // Nombre del campo en MySQL
 	Content                       *string    `json:"content,omitempty"`
@@ -64,7 +63,6 @@ func NewInsertMessageRequest(validationStruct *helper.ToValidate, utfi string) *
 		mobileNumber = validationStruct.Mobile
 	}
 	insertMessageRequest := &InsertMessageRequest{
-		Utfi:                   &utfi,
 		Created:                timePtr(validationStruct.StartPetition),
 		Type:                   stringPtr(constants.INSERT_TYPE),
 		Content:                stringPtr(hexaToString(validationStruct.Message)),

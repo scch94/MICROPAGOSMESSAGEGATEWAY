@@ -1,11 +1,9 @@
 package handler
 
 import (
-	"context"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/ins_log"
 )
 
@@ -20,7 +18,7 @@ func NewHandler() *Handler {
 }
 func (h *Handler) Welcome(c *gin.Context) {
 	ctx := c.Request.Context()
-	ctx = context.WithValue(context.Background(), constants.PACKAGE_NAME_KEY, "handler")
+	ctx = ins_log.SetPackageNameInContext(ctx, "handlerWelcome")
 	ins_log.Info(ctx, "starting handler welcome")
 
 	c.JSON(http.StatusOK, "bienvenidos")

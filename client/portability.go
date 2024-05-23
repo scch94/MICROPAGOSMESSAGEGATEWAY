@@ -12,7 +12,6 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
@@ -22,7 +21,7 @@ import (
 func CallPortabilidad(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.PortabilidadResult {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "client")
+	ctx = ins_log.SetPackageNameInContext(ctx, "client")
 
 	//creamos el struct para controlar la respuesta de portabilidad
 	portabilidadResult := helper.PortabilidadResult{}

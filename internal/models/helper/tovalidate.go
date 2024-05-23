@@ -71,7 +71,7 @@ func (p *ToValidate) ToString() string {
 func (p *ToValidate) ValidateMobileRegex(utfi string, ctx context.Context) error {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "validation")
+	ctx = ins_log.SetPackageNameInContext(ctx, "validation")
 
 	ins_log.Infof(ctx, "PETITION[%v], starting to validate a regex expression", utfi)
 	ins_log.Tracef(ctx, "PETITION[%v], regex expression: %v value to validate %v", utfi, config.Config.MobileRegex, p.Mobile)
@@ -104,7 +104,7 @@ func formatNumber(number string, ctx context.Context) string {
 func (p *ToValidate) ValidateMessageLength(utfi string, ctx context.Context) error {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "validation")
+	ctx = ins_log.SetPackageNameInContext(ctx, "validation")
 
 	var finalMessage string
 	ins_log.Infof(ctx, "PETITION[%v], starting to validate th message length", utfi)
@@ -128,7 +128,7 @@ func (p *ToValidate) ValidateMessageLength(utfi string, ctx context.Context) err
 func (p *ToValidate) ValidateSendAfterAndSendBefore(utfi string, ctx context.Context) WhenSendResult {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = context.WithValue(ctx, constants.PACKAGE_NAME_KEY, "validation")
+	ctx = ins_log.SetPackageNameInContext(ctx, "validation")
 
 	whenSendResult := WhenSendResult{}
 	//validaremos el send after si alguno falta el mensaje se enviara automaticamente al igual que si alguno de los dos no estan en el formato adecuado

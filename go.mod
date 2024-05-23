@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/scch94/Gconfiguration v0.0.0-20240512172409-4528e7ec42f1
-	github.com/scch94/ins_log v0.0.0-20240522161841-4c079f6c044f
+	github.com/scch94/ins_log v0.0.0-20240523020353-9090a3e11ceb
 )
 
 require (

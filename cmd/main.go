@@ -12,13 +12,15 @@ import (
 )
 
 func main() {
+
 	// Creamos el contexto para esta ejecución
 	ctx := context.Background()
+
 	// Obtener la fecha actual
 	today := time.Now().Format("2006-01-02")
 
 	// Construir el nombre del archivo de log
-	logFileName := "logfile_" + today + ".log"
+	logFileName := "micropagosmessagegateway_" + today + ".log"
 	file, err := os.OpenFile(logFileName, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
 		panic(err)
@@ -29,8 +31,6 @@ func main() {
 	multiWriter := io.MultiWriter(os.Stdout, file)
 	ins_log.StartLoggerWithWriter(multiWriter)
 
-	// Agregamos el valor "packageName" al contexto
-	ctx = context.WithValue(ctx, "packageName", "main")
 	// Levantamos la configuración
 	errConfig := config.Upconfig(ctx)
 	if errConfig != nil {
@@ -40,6 +40,10 @@ func main() {
 
 	// Inicializamos el logger
 	ins_log.SetService("micropagosmessagegateway")
+
+	// Agregamos el valor "packageName" al contexto
+	ctx = ins_log.SetPackageNameInContext(ctx, "main")
+
 	ins_log.Infof(ctx, "starting micropagos message gateway version: %+v", version())
 
 	// Iniciamos el servidor
