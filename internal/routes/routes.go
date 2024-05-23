@@ -14,17 +14,14 @@ import (
 
 func SetupRouter(ctx context.Context) *gin.Engine {
 
-	// Agregar el valor "packageName" al contexto
-	ctx = ins_log.SetPackageNameInContext(ctx, "routes")
-
 	// create a new gin router and register the handlers
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.New()
+	router.Use(gin.Recovery())
 
 	// Agregar middlewares global
-	router.Use(middleware.GlobalMiddleware(ctx))
-	router.Use(middleware.Authenticathormidldleware(ctx))
-	router.Use(gin.Recovery())
+	router.Use(middleware.GlobalMiddleware())
+	router.Use(middleware.Authenticathormidldleware())
 
 	h := handler.NewHandler()
 

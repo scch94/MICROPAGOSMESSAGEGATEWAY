@@ -1,24 +1,23 @@
 package middleware
 
 import (
-	"context"
 	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/scch94/ins_log"
 )
 
-func GlobalMiddleware(ctx context.Context) gin.HandlerFunc {
+func GlobalMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		// Generar un UTFI y agregarlo al contexto
-		ctx = ins_log.SetPackageNameInContext(context.Background(), "middleware")
+		ctx := c.Request.Context()
+		ctx = ins_log.SetPackageNameInContext(ctx, "middleware")
 		utfi := ins_log.GenerateUTFI()
 		ctx = ins_log.SetUTFIInContext(ctx, utfi)
 
 		// Copiar el contexto a la solicitud
 		c.Request = c.Request.WithContext(ctx)
 
-		// Aquí puedes realizar cualquier acción que deseas realizar antes de que se maneje la solicitud
 		ins_log.Info(ctx, "New petition received")
 		ins_log.Tracef(ctx, "url: %v, method: %v", c.Request.RequestURI, c.Request.Method)
 		startTime := time.Now() // Registro de inicio de tiempo

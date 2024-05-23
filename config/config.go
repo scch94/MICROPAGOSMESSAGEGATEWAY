@@ -27,6 +27,7 @@ func Upconfig(ctx context.Context) error {
 }
 
 type MicropagosConfiguration struct {
+	LogLevel          string         `json:"log_level"`
 	GetUserDomain     EndpointConfig `json:"getUserDomain"`
 	ServPort          string         `json:"server_port"`
 	GetFilterDatabase EndpointConfig `json:"getFilterDatabase"`
