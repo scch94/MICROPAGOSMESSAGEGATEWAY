@@ -24,6 +24,7 @@ func GlobalMiddleware() gin.HandlerFunc {
 
 		// Pasar la solicitud al siguiente middleware o al controlador final
 		c.Next()
+
 		//logeamos el tiempo final de la peticion
 		elapsedTime := time.Since(startTime)
 		ins_log.Infof(ctx, "Request took %v", elapsedTime)
