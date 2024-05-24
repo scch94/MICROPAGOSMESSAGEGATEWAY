@@ -1,9 +1,9 @@
 package request
 
-type GetUserDomainRequest struct {
+type GetUserRequest struct {
 	UserName string
 }
 
-func NewGetUserDomainRequest(userName string) *GetUserDomainRequest {
-	return &GetUserDomainRequest{UserName: userName}
+func NewGetUserRequest(userName string) *GetUserRequest {
+	return &GetUserRequest{UserName: userName}
 }

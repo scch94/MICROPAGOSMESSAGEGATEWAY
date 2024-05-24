@@ -10,8 +10,6 @@ import (
 	"net/http"
 	"sync"
 
-	//"net/http"
-
 	"github.com/gin-gonic/gin"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/client"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
@@ -22,7 +20,9 @@ import (
 	"github.com/scch94/ins_log"
 )
 
-func (h *Handler) SendMessageService(c *gin.Context) {
+var dominioString string
+
+func (h *Handler) SendMessageHandler(c *gin.Context) {
 
 	//traemos el contexto y le setiamos el contexto actual
 	ctx := c.Request.Context()
@@ -30,7 +30,10 @@ func (h *Handler) SendMessageService(c *gin.Context) {
 
 	//traemos el usuarios desde el contexto no usamos el error por que si llegamos hasta aca el username debe existir
 	username, _ := c.Get("username")
+	dominio, _ := c.Get("dominio")
+
 	usernameString := username.(string)
+	dominioString = dominio.(string)
 	ins_log.Infof(ctx, "starting to sendMessage method to the user %s", username)
 	ins_log.Debug(ctx, "starting to get the xml")
 
@@ -53,6 +56,7 @@ func (h *Handler) SendMessageService(c *gin.Context) {
 
 	//creamos la variable que sera del tipo struct para guardar los datos de la peticion
 	var SendMessageRequest request.SendMessageRequest
+
 	//parceamos el xml y lo guadamos en envelope
 	err = xml.Unmarshal(body, &SendMessageRequest)
 	if err != nil {
@@ -256,7 +260,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 	validationResult.PassedValidation = true
 	validationResult.ValidationMessage = ""
 
-	//3ero validateShortNumber si el shortnumber esta en la peticion no vamos a la base y si no esta vamos a la base !
+	//3ero validateShortNumber si el shortnumber esta en la peticion o usamos el dominio de la confgi!
 	userDomainResult := GetShortNumber(validate, utfi, ctx)
 	if userDomainResult.UserDomainError != nil {
 
@@ -371,6 +375,8 @@ func createdInsertResults(results []helper.Result) []response.Result {
 
 func GetShortNumber(validate *helper.ToValidate, utfi string, ctx context.Context) helper.UserDomainResult {
 
+	//llenamos el herper que sera utilizado para el domainresult
+	userDomainResult := helper.UserDomainResult{}
 	ins_log.Infof(ctx, "PETITION[%v], checking short number", utfi)
 	if validate.ShortNumber != "" {
 
@@ -387,24 +393,19 @@ func GetShortNumber(validate *helper.ToValidate, utfi string, ctx context.Contex
 		//si no usamos el que esta en la cofig
 		ins_log.Tracef(ctx, "PETITION[%v], using short number of the config", utfi)
 
-		//primero tenemos que ir a la base a ver que dominio tiene el usuario
-		userDomainResult := client.CallToGetUserDomain(validate, utfi, ctx)
-		if userDomainResult.UserDomainResult == "" || userDomainResult.UserDomainError != nil {
-			ins_log.Tracef(ctx, "PETITION[%v], have an error when we try to CallToGetUserDomain() ", utfi)
-			userDomainResult.UserDomainError = errors.New("have an error when we try to CallToGetUserDomain()")
-			userDomainResult.UserDomainMessage = "have an error when we try to CallToGetUserDomain()"
-			return userDomainResult
-		}
-
 		//ahora con el dominio vamos a buscar el shortnumberen la config
-		shortNumber := config.Config.SearchShortNumber(userDomainResult.UserDomainResult)
+		shortNumber := config.Config.SearchShortNumber(dominioString)
 		if shortNumber == "" {
-			ins_log.Tracef(ctx, "PETITION[%v], dindt find a short number for the domain %s please check the configuration", userDomainResult.UserDomainResult)
-			userDomainResult.UserDomainError = errors.New("dindt find a short number for the domain " + userDomainResult.UserDomainResult)
+			ins_log.Tracef(ctx, "PETITION[%v], dindt find a short number for the domain %s please check the configuration", dominioString)
+			userDomainResult.UserDomainError = errors.New("dindt find a short number for the domain " + dominioString)
 			userDomainResult.UserDomainMessage = "dindt find a short number for the domain"
 			return userDomainResult
 		}
-
+		userDomainResult = helper.UserDomainResult{
+			UserDomainResult:  "ok",
+			UserDomainError:   nil,
+			UserDomainMessage: "using short number of the config",
+		}
 		validate.ShortNumber = shortNumber
 		return userDomainResult
 	}

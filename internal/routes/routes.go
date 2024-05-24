@@ -21,13 +21,13 @@ func SetupRouter(ctx context.Context) *gin.Engine {
 
 	// Agregar middlewares global
 	router.Use(middleware.GlobalMiddleware())
-	router.Use(middleware.Authenticathormidldleware())
+	router.Use(middleware.AuthMiddleware())
 
 	h := handler.NewHandler()
 
 	//metodos
 	router.GET("/", h.Welcome)
-	router.POST(constants.PATH, h.SendMessageService)
+	router.POST(constants.PATH, h.SendMessageHandler)
 	router.NoRoute(notFoundHandler)
 	return router
 }

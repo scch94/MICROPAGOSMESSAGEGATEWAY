@@ -1,7 +1,5 @@
 package constants
 
-type contextKey string
-
 const (
 	PATH               = "ws/SendMessageService"
 	MESSAGE_REGEX      = "[áéíóúÁÉÍÓÚñÑ]"
@@ -32,7 +30,8 @@ const (
 	ERROR_CHECKING_WHEN_SEND_MESSAGE           = "9"
 	ERROR_IN_SMS_GATEWAY                       = "10"
 	ERROR_INSERTING_MESSAGE_RESULT_IN_DATABASE = "11"
-	ERROR_UNAUTORIES                           = "12"
+	ERROR_UNAUTHORIZED                         = "12"
+	ERROR_INVALID_USERNAME_OR_PASSWORD         = "13"
 	OK                                         = "0"
 
 	//RESULTADOS PARA INSERTAR EN LA BASE DE DATOS
@@ -41,4 +40,9 @@ const (
 	RESULT_FILTERED              = "FILTERED"
 	RESULT_PENDING               = "PENDING"
 	RESULT_SENT                  = "SENT"
+
+	//ERRORES
 )
+
+// SALT PARA CODIFICAR LA PASSWORD
+var SALT = []byte{0x59, 0x7B, 0x17, 0x09, 0x07, 0x0F, 0x12, 0x04}
