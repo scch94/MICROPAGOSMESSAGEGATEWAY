@@ -91,6 +91,7 @@ func calltoTelcoGatewayRequest(req *http.Request, utfi string, ctx context.Conte
 	client := &http.Client{
 		Timeout: time.Duration(config.Config.SMSGateway.Timeout) * time.Millisecond,
 	}
+	defer client.CloseIdleConnections()
 	start := time.Now()
 	resp, err := client.Do(req)
 	if err != nil {

@@ -94,6 +94,8 @@ func callToMicropagosInsertMessageDatabase(req *http.Request, utfi string, ctx c
 	client := &http.Client{
 		Timeout: time.Duration(config.Config.InsertMessage.Timeout) * time.Millisecond,
 	}
+	defer client.CloseIdleConnections()
+
 	start := time.Now()
 	resp, err := client.Do(req)
 	if err != nil {

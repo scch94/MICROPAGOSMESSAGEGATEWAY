@@ -4,6 +4,7 @@ import (
 	"context"
 	"io"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
@@ -16,8 +17,10 @@ func main() {
 	// Creamos el contexto para esta ejecución
 	ctx := context.Background()
 
-	// Obtener la fecha actual
-	today := time.Now().Format("2006-01-02")
+	today := time.Now().Format("2006-01-02 15")
+	// Reemplazar los caracteres no permitidos en el nombre del archivo
+	replacer := strings.NewReplacer(" ", "-")
+	today = replacer.Replace(today)
 
 	// Construir el nombre del archivo de log
 	logFileName := "micropagosmessagegateway_" + today + ".log"

@@ -73,6 +73,8 @@ func callToMicropagosGetUserDatabase(req *http.Request, ctx context.Context) (re
 	client := &http.Client{
 		Timeout: time.Duration(config.Config.GetUserDomain.Timeout) * time.Millisecond,
 	}
+	defer client.CloseIdleConnections()
+
 	start := time.Now()
 	resp, err := client.Do(req)
 	if err != nil {

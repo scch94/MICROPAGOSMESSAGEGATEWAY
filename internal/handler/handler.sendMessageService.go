@@ -51,9 +51,6 @@ func (h *Handler) SendMessageHandler(c *gin.Context) {
 		c.Data(http.StatusBadRequest, "application/xml", []byte(xmlresponse))
 		return
 	}
-	xmlString := string(body)
-	ins_log.Tracef(ctx, "this is the body of the petition %v", xmlString)
-
 	//creamos la variable que sera del tipo struct para guardar los datos de la peticion
 	var SendMessageRequest request.SendMessageRequest
 
@@ -146,6 +143,7 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 			SendAfter:      r.Body.SendMassiveMessages.SendAfter,
 			SendBefore:     r.Body.SendMassiveMessages.SendBefore,
 			Priority:       r.Body.SendMassiveMessages.Priority,
+			ShortNumber:    r.Body.SendMassiveMessages.ShortNumber,
 			Result:         "",
 			StartPetition:  time.Now(),
 		}

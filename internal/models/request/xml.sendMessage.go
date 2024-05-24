@@ -19,27 +19,29 @@ type Body struct {
 }
 
 type SendMassiveMessages struct {
-	MassiveMessage   string             `xml:"massiveMessage,omitempty"`
-	MobileMessageDto []MobileMessageDto `xml:"mobileMessageDto,omitempty"`
-	SendAfter        string             `xml:"sendAfter,omitempty"`
-	SendBefore       string             `xml:"sendBefore,omitempty"`
-	ShortNumber      string             `xml:"shortNumber,omitempty"`
-	UseOriginName    string             `xml:"useOriginName,omitempty"`
-	Priority         string             `xml:"priority,omitempty"`
+	MassiveMessage   string             `xml:"massiveMessage,omitempty"`   // Campo opcional
+	MobileMessageDto []MobileMessageDto `xml:"mobileMessageDto,omitempty"` // Campo opcional
+	SendAfter        string             `xml:"sendAfter,omitempty"`        // Campo opcional
+	SendBefore       string             `xml:"sendBefore,omitempty"`       // Campo opcional
+	ShortNumber      string             `xml:"shortNumber,omitempty"`      // Campo opcional
+	UseOriginName    string             `xml:"useOriginName,omitempty"`    // Campo opcional
+	Priority         string             `xml:"priority,omitempty"`         // Campo opcional
 }
+
 type MobileMessageDto struct {
-	Message string `xml:"message,omitempty"`
-	Mobile  string `xml:"mobile,omitempty"`
+	Message string `xml:"message,omitempty"` // Campo opcional
+	Mobile  string `xml:"mobile,omitempty"`  // Campo opcional
 }
+
 type Send struct {
-	Mobile        string `xml:"mobile,omitempty"`
-	Message       string `xml:"message,omitempty"`
-	UseOriginName string `xml:"useOriginName,omitempty"`
+	Mobile        string `xml:"mobile,omitempty"`        // Campo opcional
+	Message       string `xml:"message,omitempty"`       // Campo opcional
+	UseOriginName string `xml:"useOriginName,omitempty"` // Campo opcional
 }
 
 // Método común para imprimir la estructura de datos
 func (e *SendMessageRequest) DetermineRequestType() (string, error) {
-	if e.Body.SendMassiveMessages.MassiveMessage != "" {
+	if e.Body.SendMassiveMessages.MobileMessageDto != nil {
 		return constants.MASSIVE_MESSAGE, nil
 
 	} else if e.Body.Send.Mobile != "" {

@@ -84,6 +84,7 @@ func callToMicropagosFilterDatabase(req *http.Request, utfi string, ctx context.
 	client := &http.Client{
 		Timeout: time.Duration(config.Config.GetFilterDatabase.Timeout) * time.Second,
 	}
+	defer client.CloseIdleConnections()
 	start := time.Now()
 	resp, err := client.Do(req)
 	if err != nil {

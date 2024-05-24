@@ -87,6 +87,7 @@ func callToPortabilidad(req *http.Request, utfi string, ctx context.Context) (st
 	client := &http.Client{
 		Timeout: time.Duration(config.Config.Portabilidad.Timeout) * time.Millisecond,
 	}
+	defer client.CloseIdleConnections()
 	start := time.Now()
 	resp, err := client.Do(req)
 	if err != nil {
