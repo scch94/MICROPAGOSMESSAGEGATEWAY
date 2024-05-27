@@ -19,7 +19,7 @@ func main() {
 
 	today := time.Now().Format("2006-01-02 15")
 	// Reemplazar los caracteres no permitidos en el nombre del archivo
-	replacer := strings.NewReplacer(" ", "-")
+	replacer := strings.NewReplacer(" ", "_")
 	today = replacer.Replace(today)
 
 	// Construir el nombre del archivo de log

@@ -69,13 +69,10 @@ func callToMicropagosGetUserDatabase(req *http.Request, ctx context.Context) (re
 
 	var UserResponse response.UserResponse
 
-	//creamos el client, generamos el cronometro y realizamos la peticion
-	client := &http.Client{
-		Timeout: time.Duration(config.Config.GetUserDomain.Timeout) * time.Millisecond,
-	}
-	defer client.CloseIdleConnections()
-
+	//traemos el client y le configuramos el timeout , generamos el cronometro y realizamos la peticion
+	client.Timeout = time.Duration(config.Config.GetUserDomain.Timeout) * time.Millisecond
 	start := time.Now()
+
 	resp, err := client.Do(req)
 	if err != nil {
 		ins_log.Errorf(ctx, "Error when we do the petition to micropagos databse: %s", err)

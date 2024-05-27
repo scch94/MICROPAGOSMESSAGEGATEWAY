@@ -122,13 +122,14 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 
 	//creamos la structura que guardara los resultados de cada proceso-> slices
 	ins_log.Info(ctx, "starting to send massive message")
-	var wg sync.WaitGroup
+
 	responseErrors := make(chan helper.Result, len(r.Body.SendMassiveMessages.MobileMessageDto))
+	var wg sync.WaitGroup
 	var i int
 
 	// Ciclo for que recorrera los mensajes a enviar
 	for identifier, p := range r.Body.SendMassiveMessages.MobileMessageDto {
-
+		wg.Add(1)
 		//additional utfi para identiicar los distintos proceso
 		utfi := ins_log.GenerateUTFI()
 		ins_log.Infof(ctx, "this is the identifier of this petition %v", utfi)
@@ -147,9 +148,8 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 			Result:         "",
 			StartPetition:  time.Now(),
 		}
-		wg.Add(1)
 		go func(validate *helper.ToValidate, i int) {
-
+			defer wg.Done()
 			//creamos la structura de guardar el resultado
 			result := helper.Result{}
 			ins_log.Infof(ctx, "PETITION[%v], starting to validate the petition #%v", utfi)
@@ -181,11 +181,14 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 			ins_log.Tracef(ctx, "PETITION[%v] Ended", utfi)
 			responseErrors <- result
 
-			wg.Done()
 		}(&validationStruct, i)
 	}
-	wg.Wait()
-	close(responseErrors) // Cerrar canal de errores una vez completadas las goroutines
+
+	go func() {
+		wg.Wait()
+		close(responseErrors) // Cerrar el canal una vez todas las goroutines han terminado
+	}()
+	// Cerrar canal de errores una vez completadas las goroutines
 
 	ins_log.Infof(ctx, "this is the number of procced message %d", len(r.Body.SendMassiveMessages.MobileMessageDto))
 	return responseErrors

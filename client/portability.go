@@ -83,12 +83,10 @@ func callToPortabilidad(req *http.Request, utfi string, ctx context.Context) (st
 	//creamos la variable que obtendra la respuesta de portabilidad
 	var portabiliadResponse response.PortabilidadResponse
 
-	//creamos el client generamos cronometro y realizamos la peticion
-	client := &http.Client{
-		Timeout: time.Duration(config.Config.Portabilidad.Timeout) * time.Millisecond,
-	}
-	defer client.CloseIdleConnections()
+	//traemos el client y le configuramos el timeout , generamos el cronometro y realizamos la peticion
+	client.Timeout = time.Duration(config.Config.Portabilidad.Timeout) * time.Millisecond
 	start := time.Now()
+
 	resp, err := client.Do(req)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to portabilidad: %s", utfi, err)
