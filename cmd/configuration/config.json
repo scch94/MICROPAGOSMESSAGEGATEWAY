@@ -4,22 +4,22 @@
     "mobil_regex": "^09\\d{7}$",
     "server_port": ":1000",
     "getUserDomain":{
-        "url":"http://localhost:2122/userdomain",
+        "url":"http://192.168.27.41:2122/userdomain",
         "method":"GET",
         "timeout":40000
     },
     "getFilterDatabase":{
-        "url":"http://localhost:2122/filter",
+        "url":"http://192.168.27.41:2122/filter",
         "method":"GET",
         "timeout":40000
     },
     "inserMessage":{
-        "url":"http://localhost:2122/insertMessage",
+        "url":"http://192.168.27.41:2122/insertMessage",
         "method":"POST",
         "timeout":40000
     },
     "smsGateway":{
-        "url":"http://localhost:1111/",
+        "url":"http://192.168.27.41:8090/sendsms",
         "method":"POST",
         "timeout":40000
     },
