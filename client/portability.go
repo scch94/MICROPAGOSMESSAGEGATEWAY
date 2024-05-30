@@ -79,51 +79,56 @@ func prepareRequest(msisdn string, utfi string, ctx context.Context) (*http.Requ
 }
 
 func callToPortabilidad(req *http.Request, utfi string, ctx context.Context) (string, error) {
-
-	//creamos la variable que obtendra la respuesta de portabilidad
 	var portabiliadResponse response.PortabilidadResponse
-
 	start := time.Now()
+	// Loop para realizar hasta 3 intentos
+	for i := 0; i < 3; i++ {
 
-	resp, err := Client.Do(req)
-	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to portabilidad: %s", utfi, err)
-		return "", err
+		resp, err := Client.Do(req)
+		if err != nil {
+			ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to portabilidad: %s", utfi, err)
+			continue // Intenta de nuevo
+		}
+		defer resp.Body.Close()
+		duration := time.Since(start)
+		ins_log.Infof(ctx, "PETITION[%v], Request to PORTABILIDAD took %v", utfi, duration)
+
+		// Confirmamos que la respuesta sea 200
+		if resp.StatusCode != http.StatusOK {
+			err = fmt.Errorf("received non-200 status code: %d", resp.StatusCode)
+			ins_log.Errorf(ctx, "PETITION[%v], error due to non-200 status code: %v", utfi, err)
+			return "", err
+		}
+
+		// Logueamos lo que recibimos
+		responseBody, err := io.ReadAll(resp.Body)
+		if err != nil {
+			ins_log.Errorf(ctx, "PETITION[%v], Error reading response body: %s", utfi, err)
+			return "", err
+		}
+
+		// Imprimir la respuesta recibida
+		statusCode := resp.StatusCode
+		ins_log.Infof(ctx, "PETITION[%v], HTTP Status Response: %d", utfi, statusCode)
+		ins_log.Infof(ctx, "PETITION[%v], RESPONSE BODY: %s", utfi, string(responseBody))
+
+		// Parseamos el resultado con lo que esperamos recibir
+		err = xml.Unmarshal(responseBody, &portabiliadResponse)
+		if err != nil {
+			ins_log.Errorf(ctx, "PETITION[%v], Error decoding the response: %s", utfi, err)
+			return "", err
+		}
+
+		// Verificamos si la respuesta es desconocida
+		if portabiliadResponse.Body.GetTelcoResponse.Return.TelcoName == "UNKNOWN" {
+			ins_log.Errorf(ctx, "PETITION[%v], the number is not vinculated to any telco number", utfi)
+			return "", errors.New("error trying to get telco")
+		}
+
+		// Si todo está bien, retornamos la telco obtenida
+		return portabiliadResponse.Body.GetTelcoResponse.Return.TelcoName, nil
 	}
-	defer resp.Body.Close()
-	duration := time.Since(start)
-	ins_log.Infof(ctx, "PETITION[%v], Request to PORTABILIDAD tooks %v", utfi, duration)
 
-	//confirmamos que la respueta sea 200
-	if resp.StatusCode != http.StatusOK {
-		err = fmt.Errorf("received non-200 status code: %d", resp.StatusCode)
-		ins_log.Errorf(ctx, "PETITION[%v], error due to non-200 status code: %v", utfi, err)
-		return "", err
-	}
-
-	//logueamos lo que recibimos
-	responseBody, err := io.ReadAll(resp.Body)
-	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error reading response body: %s", utfi, err)
-		return "", err
-	}
-
-	// Imprimir la respuesta recibida
-	statusCode := resp.StatusCode
-	ins_log.Infof(ctx, "PETITION[%v], HTTP Status Response: %d", utfi, statusCode)
-	ins_log.Infof(ctx, "PETITION[%v], RESPONSE BODY: %s", utfi, string(responseBody))
-
-	//parceamos el resultado con lo que esperamos recibir
-	err = xml.Unmarshal(responseBody, &portabiliadResponse)
-	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error decoding the response: %s", utfi, err)
-		return "", err
-	}
-
-	// check if the responses is unkown
-	if portabiliadResponse.Body.GetTelcoResponse.Return.TelcoName == "UNKNOWN" {
-		ins_log.Errorf(ctx, "PETITION[%v], the number is not vinculated to any telco number", utfi)
-		return "", errors.New("error trying to get telco")
-	}
-	return portabiliadResponse.Body.GetTelcoResponse.Return.TelcoName, err
+	// Si se agotan los intentos y no se obtiene una respuesta exitosa, retornamos un error
+	return "", errors.New("all retry attempts failed")
 }
