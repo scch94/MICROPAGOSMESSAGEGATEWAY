@@ -89,7 +89,7 @@ func calltoTelcoGatewayRequest(req *http.Request, utfi string, ctx context.Conte
 
 	start := time.Now()
 
-	resp, err := client.Do(req)
+	resp, err := Client.Do(req)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to smsgateway: %s", utfi, err)
 		return smsGatewayResponse, err

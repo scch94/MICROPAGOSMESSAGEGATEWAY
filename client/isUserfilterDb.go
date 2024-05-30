@@ -82,7 +82,7 @@ func callToMicropagosFilterDatabase(req *http.Request, utfi string, ctx context.
 
 	start := time.Now()
 
-	resp, err := client.Do(req)
+	resp, err := Client.Do(req)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to micropagos databse: %s", utfi, err)
 		return filterMessageResponse, err

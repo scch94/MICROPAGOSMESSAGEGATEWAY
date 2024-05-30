@@ -5,18 +5,25 @@ import (
 	"time"
 )
 
-var transport = &http.Transport{
+var Client http.Client
 
-	MaxIdleConns:          100,
-	MaxIdleConnsPerHost:   100,
-	MaxConnsPerHost:       100,
-	IdleConnTimeout:       90 * time.Second, // Aumentar tiempo de espera para conexiones inactivas
-	TLSHandshakeTimeout:   10 * time.Second,
-	ResponseHeaderTimeout: 30 * time.Second, // Tiempo de espera para los encabezados de respuesta
-	DisableKeepAlives:     false,            // Temporalmente deshabilitado
-}
-
-var client = &http.Client{
-	Transport: transport,
-	Timeout:   30 * time.Second, // Tiempo de espera general para las solicitudes
+func InitHttpClient() {
+	// TODO: Pasar a una config
+	maxIdleConns := 10
+	maxConnsPerHost := 100
+	maxIdleConnsPerHost := 10
+	idleConnTimeoutSeconds := 30
+	disableCompression := true
+	requestTimeout := 30
+	tr := &http.Transport{
+		MaxIdleConns:        maxIdleConns,
+		MaxConnsPerHost:     maxConnsPerHost,
+		MaxIdleConnsPerHost: maxIdleConnsPerHost,
+		IdleConnTimeout:     time.Duration(idleConnTimeoutSeconds) * time.Second,
+		DisableCompression:  disableCompression,
+	}
+	Client = http.Client{
+		Transport: tr,
+		Timeout:   time.Duration(requestTimeout) * time.Second,
+	}
 }

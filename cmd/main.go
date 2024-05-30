@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/client"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/server"
 	"github.com/scch94/ins_log"
@@ -49,6 +50,9 @@ func main() {
 	ctx = ins_log.SetPackageNameInContext(ctx, "main")
 
 	ins_log.Infof(ctx, "starting micropagos message gateway version: %+v", version())
+
+	//inicamos el client
+	client.InitHttpClient()
 
 	// Iniciamos el servidor
 	err = server.StartServer(ctx)

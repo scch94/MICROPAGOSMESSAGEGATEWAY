@@ -71,7 +71,7 @@ func callToMicropagosGetUserDatabase(req *http.Request, ctx context.Context) (re
 
 	start := time.Now()
 
-	resp, err := client.Do(req)
+	resp, err := Client.Do(req)
 	if err != nil {
 		ins_log.Errorf(ctx, "Error when we do the petition to micropagos databse: %s", err)
 		return UserResponse, err
