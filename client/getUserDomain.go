@@ -69,8 +69,6 @@ func callToMicropagosGetUserDatabase(req *http.Request, ctx context.Context) (re
 
 	var UserResponse response.UserResponse
 
-	//traemos el client y le configuramos el timeout , generamos el cronometro y realizamos la peticion
-	client.Timeout = time.Duration(config.Config.GetUserDomain.Timeout) * time.Millisecond
 	start := time.Now()
 
 	resp, err := client.Do(req)

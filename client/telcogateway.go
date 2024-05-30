@@ -87,8 +87,6 @@ func calltoTelcoGatewayRequest(req *http.Request, utfi string, ctx context.Conte
 	//creamos la variable que obtendra la respuesta de portabilidad
 	var smsGatewayResponse response.SmsGatewayResponse
 
-	//traemos el client y le configuramos el timeout , generamos el cronometro y realizamos la peticion
-	client.Timeout = time.Duration(config.Config.SMSGateway.Timeout) * time.Millisecond
 	start := time.Now()
 
 	resp, err := client.Do(req)
@@ -124,6 +122,13 @@ func calltoTelcoGatewayRequest(req *http.Request, utfi string, ctx context.Conte
 	err = json.Unmarshal(responseBody, &smsGatewayResponse)
 	if err != nil {
 		ins_log.Errorf(ctx, "PETITION[%v], Error decoding the response: %s", utfi, err)
+		return smsGatewayResponse, err
+	}
+
+	//miramos si la respuesta es distinta de 0
+	if smsGatewayResponse.Status != "0" {
+		ins_log.Errorf(ctx, "PETITION[%v], Error in the response of the telcogateway response: %s", utfi, smsGatewayResponse.Description)
+		err = fmt.Errorf("error in telcogateway response: %s", smsGatewayResponse.Description)
 		return smsGatewayResponse, err
 	}
 

@@ -80,8 +80,6 @@ func callToMicropagosFilterDatabase(req *http.Request, utfi string, ctx context.
 
 	var filterMessageResponse response.FilterResponse
 
-	//traemos el client y le configuramos el timeout , generamos el cronometro y realizamos la peticion
-	client.Timeout = time.Duration(config.Config.GetFilterDatabase.Timeout) * time.Millisecond
 	start := time.Now()
 
 	resp, err := client.Do(req)
