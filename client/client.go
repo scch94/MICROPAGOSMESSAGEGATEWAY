@@ -16,6 +16,7 @@ func InitHttpClient() {
 		MaxIdleConnsPerHost: config.Config.Client.MaxConnsPerHost,
 		IdleConnTimeout:     time.Duration(config.Config.Client.IdleConnTimeoutSeconds) * time.Second,
 		DisableCompression:  config.Config.Client.DisableCompression,
+		DisableKeepAlives:   config.Config.Client.DisableKeepAlives,
 	}
 	Client = http.Client{
 		Transport: tr,

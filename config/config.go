@@ -49,6 +49,7 @@ type Client struct {
 	IdleConnTimeoutSeconds int  `json:"idleConnTimeoutSeconds"`
 	DisableCompression     bool `json:"disableCompression"`
 	PetitionsTimeOut       int  `json:"petitionsTimeOut"`
+	DisableKeepAlives      bool `json:"disableKeepAlives"`
 }
 
 type EndpointConfig struct {

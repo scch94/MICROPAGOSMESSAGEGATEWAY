@@ -6,26 +6,27 @@
         "maxIdleConnsPerHost":10,
         "idleConnTimeoutSeconds" : 30,
         "disableCompression":true,
-        "petitionsTimeOut":40000
+        "petitionsTimeOut":40000,
+        "disableKeepAlives":true
     },
     "getMask":{
-        "url":"http://localhost:2122/masks",
+        "url":"http://192.168.27.41:2122/masks",
         "method":"GET"
     },
     "getUserDomain":{
-        "url":"http://localhost:2122/userdomain",
+        "url":"http://192.168.27.41:2122/userdomain",
         "method":"GET"
     },
     "getFilterDatabase":{
-        "url":"http://localhost:2122/filter",
+        "url":"http://192.168.27.41:2122/filter",
         "method":"GET"
     },
     "inserMessage":{
-        "url":"http://localhost:2122/insertMessage",
+        "url":"http://192.168.27.41:2122/insertMessage",
         "method":"POST"
     },
     "smsGateway":{
-        "url":"http://localhost:3111",
+        "url":"http://192.168.27.41:3111",
         "method":"POST"
     },
     "portabilidad":{
@@ -89,5 +90,5 @@
     "max_message_length": 500,
     "mobil_regex": "^09\\d{7}$",
     "server_port": ":1000",
-    "update_mask_time_in_minutes":1
+    "update_mask_time_in_minutes":60
 }
