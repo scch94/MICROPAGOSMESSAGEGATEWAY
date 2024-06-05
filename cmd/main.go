@@ -4,6 +4,7 @@ import (
 	"context"
 	"io"
 	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/go-co-op/gocron"
@@ -19,11 +20,14 @@ func main() {
 	// Creamos el contexto para esta ejecución
 	ctx := context.Background()
 
-	logFileName := initializeLogger()
+	logFileName, err := initializeLogger()
+	if err != nil {
+		panic(err)
+	}
 	defer logFileName.Close()
 
 	// Load configuration
-	if err := config.Upconfig(ctx); err != nil {
+	if err = config.Upconfig(ctx); err != nil {
 		ins_log.Errorf(ctx, "error loading configuration: %v", err)
 		return
 	}
@@ -46,16 +50,29 @@ func main() {
 	// Keep the program running
 	select {}
 }
-func initializeLogger() *os.File {
+func initializeLogger() (*os.File, error) {
+
+	logDir := "../log"
+
+	// Create the log directory if it doesn't exist
+	if err := os.MkdirAll(logDir, 0755); err != nil {
+		return nil, err
+	}
+
+	//Definimos el nombre del archivo
 	today := time.Now().Format("2006-01-02_15")
-	logFileName := logFileName + today + ".log"
+	logFileName := filepath.Join(logDir, logFileName+today+".log")
+
+	//abrimos el archivo del log
 	file, err := os.OpenFile(logFileName, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
+
+	//configuramos para abrir el log file y la consola
 	multiWriter := io.MultiWriter(os.Stdout, file)
 	ins_log.StartLoggerWithWriter(multiWriter)
-	return file
+	return file, nil
 }
 
 func getVersion() string {

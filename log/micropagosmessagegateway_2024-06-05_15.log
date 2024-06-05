@@ -1,0 +1,36 @@
+[2024-06-05 15:16:10.790] [not_specified] [config] [info] [] starting to get the config struct 
+[2024-06-05 15:16:10.790] [Gconfiguration] [] [info] [] starting gconfiguration Versión:%!(EXTRA string=1.0.0)
+[2024-06-05 15:16:10.790] [Gconfiguration] [] [info] [] ubication of the configurationfile C:\golang\proyectos\micropagosmessagateway\cmd\configuration\config.json
+[2024-06-05 15:16:10.796] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-05 15:16:10.796] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"log_level":"trace","client":{"maxIdleConns":10,"maxConnsPerHost":100,"maxIdleConnsPerHost":10,"idleConnTimeoutSeconds":30,"disableCompression":true,"petitionsTimeOut":40000},"getMask":{"url":"http://localhost:2122/masks","method":"GET","timeout":0},"getUserDomain":{"url":"http://localhost:2122/userdomain","method":"GET","timeout":0},"server_port":":1000","getFilterDatabase":{"url":"http://localhost:2122/filter","method":"GET","timeout":0},"inserMessage":{"url":"http://localhost:2122/insertMessage","method":"POST","timeout":0},"smsGateway":{"url":"http://localhost:3111","method":"POST","timeout":0},"portabilidad":{"url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/","method":"POST","timeout":0,"portabilidad_user":"inswitch","portabilidad_password":"1234"},"max_message_length":500,"mobil_regex":"^09\\d{7}$","raven":[{"name":"testing","sendMail":false,"shortNumber":88277},{"name":"pronto","sendMail":false,"shortNumber":17800},{"name":"oca","sendMail":false,"shortNumber":1730},{"name":"creditel","sendMail":false,"shortNumber":4242},{"name":"itau","sendMail":false,"shortNumber":1784},{"name":"facilcel","sendMail":false,"shortNumber":3031},{"name":"santander","sendMail":false,"shortNumber":1320},{"name":"creditosDirectos","sendMail":false,"shortNumber":18919},{"name":"firstdata","sendMail":false,"shortNumber":2992},{"name":"Micropagos","sendMail":false,"shortNumber":88277}],"update_mask_time_in_minutes":1}
+[2024-06-05 15:16:10.797] [micropagosmessagegateway] [main] [info] [] starting micropagos message gateway version: 1.0.0
+[2024-06-05 15:16:10.797] [micropagosmessagegateway] [server] [info] [] Starting server on address: :1000
+[2024-06-05 15:16:11.087] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:17:11.042] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:18:11.124] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:19:11.056] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:20:11.122] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:21:11.060] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:22:11.108] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:23:11.049] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:24:11.059] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:25:11.059] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:26:11.118] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:27:11.051] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:28:11.061] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:29:11.058] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:30:11.051] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:31:11.047] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:32:11.066] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:33:11.070] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:34:11.051] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:35:11.074] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:36:21.489] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-05 15:39:31.438] [not_specified] [config] [info] [] starting to get the config struct 
+[2024-06-05 15:39:31.439] [Gconfiguration] [] [info] [] starting gconfiguration Versión: 1.0.0
+[2024-06-05 15:39:31.439] [Gconfiguration] [] [info] [] Location of the configuration file: ..\config\config.json
+[2024-06-05 15:39:31.444] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-05 15:39:31.444] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"log_level":"trace","client":{"maxIdleConns":10,"maxConnsPerHost":100,"maxIdleConnsPerHost":10,"idleConnTimeoutSeconds":30,"disableCompression":true,"petitionsTimeOut":40000},"getMask":{"url":"http://localhost:2122/masks","method":"GET","timeout":0},"getUserDomain":{"url":"http://localhost:2122/userdomain","method":"GET","timeout":0},"server_port":":1000","getFilterDatabase":{"url":"http://localhost:2122/filter","method":"GET","timeout":0},"inserMessage":{"url":"http://localhost:2122/insertMessage","method":"POST","timeout":0},"smsGateway":{"url":"http://localhost:3111","method":"POST","timeout":0},"portabilidad":{"url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/","method":"POST","timeout":0,"portabilidad_user":"inswitch","portabilidad_password":"1234"},"max_message_length":500,"mobil_regex":"^09\\d{7}$","raven":[{"name":"testing","sendMail":false,"shortNumber":88277},{"name":"pronto","sendMail":false,"shortNumber":17800},{"name":"oca","sendMail":false,"shortNumber":1730},{"name":"creditel","sendMail":false,"shortNumber":4242},{"name":"itau","sendMail":false,"shortNumber":1784},{"name":"facilcel","sendMail":false,"shortNumber":3031},{"name":"santander","sendMail":false,"shortNumber":1320},{"name":"creditosDirectos","sendMail":false,"shortNumber":18919},{"name":"firstdata","sendMail":false,"shortNumber":2992},{"name":"Micropagos","sendMail":false,"shortNumber":88277}],"update_mask_time_in_minutes":1}
+[2024-06-05 15:39:31.445] [micropagosmessagegateway] [main] [info] [] starting micropagos message gateway version: 1.0.0
+[2024-06-05 15:39:31.445] [micropagosmessagegateway] [server] [info] [] Starting server on address: :1000
+[2024-06-05 15:39:31.730] [micropagosmessagegateway] [main] [trace] [] mask was updated

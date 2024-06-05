@@ -1,0 +1,93 @@
+{
+    "log_level":"trace",
+    "client":{
+        "maxIdleConns":10,
+        "maxConnsPerHost":100,
+        "maxIdleConnsPerHost":10,
+        "idleConnTimeoutSeconds" : 30,
+        "disableCompression":true,
+        "petitionsTimeOut":40000
+    },
+    "getMask":{
+        "url":"http://localhost:2122/masks",
+        "method":"GET"
+    },
+    "getUserDomain":{
+        "url":"http://localhost:2122/userdomain",
+        "method":"GET"
+    },
+    "getFilterDatabase":{
+        "url":"http://localhost:2122/filter",
+        "method":"GET"
+    },
+    "inserMessage":{
+        "url":"http://localhost:2122/insertMessage",
+        "method":"POST"
+    },
+    "smsGateway":{
+        "url":"http://localhost:3111",
+        "method":"POST"
+    },
+    "portabilidad":{
+        "url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/",
+        "method":"POST",
+        "portabilidad_user": "inswitch",
+        "portabilidad_password": "1234"
+    },
+    "raven": [
+        {
+            "name": "testing",
+            "sendMail": false,
+            "shortNumber": 88277
+        },
+        {
+            "name": "pronto",
+            "sendMail": false,
+            "shortNumber": 17800
+        },
+        {
+            "name": "oca",
+            "sendMail": false,
+            "shortNumber": 1730
+        },
+        {
+            "name": "creditel",
+            "sendMail": false,
+            "shortNumber": 4242
+        },
+        {
+            "name": "itau",
+            "sendMail": false,
+            "shortNumber": 1784
+        },
+        {
+            "name": "facilcel",
+            "sendMail": false,
+            "shortNumber": 3031
+        },
+        {
+            "name": "santander",
+            "sendMail": false,
+            "shortNumber": 1320
+        },
+        {
+            "name": "creditosDirectos",
+            "sendMail": false,
+            "shortNumber": 18919
+        },
+        {
+            "name": "firstdata",
+            "sendMail": false,
+            "shortNumber": 2992
+        },
+        {
+            "name": "Micropagos",
+            "sendMail": false,
+            "shortNumber": 88277
+        }
+    ],  
+    "max_message_length": 500,
+    "mobil_regex": "^09\\d{7}$",
+    "server_port": ":1000",
+    "update_mask_time_in_minutes":1
+}

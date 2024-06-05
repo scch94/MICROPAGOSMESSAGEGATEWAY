@@ -18,7 +18,8 @@ func Upconfig(ctx context.Context) error {
 	ctx = ins_log.SetPackageNameInContext(ctx, "config")
 
 	ins_log.Info(ctx, "starting to get the config struct ")
-	err := Gconfiguration.GetConfig(&Config)
+	err := Gconfiguration.GetConfig(&Config, "../config")
+
 	if err != nil {
 		ins_log.Fatalf(ctx, "error in Gconfiguration.GetConfig() ", err)
 		return err
