@@ -27,16 +27,27 @@ func Upconfig(ctx context.Context) error {
 }
 
 type MicropagosConfiguration struct {
-	LogLevel          string         `json:"log_level"`
-	GetUserDomain     EndpointConfig `json:"getUserDomain"`
-	ServPort          string         `json:"server_port"`
-	GetFilterDatabase EndpointConfig `json:"getFilterDatabase"`
-	InsertMessage     EndpointConfig `json:"inserMessage"`
-	SMSGateway        EndpointConfig `json:"smsGateway"`
-	Portabilidad      EndpointConfig `json:"portabilidad"`
-	MaxMessageLength  int            `json:"max_message_length"`
-	MobileRegex       string         `json:"mobil_regex"`
-	Raven             []RavenService `json:"raven"`
+	LogLevel                string         `json:"log_level"`
+	Client                  Client         `json:"client"`
+	GetMask                 EndpointConfig `json:"getMask"`
+	GetUserDomain           EndpointConfig `json:"getUserDomain"`
+	ServPort                string         `json:"server_port"`
+	GetFilterDatabase       EndpointConfig `json:"getFilterDatabase"`
+	InsertMessage           EndpointConfig `json:"inserMessage"`
+	SMSGateway              EndpointConfig `json:"smsGateway"`
+	Portabilidad            EndpointConfig `json:"portabilidad"`
+	MaxMessageLength        int            `json:"max_message_length"`
+	MobileRegex             string         `json:"mobil_regex"`
+	Raven                   []RavenService `json:"raven"`
+	UpdateMaskTimeInMinutes int            `json:"update_mask_time_in_minutes"`
+}
+type Client struct {
+	MaxIdleConns           int  `json:"maxIdleConns"`
+	MaxConnsPerHost        int  `json:"maxConnsPerHost"`
+	MaxIdleConnsPerHost    int  `json:"maxIdleConnsPerHost"`
+	IdleConnTimeoutSeconds int  `json:"idleConnTimeoutSeconds"`
+	DisableCompression     bool `json:"disableCompression"`
+	PetitionsTimeOut       int  `json:"petitionsTimeOut"`
 }
 
 type EndpointConfig struct {

@@ -1,7 +1,6 @@
 package request
 
 import (
-	"encoding/hex"
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
@@ -10,7 +9,7 @@ import (
 
 type InsertMessageRequest struct {
 	Id                            *uint64    `json:"id,omitempty"`
-	Type                          *string    `json:"type,omitempty"` // Nombre del campo en MySQL
+	Type                          *string    `json:"type,omitempty"`
 	Content                       *string    `json:"content,omitempty"`
 	MobileNumber                  *string    `json:"mobile_number,omitempty"`
 	MobileCountryISOCode          *string    `json:"mobile_country_iso_code,omitempty"`
@@ -44,28 +43,22 @@ type InsertMessageRequest struct {
 	OriginName                    *string    `json:"origin_name,omitempty"`
 }
 
-func hexaToString(hexa string) string {
-	decodedString, err := hex.DecodeString(hexa)
-	if err != nil {
-		return hexa
-	}
-	// Convertir la cadena decodificada en una cadena normal
-	normalString := string(decodedString)
-	return normalString
-}
-
 func NewInsertMessageRequest(validationStruct *helper.ToValidate, utfi string) *InsertMessageRequest {
 	// Crear la estructura InsertMessageRequest
+
+	content := helper.GetMask(validationStruct.ShortNumber, validationStruct.InsertMessage)
 	var mobileNumber string
+	//var content string
 	if validationStruct.Result == constants.RESULT_SENT {
 		mobileNumber = validationStruct.Mobile[len(validationStruct.Mobile)-8:]
 	} else {
 		mobileNumber = validationStruct.Mobile
 	}
+
 	insertMessageRequest := &InsertMessageRequest{
 		Created:                timePtr(validationStruct.StartPetition),
 		Type:                   stringPtr(constants.INSERT_TYPE),
-		Content:                stringPtr(hexaToString(validationStruct.Message)),
+		Content:                stringPtr(content),
 		MobileNumber:           stringPtr(mobileNumber),
 		MobileCountryISOCode:   stringPtr(constants.INSERT_MOBILEC_OUNTRY_ISO_CODE),
 		ShortNumber:            stringPtr(validationStruct.ShortNumber),

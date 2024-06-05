@@ -132,7 +132,7 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 		wg.Add(1)
 		//additional utfi para identiicar los distintos proceso
 		utfi := ins_log.GenerateUTFI()
-		ins_log.Infof(ctx, "this is the identifier of this petition %v", utfi)
+		ins_log.Infof(ctx, "this is the individual identifiar of this petition %v", utfi)
 		i = identifier
 		// Creamos el helper de validación
 		validationStruct := helper.ToValidate{
@@ -152,17 +152,17 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 			defer wg.Done()
 			//creamos la structura de guardar el resultado
 			result := helper.Result{}
-			ins_log.Infof(ctx, "PETITION[%v], starting to validate the petition #%v", utfi)
+			ins_log.Debugf(ctx, "[%v], starting to validate the petition ", utfi)
 
 			// Validamos el mensaje
 			validationResult := sendSingleMessage(&validationStruct, utfi, ctx)
-			ins_log.Tracef(ctx, "PETITION[%v], this is the data of the validation result %+v", utfi, validationResult)
+			ins_log.Tracef(ctx, "[%v], this is the data of the validation result %+v", utfi, validationResult)
 			module, err := validationResult.SearchValidationResultError()
 			if err != nil {
-				ins_log.Debugf(ctx, "PETITION[%v], error when we try to send the message time to insert the message into the database err: %v", utfi, err)
+				ins_log.Debugf(ctx, "[%v], error when we try to send the message time to insert the message into the database err: %v", utfi, err)
 
 			} else {
-				ins_log.Tracef(ctx, "PETITION[%v], No error time to insert the message into the database ", utfi)
+				ins_log.Tracef(ctx, "[%v], No error time to insert the message into the database ", utfi)
 			}
 
 			//llenamos el result con el valor que insetaremos en la base de datos en el status
@@ -171,14 +171,14 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 			//ahora vamos a insertar el mensaje a la base de datos !
 			insertResult := client.CallToInsertMessageDB(&validationStruct, utfi, ctx)
 			if insertResult.Id == "" {
-				ins_log.Errorf(ctx, "PETITION[%v], error calling database err: %v", utfi, err)
+				ins_log.Errorf(ctx, "[%v], error calling database err: %v", utfi, err)
 			} else {
-				ins_log.Tracef(ctx, "PETITION[%v], transaction with id %v inserted correctly!", utfi, insertResult.Id)
+				ins_log.Tracef(ctx, "[%v], transaction with id %v inserted correctly!", utfi, insertResult.Id)
 			}
 			result.ValidationResult = validationResult
 			result.InsertResult = insertResult
 
-			ins_log.Tracef(ctx, "PETITION[%v] Ended", utfi)
+			ins_log.Tracef(ctx, "[%v] Ended", utfi)
 			responseErrors <- result
 
 		}(&validationStruct, i)
@@ -190,7 +190,7 @@ func sendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 	}()
 	// Cerrar canal de errores una vez completadas las goroutines
 
-	ins_log.Infof(ctx, "this is the number of procced message %d", len(r.Body.SendMassiveMessages.MobileMessageDto))
+	ins_log.Tracef(ctx, "this is the number of procced message %d", len(r.Body.SendMassiveMessages.MobileMessageDto))
 	return responseErrors
 }
 
@@ -208,13 +208,13 @@ func sendMethod(r *request.SendMessageRequest, username string, ctx context.Cont
 
 	// Validamos el mensaje
 	validationResult := sendSingleMessage(validationStruct, utfi, ctx)
-	ins_log.Tracef(ctx, "PETITION[%v], this is the data of the validation result %+v", utfi, validationResult)
+	ins_log.Tracef(ctx, "[%v], this is the data of the validation result %+v", utfi, validationResult)
 	status, err := validationResult.SearchValidationResultError()
 	if err != nil {
-		ins_log.Debugf(ctx, "PETITION[%v], error when we try to procees the message time to insert the message into the database with err: %v", utfi, err)
+		ins_log.Debugf(ctx, "[%v], error when we try to procees the message time to insert the message into the database with err: %v", utfi, err)
 
 	} else {
-		ins_log.Tracef(ctx, "PETITION[%v], No error time to insert the message into the database", utfi)
+		ins_log.Tracef(ctx, "[%v], No error time to insert the message into the database", utfi)
 	}
 
 	//llenamos el result con el valor que insetaremos en la base de datos en el status
@@ -223,13 +223,13 @@ func sendMethod(r *request.SendMessageRequest, username string, ctx context.Cont
 	//ahora vamos a insertar el mensaje a la base de datos !
 	insertResult := client.CallToInsertMessageDB(validationStruct, utfi, ctx)
 	if insertResult.Id == "" {
-		ins_log.Errorf(ctx, "PETITION[%v], error calling database err: %v", utfi, err)
+		ins_log.Errorf(ctx, "[%v], error calling database err: %v", utfi, err)
 	} else {
-		ins_log.Tracef(ctx, "PETITION[%v], transaction with id %v inserted correctly!", utfi, insertResult.Id)
+		ins_log.Tracef(ctx, "[%v], transaction with id %v inserted correctly!", utfi, insertResult.Id)
 	}
 	result.ValidationResult = validationResult
 	result.InsertResult = insertResult
-	ins_log.Tracef(ctx, "PETITION[%v] Ended", utfi)
+	ins_log.Tracef(ctx, "[%v] Ended", utfi)
 	return result
 }
 func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Context) helper.ValidationResult {
@@ -237,27 +237,27 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 	//creamos la struct devalidacion
 	validationResult := helper.ValidationResult{}
 
-	ins_log.Debugf(ctx, "PETITION[%v] this is the data that we are going to validate : %s", utfi, validate.ToString())
+	ins_log.Debugf(ctx, "[%v] this is the data that we are going to validate : %s", utfi, validate.ToString())
 
 	//1era validacion mobileregex
 	err := validate.ValidateMobileRegex(utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error in the function validateMobileRegex()", utfi)
+		ins_log.Errorf(ctx, "[%v], error in the function validateMobileRegex()", utfi)
 		validationResult.PassedValidation = false
 		validationResult.ValidationMessage = err.Error()
 		return validationResult
 	}
-	ins_log.Debugf(ctx, "PETITION[%v], the mobile number pass the regex expression and the formatted number is %v", utfi, validate.Mobile)
+	ins_log.Debugf(ctx, "[%v], the mobile number pass the regex expression and the formatted number is %v", utfi, validate.Mobile)
 
 	//2do validamos el largo del mensaje y vemos si usa el massive message o si tiene un mensaje definido
 	err = validate.ValidateMessageLength(utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error in ValidateMessageLengt(): ", utfi)
+		ins_log.Errorf(ctx, "[%v], error in ValidateMessageLengt(): ", utfi)
 		validationResult.PassedValidation = false
 		validationResult.ValidationMessage = err.Error()
 		return validationResult
 	}
-	ins_log.Debugf(ctx, "PETITION[%v], the message pass the validateMessageLength this is the final message: %v", utfi, validate.Message)
+	ins_log.Debugf(ctx, "[%v], the message pass the validateMessageLength this is the final message: %v", utfi, validate.Message)
 	validationResult.PassedValidation = true
 	validationResult.ValidationMessage = ""
 
@@ -265,30 +265,30 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 	userDomainResult := GetShortNumber(validate, utfi, ctx)
 	if userDomainResult.UserDomainError != nil {
 
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to getshortnumber(): ", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to getshortnumber(): ", utfi)
 		validationResult.UserDomainResult = userDomainResult
 		return validationResult
 	}
 	validationResult.UserDomainResult = userDomainResult
-	ins_log.Infof(ctx, "PETITION[%v] this is the originNumber %v", utfi, validate.ShortNumber)
+	ins_log.Infof(ctx, "[%v] this is the originNumber %v", utfi, validate.ShortNumber)
 
 	//4to Obtenemos el telcoName llamando a portabilidad, internamente llamara tambien a
 	portabilidadResult := client.CallPortabilidad(validate, utfi, ctx)
 	if !portabilidadResult.PassedPortabilidad {
-		ins_log.Errorf(ctx, "PETITION[%v], error in callportabilidad()", utfi)
+		ins_log.Errorf(ctx, "[%v], error in callportabilidad()", utfi)
 		validationResult.PortabilidadResult = portabilidadResult
 
 		return validationResult
 	}
 	validationResult.PortabilidadResult = portabilidadResult
-	ins_log.Infof(ctx, "PETITION[%v], TELCONAME: %s", utfi, validate.Telco)
+	ins_log.Infof(ctx, "[%v], TELCONAME: %s", utfi, validate.Telco)
 
 	//5TO FILTERED VEMOS SI EL ORIGIN Y DESTINO ESTAN FILTRADOS!
-	ins_log.Tracef(ctx, "PETITION[%v], starting to validate if the the origin number and destiny are filters", utfi)
+	ins_log.Tracef(ctx, "[%v], starting to validate if the the origin number and destiny are filters", utfi)
 	filterResult := client.CallToFiltersDB(validate, utfi, ctx)
 	validationResult.FilterResult = filterResult
 	if filterResult.Error != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error in callFilterdb():", utfi)
+		ins_log.Errorf(ctx, "[%v], error in callFilterdb():", utfi)
 		telcoGatewayResullt := helper.SmsgatewayResult{
 			PassedSmsgateway:      true,
 			SmsgatewayResult:      "0",
@@ -298,7 +298,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 		return validationResult
 	}
 	if filterResult.IsFilter {
-		ins_log.Tracef(ctx, "PETITION[%v], the origin number and the destinity are filters and the reason is: %v", utfi, filterResult.FilterMessage)
+		ins_log.Tracef(ctx, "[%v], the origin number and the destinity are filters and the reason is: %v", utfi, filterResult.FilterMessage)
 		telcoGatewayResullt := helper.SmsgatewayResult{
 			PassedSmsgateway:      true,
 			SmsgatewayResult:      "0",
@@ -309,7 +309,7 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 	}
 
 	//6to sendafter and sendbefore esta no devuelve error si encuentra algun problema los valores de sendafter o senfbefore estaran vacios
-	ins_log.Tracef(ctx, "PETITION[%v], starting to check send after and send before data", utfi)
+	ins_log.Tracef(ctx, "[%v], starting to check send after and send before data", utfi)
 	whenSendResult := validate.ValidateSendAfterAndSendBefore(utfi, ctx)
 	if validate.SendAfter != "" || validate.SendBefore != "" {
 		telcoGatewayResullt := helper.SmsgatewayResult{
@@ -326,14 +326,14 @@ func sendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 	//6to llamamos al gateway de envio de mensajes
 	telcoGatewayResullt := client.CallTelcoGateway(validate, utfi, ctx)
 	if telcoGatewayResullt.SmsgatewayResult != "0" {
-		ins_log.Errorf(ctx, "PETITION[%v], error in CallTelcoGateway()", utfi)
+		ins_log.Errorf(ctx, "[%v], error in CallTelcoGateway()", utfi)
 		validationResult.SmsgatewayResult = telcoGatewayResullt
 		return validationResult
 	}
 
 	//guardamos la hora en la que enviamos el mensaje !
 	validate.SendMessageTime = time.Now()
-	ins_log.Infof(ctx, "PETITION[%v], TelcoGatewayResponse: %s", utfi, telcoGatewayResullt.SmsgatewayResult)
+	ins_log.Infof(ctx, "[%v], TelcoGatewayResponse: %s", utfi, telcoGatewayResullt.SmsgatewayResult)
 
 	//llenamos el validattionresult con los datos de smsgatewayresult t
 	validationResult.SmsgatewayResult = telcoGatewayResullt
@@ -378,11 +378,11 @@ func GetShortNumber(validate *helper.ToValidate, utfi string, ctx context.Contex
 
 	//llenamos el herper que sera utilizado para el domainresult
 	userDomainResult := helper.UserDomainResult{}
-	ins_log.Infof(ctx, "PETITION[%v], checking short number", utfi)
+	ins_log.Infof(ctx, "[%v], checking short number", utfi)
 	if validate.ShortNumber != "" {
 
 		//si el shortnumber viene en la peticion usamos ese shortnumber
-		ins_log.Tracef(ctx, "PETITION[%v], using short number of the petition", utfi)
+		ins_log.Tracef(ctx, "[%v], using short number of the petition", utfi)
 		return helper.UserDomainResult{
 			UserDomainResult:  "ok",
 			UserDomainError:   nil,
@@ -392,12 +392,12 @@ func GetShortNumber(validate *helper.ToValidate, utfi string, ctx context.Contex
 	} else {
 
 		//si no usamos el que esta en la cofig
-		ins_log.Tracef(ctx, "PETITION[%v], using short number of the config", utfi)
+		ins_log.Tracef(ctx, "[%v], using short number of the config", utfi)
 
 		//ahora con el dominio vamos a buscar el shortnumberen la config
 		shortNumber := config.Config.SearchShortNumber(dominioString)
 		if shortNumber == "" {
-			ins_log.Tracef(ctx, "PETITION[%v], dindt find a short number for the domain %s please check the configuration", dominioString)
+			ins_log.Tracef(ctx, "[%v], dindt find a short number for the domain %s please check the configuration", dominioString)
 			userDomainResult.UserDomainError = errors.New("dindt find a short number for the domain " + dominioString)
 			userDomainResult.UserDomainMessage = "dindt find a short number for the domain"
 			return userDomainResult

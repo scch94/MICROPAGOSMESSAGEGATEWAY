@@ -18,19 +18,19 @@ import (
 func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.FilterResult {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = ins_log.SetPackageNameInContext(ctx, "client")
+	ctx = ins_log.SetPackageNameInContext(ctx, moduleName)
 
 	//cramos el struct que nos ayudara a contraolar la respuesta del filter en la base de datos
 	filterResult := helper.FilterResult{}
 
 	//creamos la estrucutra que tendra los params
-	ins_log.Infof(ctx, "PETITION[%v], startin to prepare the call to databasegateway checking FILTER", utfi)
+	ins_log.Infof(ctx, "[%v], startin to prepare the call to databasegateway checking FILTER", utfi)
 	params := request.NewFilterRequest(validationStruct.Mobile, validationStruct.ShortNumber)
 
 	//preparamos el request pasando los params de la peticion para insertarlos en la
 	req, err := prepareFilterReq(*params, utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareInsertMessageRequest()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to prepareInsertMessageRequest()", utfi)
 		filterResult.IsFilter = false
 		filterResult.FilterMessage = "errro when we try to prepare filterDB"
 		filterResult.Error = err
@@ -40,7 +40,7 @@ func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string, ctx conte
 	//hacemos el llamado y obtenemos el resultado
 	filterMessageResponse, err := callToMicropagosFilterDatabase(req, utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to callToMicropagosFilterDatabase()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to callToMicropagosFilterDatabase()", utfi)
 		filterResult.IsFilter = false
 		filterResult.FilterMessage = "errro when we try to call filterDB"
 		filterResult.Error = err
@@ -57,7 +57,7 @@ func CallToFiltersDB(validationStruct *helper.ToValidate, utfi string, ctx conte
 func prepareFilterReq(params request.FilterRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//armaremos la url para agregar los params a la url
-	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the URL to the petition", utfi)
+	ins_log.Tracef(ctx, "[%v], starting to prepare the URL to the petition", utfi)
 
 	//agregamos lo params de la solicitud
 	finalURL := fmt.Sprintf("%s/%s/%s/%s", config.Config.GetFilterDatabase.URL, params.MobileNumber[3:], params.ShortNUmber, utfi)
@@ -65,13 +65,13 @@ func prepareFilterReq(params request.FilterRequest, utfi string, ctx context.Con
 	//creamos la solicitud para hacer el get filtered
 	req, err := http.NewRequest(config.Config.GetFilterDatabase.Method, finalURL, nil)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error creating request to databasegateway: %v", err.Error(), utfi)
+		ins_log.Errorf(ctx, "[%v], Error creating request to databasegateway: %v", err.Error(), utfi)
 		return nil, err
 	}
-	ins_log.Tracef(ctx, "PETITION[%v], petition http created", utfi)
+	ins_log.Tracef(ctx, "[%v], petition http created", utfi)
 
 	//logeamos la url
-	ins_log.Infof(ctx, "PETITION[%v], Final url : %s", utfi, finalURL)
+	ins_log.Infof(ctx, "[%v], Final url : %s", utfi, finalURL)
 
 	return req, nil
 }
@@ -84,36 +84,36 @@ func callToMicropagosFilterDatabase(req *http.Request, utfi string, ctx context.
 
 	resp, err := Client.Do(req)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to micropagos databse: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error when we do the petition to micropagos databse: %s", utfi, err)
 		return filterMessageResponse, err
 	}
 	defer resp.Body.Close()
 	duration := time.Since(start)
-	ins_log.Infof(ctx, "PETITION[%v], Request to database tooks %v", utfi, duration)
+	ins_log.Infof(ctx, "[%v], Request to database tooks %v", utfi, duration)
 
 	//confirmamos que la respueta sea 200
 	if resp.StatusCode != http.StatusOK {
 		err = fmt.Errorf("received non-200 status code: %d", resp.StatusCode)
-		ins_log.Errorf(ctx, "PETITION[%v], error due to non-200 status code: %v", utfi, err)
+		ins_log.Errorf(ctx, "[%v], error due to non-200 status code: %v", utfi, err)
 		return filterMessageResponse, err
 	}
 
 	//logueamos lo que recibimos
 	responseBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error reading response body: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error reading response body: %s", utfi, err)
 		return filterMessageResponse, err
 	}
 
 	// Imprimir la respuesta recibida
 	statusCode := resp.StatusCode
-	ins_log.Infof(ctx, "PETITION[%v], HTTP Status Response: %d", utfi, statusCode)
-	ins_log.Infof(ctx, "PETITION[%v], RESPONSE BODY: %s", utfi, string(responseBody))
+	ins_log.Infof(ctx, "[%v], HTTP Status Response: %d", utfi, statusCode)
+	ins_log.Infof(ctx, "[%v], RESPONSE BODY: %s", utfi, string(responseBody))
 
 	//parceamos el resultado con lo que esperamos recibir
 	err = json.Unmarshal(responseBody, &filterMessageResponse)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error decoding the response: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error decoding the response: %s", utfi, err)
 		return filterMessageResponse, err
 	}
 

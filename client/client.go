@@ -3,27 +3,22 @@ package client
 import (
 	"net/http"
 	"time"
+
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
 )
 
 var Client http.Client
 
 func InitHttpClient() {
-	// TODO: Pasar a una config
-	maxIdleConns := 10
-	maxConnsPerHost := 100
-	maxIdleConnsPerHost := 10
-	idleConnTimeoutSeconds := 30
-	disableCompression := true
-	requestTimeout := 30
 	tr := &http.Transport{
-		MaxIdleConns:        maxIdleConns,
-		MaxConnsPerHost:     maxConnsPerHost,
-		MaxIdleConnsPerHost: maxIdleConnsPerHost,
-		IdleConnTimeout:     time.Duration(idleConnTimeoutSeconds) * time.Second,
-		DisableCompression:  disableCompression,
+		MaxIdleConns:        config.Config.Client.MaxIdleConns,
+		MaxConnsPerHost:     config.Config.Client.MaxConnsPerHost,
+		MaxIdleConnsPerHost: config.Config.Client.MaxConnsPerHost,
+		IdleConnTimeout:     time.Duration(config.Config.Client.IdleConnTimeoutSeconds) * time.Second,
+		DisableCompression:  config.Config.Client.DisableCompression,
 	}
 	Client = http.Client{
 		Transport: tr,
-		Timeout:   time.Duration(requestTimeout) * time.Second,
+		Timeout:   time.Duration(config.Config.Client.PetitionsTimeOut) * time.Second,
 	}
 }

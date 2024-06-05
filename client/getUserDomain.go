@@ -18,7 +18,7 @@ import (
 func CallToGetUserData(request request.GetUserRequest, ctx context.Context) (response.UserResponse, error) {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = ins_log.SetPackageNameInContext(ctx, "client")
+	ctx = ins_log.SetPackageNameInContext(ctx, moduleName)
 
 	//creamos el objeto que guardara la respuesta de la peticion
 	user := response.UserResponse{}

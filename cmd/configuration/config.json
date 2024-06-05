@@ -1,32 +1,36 @@
 {
     "log_level":"trace",
-    "max_message_length": 500,
-    "mobil_regex": "^09\\d{7}$",
-    "server_port": ":1000",
+    "client":{
+        "maxIdleConns":10,
+        "maxConnsPerHost":100,
+        "maxIdleConnsPerHost":10,
+        "idleConnTimeoutSeconds" : 30,
+        "disableCompression":true,
+        "petitionsTimeOut":40000
+    },
+    "getMask":{
+        "url":"http://localhost:2122/masks",
+        "method":"GET"
+    },
     "getUserDomain":{
-        "url":"http://192.168.27.41:2122/userdomain",
-        "method":"GET",
-        "timeout":40000
+        "url":"http://localhost:2122/userdomain",
+        "method":"GET"
     },
     "getFilterDatabase":{
-        "url":"http://192.168.27.41:2122/filter",
-        "method":"GET",
-        "timeout":40000
+        "url":"http://localhost:2122/filter",
+        "method":"GET"
     },
     "inserMessage":{
-        "url":"http://192.168.27.41:2122/insertMessage",
-        "method":"POST",
-        "timeout":40000
+        "url":"http://localhost:2122/insertMessage",
+        "method":"POST"
     },
     "smsGateway":{
-        "url":"http://192.168.27.41:8090/sendsms",
-        "method":"POST",
-        "timeout":40000
+        "url":"http://localhost:3111",
+        "method":"POST"
     },
     "portabilidad":{
         "url":"http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/",
         "method":"POST",
-        "timeout":40000,
         "portabilidad_user": "inswitch",
         "portabilidad_password": "1234"
     },
@@ -81,5 +85,9 @@
             "sendMail": false,
             "shortNumber": 88277
         }
-    ]
+    ],  
+    "max_message_length": 500,
+    "mobil_regex": "^09\\d{7}$",
+    "server_port": ":1000",
+    "update_mask_time_in_minutes":1
 }

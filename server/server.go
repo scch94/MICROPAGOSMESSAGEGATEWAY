@@ -11,7 +11,7 @@ import (
 
 func StartServer(ctx context.Context) error {
 	// Agregamos el valor "packageName" al contexto
-	ctx = ins_log.SetPackageNameInContext(ctx, "server")
+	ctx = ins_log.SetPackageNameInContext(ctx, moduleName)
 
 	ins_log.Infof(ctx, "Starting server on address: %s", config.Config.ServPort)
 	//usamos las rutas

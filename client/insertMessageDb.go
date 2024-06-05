@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/config"
+
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
@@ -20,19 +21,19 @@ import (
 func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.InsertResult {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = ins_log.SetPackageNameInContext(ctx, "client")
+	ctx = ins_log.SetPackageNameInContext(ctx, moduleName)
 
 	//creamos el struct para controlar la respuesta del smsgateway
 	insertResult := helper.InsertResult{}
 
 	//llenamos la estrucutra que se convertira en el json para enviar a la abse de datos
-	ins_log.Infof(ctx, "PETITION[%v], startin to prepare the call to databasegateway to INSERT message", utfi)
+	ins_log.Infof(ctx, "[%v], startin to prepare the call to databasegateway to INSERT message", utfi)
 	insertRequest := request.NewInsertMessageRequest(validationStruct, utfi)
 
 	//preparamos el request pasando el struct que tiene el json a enviar la info
 	req, err := prepareInsertMessageRequest(*insertRequest, utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareInsertMessageRequest()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to prepareInsertMessageRequest()", utfi)
 		insertResult.Id = ""
 		insertResult.Message = "error when we try to prepareInsertMessageRequest()"
 		insertResult.Result = err.Error()
@@ -42,7 +43,7 @@ func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string, ctx
 	//hacemos el llamado y obtenemos el resultado
 	insertMessageResponse, err := callToMicropagosInsertMessageDatabase(req, utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to callToMicropagosDatabase", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to callToMicropagosDatabase", utfi)
 		insertResult.Id = ""
 		insertResult.Message = "error when we try to callToMicropagosDatabase()"
 		insertResult.Result = err.Error()
@@ -58,31 +59,31 @@ func CallToInsertMessageDB(validationStruct *helper.ToValidate, utfi string, ctx
 func prepareInsertMessageRequest(insertMessageRequest request.InsertMessageRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//generamos el cuerpo de la solicitud para insertar el mensaje
-	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the URL and the body of the petition", utfi)
+	ins_log.Tracef(ctx, "[%v], starting to prepare the URL and the body of the petition", utfi)
 
 	//agregamos lo params de la solicitud
 	finalURL := fmt.Sprintf("%s/%s", config.Config.InsertMessage.URL, utfi)
 
 	body, err := json.Marshal(insertMessageRequest)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to generate the body json.marshal()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to generate the body json.marshal()", utfi)
 		return nil, err
 	}
 
 	//creamos la solicitud para ir a insetart el mensaje
 	req, err := http.NewRequest(config.Config.InsertMessage.Method, finalURL, bytes.NewReader(body))
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error creating request to telcogateway: %v", err.Error(), utfi)
+		ins_log.Errorf(ctx, "[%v], Error creating request to telcogateway: %v", err.Error(), utfi)
 		return nil, err
 	}
-	ins_log.Tracef(ctx, "PETITION[%v], petition http created", utfi)
+	ins_log.Tracef(ctx, "[%v], petition http created", utfi)
 
 	//llenamos la cabecera
 	req.Header.Set("Content-Type", "application/json")
 
 	//logueamos la url y el body final de la peticion
-	ins_log.Infof(ctx, "PETITION[%v], Final url : %s", utfi, finalURL)
-	ins_log.Infof(ctx, "PETITION[%v], Final BODY: %s", utfi, body)
+	ins_log.Infof(ctx, "[%v], Final url : %s", utfi, finalURL)
+	ins_log.Infof(ctx, "[%v], Final BODY: %s", utfi, body)
 	return req, nil
 }
 func callToMicropagosInsertMessageDatabase(req *http.Request, utfi string, ctx context.Context) (response.InsertMessageResponse, error) {
@@ -94,41 +95,41 @@ func callToMicropagosInsertMessageDatabase(req *http.Request, utfi string, ctx c
 
 	resp, err := Client.Do(req)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to micropagos databse: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error when we do the petition to micropagos databse: %s", utfi, err)
 		return insertMessageResponse, err
 	}
 	defer resp.Body.Close()
 	duration := time.Since(start)
-	ins_log.Infof(ctx, "PETITION[%v], Request to database tooks %v", utfi, duration)
+	ins_log.Infof(ctx, "[%v], Request to database tooks %v", utfi, duration)
 
 	//confirmamos que la respueta sea 200
 	if resp.StatusCode != http.StatusOK {
 		err = fmt.Errorf("received non-200 status code: %d", resp.StatusCode)
-		ins_log.Errorf(ctx, "PETITION[%v], error due to non-200 status code: %v", utfi, err)
+		ins_log.Errorf(ctx, "[%v], error due to non-200 status code: %v", utfi, err)
 		return insertMessageResponse, err
 	}
 
 	//logueamos lo que recibimos
 	responseBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error reading response body: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error reading response body: %s", utfi, err)
 		return insertMessageResponse, err
 	}
 
 	// Imprimir la respuesta recibida
 	statusCode := resp.StatusCode
-	ins_log.Infof(ctx, "PETITION[%v], HTTP Status Response: %d", utfi, statusCode)
-	ins_log.Infof(ctx, "PETITION[%v], RESPONSE BODY: %s", utfi, string(responseBody))
+	ins_log.Infof(ctx, "[%v], HTTP Status Response: %d", utfi, statusCode)
+	ins_log.Infof(ctx, "[%v], RESPONSE BODY: %s", utfi, string(responseBody))
 	//parceamos el resultado con lo que esperamos recibir
 
 	//parceamos el resultado con lo que esperamos recibir
 	err = json.Unmarshal(responseBody, &insertMessageResponse)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error decoding the response: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error decoding the response: %s", utfi, err)
 		return insertMessageResponse, err
 	}
 
 	// Imprimir la respuesta
-	ins_log.Infof(ctx, "PETITION[%v], this is the id of the message in the database: %d", utfi, insertMessageResponse.Id)
+	ins_log.Infof(ctx, "[%v], this is the id of the message in the database: %d", utfi, insertMessageResponse.Id)
 	return insertMessageResponse, nil
 }

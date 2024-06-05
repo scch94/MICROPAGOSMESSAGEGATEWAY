@@ -19,13 +19,13 @@ import (
 func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string, ctx context.Context) helper.SmsgatewayResult {
 
 	//traemos el contexto y le setiamos el contexto actual
-	ctx = ins_log.SetPackageNameInContext(ctx, "client")
+	ctx = ins_log.SetPackageNameInContext(ctx, moduleName)
 
 	//creamos el struct para controlar la respuesta del smsgateway
 	telcoGatewayResullt := helper.SmsgatewayResult{}
 
 	//creamos el cuerpo de la peticion
-	ins_log.Infof(ctx, "PETITION[%v], startin to prepare the call to telcoGateway", utfi)
+	ins_log.Infof(ctx, "[%v], startin to prepare the call to telcoGateway", utfi)
 	smsGatewayRequest := request.NewSmsGatewayRequest(*validationStruct, utfi)
 	smsGatewayRequest.TLVValue = validationStruct.Telco
 	smsGatewayRequest.TLVLength = len(validationStruct.Telco)
@@ -33,7 +33,7 @@ func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string, ctx cont
 	//preparamos el request pasando el struct que tiene el json a enviar la info
 	req, err := prepareTelcoGatewayRequest(*smsGatewayRequest, utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to prepareTelcoGatewayRequest()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to prepareTelcoGatewayRequest()", utfi)
 		telcoGatewayResullt.PassedSmsgateway = false
 		telcoGatewayResullt.SmsgatewayDescription = "error when we try to prepareTelcoGatewayRequest()"
 		telcoGatewayResullt.SmsgatewayResult = err.Error()
@@ -43,7 +43,7 @@ func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string, ctx cont
 	//hacemos el llamado y obtenemos el resultado
 	responseGateway, err := calltoTelcoGatewayRequest(req, utfi, ctx)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to call to calltoTelcoGatewayRequest()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to call to calltoTelcoGatewayRequest()", utfi)
 		telcoGatewayResullt.PassedSmsgateway = false
 		telcoGatewayResullt.SmsgatewayDescription = "error when we try to calltoTelcoGatewayRequest()"
 		telcoGatewayResullt.SmsgatewayResult = err.Error()
@@ -58,27 +58,27 @@ func CallTelcoGateway(validationStruct *helper.ToValidate, utfi string, ctx cont
 func prepareTelcoGatewayRequest(smsGatewayRequest request.SmsGatewayRequest, utfi string, ctx context.Context) (*http.Request, error) {
 
 	//generamos el cuerpo de la solicitud para el gateway que enviara el mensaje
-	ins_log.Tracef(ctx, "PETITION[%v], starting to prepare the body of the petition", utfi)
+	ins_log.Tracef(ctx, "[%v], starting to prepare the body of the petition", utfi)
 	body, err := json.Marshal(smsGatewayRequest)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], error when we try to generate the body json.marshal()", utfi)
+		ins_log.Errorf(ctx, "[%v], error when we try to generate the body json.marshal()", utfi)
 		return nil, err
 	}
 
 	//creamos la solicitud para ir a insetart el mensaje
 	req, err := http.NewRequest(config.Config.SMSGateway.Method, config.Config.SMSGateway.URL, bytes.NewReader(body))
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error creating request to telcogateway: %v", utfi, err.Error())
+		ins_log.Errorf(ctx, "[%v], Error creating request to telcogateway: %v", utfi, err.Error())
 		return nil, err
 	}
-	ins_log.Tracef(ctx, "PETITION[%v], petition http created", utfi)
+	ins_log.Tracef(ctx, "[%v], petition http created", utfi)
 
 	//llenamos cabecera
 	req.Header.Set("Content-Type", "application/json")
 
 	//logueamos la url y el body final de la peticion
-	ins_log.Infof(ctx, "PETITION[%v], Final url : %s", utfi, config.Config.SMSGateway.URL)
-	ins_log.Infof(ctx, "PETITION[%v], Final BODY: %s", utfi, body)
+	ins_log.Infof(ctx, "[%v], Final url : %s", utfi, config.Config.SMSGateway.URL)
+	ins_log.Infof(ctx, "[%v], Final BODY: %s", utfi, body)
 	return req, nil
 }
 
@@ -91,48 +91,48 @@ func calltoTelcoGatewayRequest(req *http.Request, utfi string, ctx context.Conte
 
 	resp, err := Client.Do(req)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error when we do the petition to smsgateway: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error when we do the petition to smsgateway: %s", utfi, err)
 		return smsGatewayResponse, err
 	}
 	defer resp.Body.Close()
 	duration := time.Since(start)
-	ins_log.Infof(ctx, "PETITION[%v], Request to SMSGATEWAY tooks %v", utfi, duration)
+	ins_log.Infof(ctx, "[%v], Request to SMSGATEWAY tooks %v", utfi, duration)
 
 	//confirmamos que la respueta sea 200
 	if resp.StatusCode != http.StatusOK {
 		err = fmt.Errorf("received non-200 status code: %d", resp.StatusCode)
-		ins_log.Errorf(ctx, "PETITION[%v], error due to non-200 status code: %v", utfi, err)
+		ins_log.Errorf(ctx, "[%v], error due to non-200 status code: %v", utfi, err)
 		return smsGatewayResponse, err
 	}
 
 	//logueamos lo que recibimos
 	responseBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error reading response body: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error reading response body: %s", utfi, err)
 		return smsGatewayResponse, err
 	}
 
 	// Imprimir la respuesta recibida
 	statusCode := resp.StatusCode
-	ins_log.Infof(ctx, "PETITION[%v], HTTP Status Response: %d", utfi, statusCode)
-	ins_log.Infof(ctx, "PETITION[%v], RESPONSE BODY: %s", utfi, string(responseBody))
+	ins_log.Infof(ctx, "[%v], HTTP Status Response: %d", utfi, statusCode)
+	ins_log.Infof(ctx, "[%v], RESPONSE BODY: %s", utfi, string(responseBody))
 	//parceamos el resultado con lo que esperamos recibir
 
 	//parceamos el resultado con lo que esperamos recibir
 	err = json.Unmarshal(responseBody, &smsGatewayResponse)
 	if err != nil {
-		ins_log.Errorf(ctx, "PETITION[%v], Error decoding the response: %s", utfi, err)
+		ins_log.Errorf(ctx, "[%v], Error decoding the response: %s", utfi, err)
 		return smsGatewayResponse, err
 	}
 
 	//miramos si la respuesta es distinta de 0
 	if smsGatewayResponse.Status != "0" {
-		ins_log.Errorf(ctx, "PETITION[%v], Error in the response of the telcogateway response: %s", utfi, smsGatewayResponse.Description)
+		ins_log.Errorf(ctx, "[%v], Error in the response of the telcogateway response: %s", utfi, smsGatewayResponse.Description)
 		err = fmt.Errorf("error in telcogateway response: %s", smsGatewayResponse.Description)
 		return smsGatewayResponse, err
 	}
 
 	// Imprimir la respuesta
-	ins_log.Infof(ctx, "PETITION[%v], this is the code of the response: %s", utfi, smsGatewayResponse.Status)
+	ins_log.Infof(ctx, "[%v], this is the code of the response: %s", utfi, smsGatewayResponse.Status)
 	return smsGatewayResponse, nil
 }
