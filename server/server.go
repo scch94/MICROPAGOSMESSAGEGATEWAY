@@ -13,7 +13,7 @@ func StartServer(ctx context.Context) error {
 	// Agregamos el valor "packageName" al contexto
 	ctx = ins_log.SetPackageNameInContext(ctx, moduleName)
 
-	ins_log.Infof(ctx, "Starting server on address: %s", config.Config.ServPort)
+	ins_log.Infof(ctx, "Starting server on Port: %s", config.Config.ServPort)
 	//usamos las rutas
 	router := routes.SetupRouter(ctx)
 	serverConfig := &http.Server{
