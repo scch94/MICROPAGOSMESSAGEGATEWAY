@@ -71,8 +71,12 @@ github.com/scch94/Gconfiguration v0.0.0-20240512172409-4528e7ec42f1 h1:uX5H3AiiF
 github.com/scch94/Gconfiguration v0.0.0-20240512172409-4528e7ec42f1/go.mod h1:/FT2WXG7bmhxIfhe2rs4AxeVQKsQ3YnhavY14VQaYgw=
 github.com/scch94/Gconfiguration v0.0.0-20240605203613-08bc6eef41f8 h1:a444jgnzPOjN9DJmSMLBgkibyxef3kbN4boUdBoMZV8=
 github.com/scch94/Gconfiguration v0.0.0-20240605203613-08bc6eef41f8/go.mod h1:/FT2WXG7bmhxIfhe2rs4AxeVQKsQ3YnhavY14VQaYgw=
+github.com/scch94/Gconfiguration v0.0.0-20240606135956-fe43797c4ed6 h1:atjc9bQ6hvr8ubgHpnRcoM++yy09eTYk0YRAyg/THxw=
+github.com/scch94/Gconfiguration v0.0.0-20240606135956-fe43797c4ed6/go.mod h1:/FT2WXG7bmhxIfhe2rs4AxeVQKsQ3YnhavY14VQaYgw=
 github.com/scch94/ins_log v0.0.0-20240523020353-9090a3e11ceb h1:sfvLM/QbiaiK1Rz2cUXDVGly7/C6AI3S5ut8xvG18Hs=
 github.com/scch94/ins_log v0.0.0-20240523020353-9090a3e11ceb/go.mod h1:Ye7266CglnRW8IHSXFOcGLJqm9sQL98u8UsQbc23Qvs=
+github.com/scch94/ins_log v0.0.0-20240606122144-fec17f9232b6 h1:Hb7g/3S0QmO+NGBvDNr97bAWxEwO9QahiOBSadd96ls=
+github.com/scch94/ins_log v0.0.0-20240606122144-fec17f9232b6/go.mod h1:Ye7266CglnRW8IHSXFOcGLJqm9sQL98u8UsQbc23Qvs=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
 github.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=

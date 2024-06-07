@@ -1,7 +1,8 @@
 package constants
 
 const (
-	PATH               = "ws/SendMessageService"
+	LEGACYPATH         = "ws/SendMessageService"
+	PATH               = "ws/MessageGateway"
 	MESSAGE_REGEX      = "[áéíóúÁÉÍÓÚñÑ]"
 	MAX_MESSAGE_LENGTH = 500
 	GATEWAY_URL        = "http://localhost:1010"

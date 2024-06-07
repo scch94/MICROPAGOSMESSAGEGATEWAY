@@ -18,7 +18,7 @@ func Upconfig(ctx context.Context) error {
 	ctx = ins_log.SetPackageNameInContext(ctx, "config")
 
 	ins_log.Info(ctx, "starting to get the config struct ")
-	err := Gconfiguration.GetConfig(&Config, "../config")
+	err := Gconfiguration.GetConfig(&Config, "../config", "micropagosMsgGatewayConfig.json")
 
 	if err != nil {
 		ins_log.Fatalf(ctx, "error in Gconfiguration.GetConfig() ", err)
@@ -29,6 +29,7 @@ func Upconfig(ctx context.Context) error {
 
 type MicropagosConfiguration struct {
 	LogLevel                string         `json:"log_level"`
+	Log_name                string         `json:"log_name"`
 	Client                  Client         `json:"client"`
 	GetMask                 EndpointConfig `json:"getMask"`
 	GetUserDomain           EndpointConfig `json:"getUserDomain"`

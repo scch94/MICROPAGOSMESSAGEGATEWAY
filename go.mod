@@ -5,8 +5,8 @@ go 1.22.2
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-co-op/gocron v1.37.0
-	github.com/scch94/Gconfiguration v0.0.0-20240605203613-08bc6eef41f8
-	github.com/scch94/ins_log v0.0.0-20240523020353-9090a3e11ceb
+	github.com/scch94/Gconfiguration v0.0.0-20240606135956-fe43797c4ed6
+	github.com/scch94/ins_log v0.0.0-20240606122144-fec17f9232b6
 )
 
 require (

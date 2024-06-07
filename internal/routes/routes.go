@@ -28,6 +28,7 @@ func SetupRouter(ctx context.Context) *gin.Engine {
 	//metodos
 	router.GET("/", h.Welcome)
 	router.POST(constants.PATH, h.SendMessageHandler)
+	router.POST(constants.LEGACYPATH, h.LegacySendMessageHandler)
 	router.NoRoute(notFoundHandler)
 	return router
 }

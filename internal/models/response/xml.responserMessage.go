@@ -19,13 +19,15 @@ type Body struct {
 	Error   []Fault
 }
 
-// Fault representa la estructura de un mensaje de error SOAP
+// succes representa la estructura de un mensaje de exito
 type Success struct {
 	XMLName    xml.Name `xml:"env:Success"`
 	DatabaseID string   `xml:"database_id"`
 	Code       string   `xml:"code"`
 	Message    string   `xml:"message"`
 }
+
+// Fault representa la estructura de un mensaje de error SOAP
 type Fault struct {
 	XMLName    xml.Name `xml:"env:Fault"`
 	DatabaseID string   `xml:"database_id"`
