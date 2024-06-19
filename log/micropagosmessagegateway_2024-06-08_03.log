@@ -1,0 +1,3 @@
+[2024-06-08 03:01:30.450] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos databse: Get "http://localhost:2122/masks/f866fbb8feb4": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-08 03:01:30.453] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-08 03:01:30.456] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/masks/f866fbb8feb4": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
