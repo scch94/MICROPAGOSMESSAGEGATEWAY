@@ -10,6 +10,10 @@
         "petitionsTimeOut":40000,
         "disableKeepAlives":true
     },
+    "getUsersInfo":{
+        "url":"http://localhost:2122/usersInfo",
+        "method":"GET"
+    },
     "getMask":{
         "url":"http://localhost:2122/masks",
         "method":"GET"

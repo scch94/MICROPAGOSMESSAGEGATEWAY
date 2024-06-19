@@ -34,6 +34,7 @@ type MicropagosConfiguration struct {
 	GetMask                 EndpointConfig `json:"getMask"`
 	GetUserDomain           EndpointConfig `json:"getUserDomain"`
 	ServPort                string         `json:"server_port"`
+	GetUsersInfo            EndpointConfig `json:"getUsersInfo"`
 	GetFilterDatabase       EndpointConfig `json:"getFilterDatabase"`
 	InsertMessage           EndpointConfig `json:"inserMessage"`
 	SMSGateway              EndpointConfig `json:"smsGateway"`

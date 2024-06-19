@@ -1,0 +1,34 @@
+[2024-06-19 12:31:52.026] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos databse: Get "http://localhost:2122/masks/8bc4b5e46923": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 12:31:52.028] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-19 12:31:52.028] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/masks/8bc4b5e46923": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 12:31:52.029] [micropagosmessagegateway] [main] [warn] [] mask is empty after error, retrying...
+[2024-06-19 12:32:52.366] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:32:52.671] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:33:52.166] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:33:52.463] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:35:52.180] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:35:52.486] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:37:52.168] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:37:52.459] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:39:52.253] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:39:52.542] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:41:52.184] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:41:52.406] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:43:52.177] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:43:52.468] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:45:52.167] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:45:52.462] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:47:52.174] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:47:52.470] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:49:52.169] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:49:52.391] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:51:52.183] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:51:52.405] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:53:52.185] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:53:52.477] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:55:52.177] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:55:52.472] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:57:52.175] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:57:52.465] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 12:59:52.176] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 12:59:52.484] [micropagosmessagegateway] [main] [trace] [] users backup was updated

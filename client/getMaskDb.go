@@ -64,7 +64,7 @@ func callToMicropagosGetMask(req *http.Request, ctx context.Context) (response.M
 
 	resp, err := Client.Do(req)
 	if err != nil {
-		ins_log.Errorf(ctx, "Error when we do the petition to micropagos databse: %s", err)
+		ins_log.Errorf(ctx, "Error when we do the petition to micropagos database: %s", err)
 		return maskResponse, err
 	}
 	defer resp.Body.Close()

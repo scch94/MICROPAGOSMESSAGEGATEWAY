@@ -74,11 +74,31 @@ func updateMask(ctx context.Context) {
 	}
 }
 
+// esto garantiza que no importa el orden en el que levantes el modulo de la base y el modulo message gateway
+func updateUsers(ctx context.Context) {
+	for {
+		UsersInfoResponse, err := client.CallToGetUsers(ctx)
+		if err != nil {
+			ins_log.Errorf(ctx, "error getting mask: %v", err)
+			if len(helper.Users) == 0 {
+				ins_log.Warn(ctx, "mask is empty after error, retrying...")
+				time.Sleep(10 * time.Second)
+				continue
+			}
+			break
+		}
+		helper.Users = UsersInfoResponse.Users
+		ins_log.Trace(ctx, "users backup was updated")
+		break
+	}
+}
+
 // proceso automatico que ira actualizando cada n tiempo el mask(el valor del timepo esta en la config)
 func startScheduler(ctx context.Context) {
 	scheduler := gocron.NewScheduler(time.Local)
 	scheduler.Every(config.Config.UpdateMaskTimeInMinutes).Minutes().Do(func() {
 		updateMask(ctx)
+		updateUsers(ctx)
 	})
 	go scheduler.StartAsync()
 }
