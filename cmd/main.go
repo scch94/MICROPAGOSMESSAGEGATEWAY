@@ -41,8 +41,6 @@ func main() {
 	// Start scheduled tasks
 	startScheduler(ctx)
 
-	go startUpdatelastLogin(ctx)
-
 	// Start server
 	go startServer(ctx)
 
@@ -152,17 +150,4 @@ func initializeAndWatchLogger(ctx context.Context) {
 
 func getVersion() string {
 	return version
-}
-
-// proceso automatico que ira actualizando cada n tiempo el mask y los usuarios (el valor del timepo esta en la config)
-func startSchedulerUpdatelastLogin(ctx context.Context) {
-	scheduler := gocron.NewScheduler(time.Local)
-	scheduler.Every(config.Config.UpdateLastLoginInMinutes).Minutes().Do(func() {
-		startUpdatelastLogin(ctx)
-	})
-	go scheduler.StartAsync()
-}
-
-func startUpdatelastLogin(ctx context.Context) {
-
 }
