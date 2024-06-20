@@ -1,0 +1,78 @@
+[2024-06-19 16:00:20.976] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:00:21.272] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:02:20.894] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:02:21.126] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:04:20.887] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:04:21.180] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:06:20.881] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:06:21.176] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:08:20.899] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:08:21.127] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:10:20.971] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:10:21.290] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:12:20.938] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:12:21.235] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:14:20.893] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:14:21.182] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:16:20.891] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:16:21.196] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:18:20.878] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:18:21.126] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:20:20.971] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:20:21.269] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:22:20.897] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:22:21.192] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:24:20.885] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:24:21.177] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:26:20.907] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:26:21.210] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:28:20.917] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:28:21.234] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:30:20.879] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:30:21.170] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:32:20.888] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:32:21.188] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:34:20.890] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:34:21.183] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:38:09.210] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:38:09.515] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:38:22.962] [micropagosmessagegateway] [middleware] [info] [fe416a082c49] New petition received
+[2024-06-19 16:38:22.962] [micropagosmessagegateway] [middleware] [trace] [fe416a082c49] url: /, method: GET
+[2024-06-19 16:38:22.962] [micropagosmessagegateway] [middleware] [trace] [fe416a082c49] starting to validate the ahutentication
+[2024-06-19 16:38:22.962] [micropagosmessagegateway] [handler] [info] [fe416a082c49] starting to get the userdata for the user eaguerre
+[2024-06-19 16:38:22.962] [micropagosmessagegateway] [middleware] [trace] [fe416a082c49] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-19 16:38:22.963] [micropagosmessagegateway] [middleware] [info] [fe416a082c49] the user:eaguerre is already authenticated
+[2024-06-19 16:38:22.964] [micropagosmessagegateway] [handlerWelcome] [info] [fe416a082c49] starting handler welcome
+[2024-06-19 16:38:22.964] [micropagosmessagegateway] [handler] [trace] [fe416a082c49] starting to updated the last login of the user eaguerre
+[2024-06-19 16:38:22.964] [micropagosmessagegateway] [middleware] [info] [fe416a082c49] Request took 2.0973ms
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [middleware] [info] [cb3c85d8dc83] New petition received
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [middleware] [trace] [cb3c85d8dc83] url: /, method: GET
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [middleware] [trace] [cb3c85d8dc83] starting to validate the ahutentication
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [handler] [info] [cb3c85d8dc83] starting to get the userdata for the user eaguerre
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [middleware] [trace] [cb3c85d8dc83] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [middleware] [info] [cb3c85d8dc83] the user:eaguerre is already authenticated
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [handlerWelcome] [info] [cb3c85d8dc83] starting handler welcome
+[2024-06-19 16:38:34.878] [micropagosmessagegateway] [handler] [trace] [cb3c85d8dc83] starting to updated the last login of the user eaguerre
+[2024-06-19 16:38:34.879] [micropagosmessagegateway] [middleware] [info] [cb3c85d8dc83] Request took 1.0236ms
+[2024-06-19 16:39:22.975] [micropagosmessagegateway] [handler] [trace] [fe416a082c49] user eaguerre inserted in the lastlogin data
+[2024-06-19 16:39:34.880] [micropagosmessagegateway] [handler] [trace] [cb3c85d8dc83] user last login updated to: 2024-06-19 16:39:34
+[2024-06-19 16:40:09.144] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:40:09.441] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:42:09.174] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:42:09.479] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:44:09.171] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:44:09.481] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:46:09.159] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:46:09.448] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:48:09.164] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:48:09.460] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:50:09.155] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:50:09.449] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:52:09.176] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:52:09.467] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:54:09.155] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:54:09.374] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:56:09.168] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:56:09.470] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 16:58:09.171] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 16:58:09.473] [micropagosmessagegateway] [main] [trace] [] users backup was updated

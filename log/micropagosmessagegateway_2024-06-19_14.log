@@ -1,0 +1,149 @@
+[2024-06-19 14:41:25.535] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:41:25.835] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:42:19.490] [micropagosmessagegateway] [middleware] [info] [b8637fcdeb8b] New petition received
+[2024-06-19 14:42:19.490] [micropagosmessagegateway] [middleware] [trace] [b8637fcdeb8b] url: /, method: GET
+[2024-06-19 14:42:19.490] [micropagosmessagegateway] [middleware] [info] [b8637fcdeb8b] starting to validate the ahutentication
+[2024-06-19 14:42:19.491] [micropagosmessagegateway] [middleware] [info] [b8637fcdeb8b] starting Authentication proccess for eaguerres
+[2024-06-19 14:42:19.497] [micropagosmessagegateway] [handler] [info] [b8637fcdeb8b] starting to get the userdata for the user eaguerres
+[2024-06-19 14:42:19.497] [micropagosmessagegateway] [middleware] [error] [b8637fcdeb8b] error getting user data to the user eaguerres
+[2024-06-19 14:42:19.497] [micropagosmessagegateway] [middleware] [error] [b8637fcdeb8b] User does not exist or does not have permission to use the service.
+[2024-06-19 14:42:19.497] [micropagosmessagegateway] [middleware] [error] [b8637fcdeb8b] User does not exist or does not have permission to use the service.
+[2024-06-19 14:42:19.497] [micropagosmessagegateway] [middleware] [info] [b8637fcdeb8b] Request took 7.0582ms
+[2024-06-19 14:43:25.497] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:43:25.723] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:45:52.921] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:45:53.224] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:46:10.465] [micropagosmessagegateway] [middleware] [info] [fbea473c2dce] New petition received
+[2024-06-19 14:46:10.466] [micropagosmessagegateway] [middleware] [trace] [fbea473c2dce] url: /, method: GET
+[2024-06-19 14:46:10.466] [micropagosmessagegateway] [middleware] [trace] [fbea473c2dce] starting to validate the ahutentication
+[2024-06-19 14:46:10.466] [micropagosmessagegateway] [handler] [info] [fbea473c2dce] starting to get the userdata for the user eaguerres
+[2024-06-19 14:46:10.466] [micropagosmessagegateway] [middleware] [error] [fbea473c2dce] error getting user data to the user eaguerres,User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:10.466] [micropagosmessagegateway] [middleware] [error] [fbea473c2dce] User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:10.467] [micropagosmessagegateway] [middleware] [info] [fbea473c2dce] Request took 528.8µs
+[2024-06-19 14:46:29.485] [micropagosmessagegateway] [middleware] [info] [f6d0bba57d26] New petition received
+[2024-06-19 14:46:29.485] [micropagosmessagegateway] [middleware] [trace] [f6d0bba57d26] url: /, method: GET
+[2024-06-19 14:46:29.485] [micropagosmessagegateway] [middleware] [trace] [f6d0bba57d26] starting to validate the ahutentication
+[2024-06-19 14:46:29.485] [micropagosmessagegateway] [handler] [info] [f6d0bba57d26] starting to get the userdata for the user eaguerre
+[2024-06-19 14:46:29.485] [micropagosmessagegateway] [middleware] [error] [f6d0bba57d26] error getting user data to the user eaguerre,User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:29.485] [micropagosmessagegateway] [middleware] [error] [f6d0bba57d26] User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:29.486] [micropagosmessagegateway] [middleware] [info] [f6d0bba57d26] Request took 537.1µs
+[2024-06-19 14:46:31.315] [micropagosmessagegateway] [middleware] [info] [af7a2f76fef4] New petition received
+[2024-06-19 14:46:31.316] [micropagosmessagegateway] [middleware] [trace] [af7a2f76fef4] url: /, method: GET
+[2024-06-19 14:46:31.316] [micropagosmessagegateway] [middleware] [trace] [af7a2f76fef4] starting to validate the ahutentication
+[2024-06-19 14:46:31.316] [micropagosmessagegateway] [handler] [info] [af7a2f76fef4] starting to get the userdata for the user eaguerre
+[2024-06-19 14:46:31.316] [micropagosmessagegateway] [middleware] [error] [af7a2f76fef4] error getting user data to the user eaguerre,User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:31.316] [micropagosmessagegateway] [middleware] [error] [af7a2f76fef4] User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:31.316] [micropagosmessagegateway] [middleware] [info] [af7a2f76fef4] Request took 514.5µs
+[2024-06-19 14:46:47.748] [micropagosmessagegateway] [middleware] [info] [8ee497ece5ca] New petition received
+[2024-06-19 14:46:47.748] [micropagosmessagegateway] [middleware] [trace] [8ee497ece5ca] url: /, method: GET
+[2024-06-19 14:46:47.749] [micropagosmessagegateway] [middleware] [trace] [8ee497ece5ca] starting to validate the ahutentication
+[2024-06-19 14:46:47.749] [micropagosmessagegateway] [handler] [info] [8ee497ece5ca] starting to get the userdata for the user eaguerre
+[2024-06-19 14:46:47.749] [micropagosmessagegateway] [middleware] [error] [8ee497ece5ca] error getting user data to the user eaguerre,User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:47.749] [micropagosmessagegateway] [middleware] [error] [8ee497ece5ca] User does not exist or does not have permission to use the service.
+[2024-06-19 14:46:47.749] [micropagosmessagegateway] [middleware] [info] [8ee497ece5ca] Request took 0s
+[2024-06-19 14:47:52.811] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:47:53.109] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:48:27.885] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:48:28.183] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:48:43.041] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:48:43.332] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:48:55.479] [micropagosmessagegateway] [middleware] [info] [4a79f3b161e7] New petition received
+[2024-06-19 14:48:55.479] [micropagosmessagegateway] [middleware] [trace] [4a79f3b161e7] url: /, method: GET
+[2024-06-19 14:48:55.479] [micropagosmessagegateway] [middleware] [trace] [4a79f3b161e7] starting to validate the ahutentication
+[2024-06-19 14:48:55.479] [micropagosmessagegateway] [handler] [info] [4a79f3b161e7] starting to get the userdata for the user eaguerre
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {24 24 xTArnkceZoAkU0wCJu1v0adMhhk= 2014-03-25 16:37:44 Oca}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {86 86 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2020-06-05 15:33:05 Pronto}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {3 3 /FY4QCXqL7zvXUgg/w+HNY+U5mU= 2018-10-29 17:20:41 Oca}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {85 85 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2014-06-04 15:40:24 Itau}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {141 141 3m9VOxTd9I3a5G7gBNeWcaukTX4=  IMM}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {4 4 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2024-06-17 14:35:32 Micropagos}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {84 84 xTArnkceZoAkU0wCJu1v0adMhhk= 2012-11-22 12:24:07 Micropagos}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {1 1 xTArnkceZoAkU0wCJu1v0adMhhk= 2014-05-29 12:33:32 Micropagos}
+[2024-06-19 14:48:55.480] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {80 80 xTArnkceZoAkU0wCJu1v0adMhhk= 2012-09-27 13:17:36 Oca}
+[2024-06-19 14:48:55.481] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {2 2 xTArnkceZoAkU0wCJu1v0adMhhk= 2013-07-24 11:15:55 Micropagos}
+[2024-06-19 14:48:55.481] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {60 60 xTArnkceZoAkU0wCJu1v0adMhhk= 2017-05-08 11:21:07 Micropagos}
+[2024-06-19 14:48:55.486] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {163 163 iEp0Qv5GDsYxMQmLGFP/xG+90Y4= 2013-07-26 12:06:35 Moc}
+[2024-06-19 14:48:55.486] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {164 164 xTArnkceZoAkU0wCJu1v0adMhhk= 2013-07-29 13:47:07 Moc}
+[2024-06-19 14:48:55.486] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {5 5 xTArnkceZoAkU0wCJu1v0adMhhk= 2024-06-19 17:00:00 Micropagos}
+[2024-06-19 14:48:55.486] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {165 165 xTArnkceZoAkU0wCJu1v0adMhhk= 2023-09-13 12:45:27 Creditel}
+[2024-06-19 14:48:55.486] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {178 178 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2022-05-02 10:59:25 Pronto}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {167 167 xTArnkceZoAkU0wCJu1v0adMhhk= 2022-02-01 13:46:37 Oca}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {189 189 xTArnkceZoAkU0wCJu1v0adMhhk= 2016-08-24 15:06:35 Pronto}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {190 190 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2024-06-19 10:41:55 Santander}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {191 191 xTArnkceZoAkU0wCJu1v0adMhhk= 2016-09-28 11:43:50 Oca}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {193 193 eJntDmwNzvsNKVaR5S7CPDvZeWA= 2019-09-30 14:29:59 FirstData}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {196 196 e8EngNA+aYaoTT4gBeU+SzDtDAQ= 2017-05-26 17:03:38 Micropagos}
+[2024-06-19 14:48:55.487] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {201 201 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2024-02-23 20:27:06 Banred}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {205 205 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2024-06-19 15:54:28 Oca}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {209 209 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2020-02-07 15:23:49 Facilcel}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {210 210 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2019-10-03 15:19:32 Pronto Efectivos}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {216 216 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2019-09-30 12:58:30 Bit$}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {218 218 2FOnzhnQxUtG6ROYXFI3sfLDhpg= 2024-03-11 01:00:00 Micropagos}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {223 223 p5vwxQflHkp/9daZCzxdltOmXRM= 2024-01-08 11:35:58 Santander}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [handler] [trace] [4a79f3b161e7] user {197 197 AoMkN6rmv3X6EuXxvrivjC3SZqE= 2024-03-22 13:39:56 FirstData}
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [middleware] [error] [4a79f3b161e7] error getting user data to the user eaguerre,User does not exist or does not have permission to use the service.
+[2024-06-19 14:48:55.488] [micropagosmessagegateway] [middleware] [error] [4a79f3b161e7] User does not exist or does not have permission to use the service.
+[2024-06-19 14:48:55.489] [micropagosmessagegateway] [middleware] [info] [4a79f3b161e7] Request took 9.896ms
+[2024-06-19 14:50:43.079] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:50:43.300] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:52:42.769] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos database: Get "http://localhost:2122/masks/87035a89b0f0": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:52:42.770] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-19 14:52:42.770] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/masks/87035a89b0f0": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:52:42.772] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos database: Get "http://localhost:2122/usersInfo/962778ce7612": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:52:42.772] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-19 14:52:42.772] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/usersInfo/962778ce7612": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:54:42.799] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos database: Get "http://localhost:2122/masks/ace923d9e859": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:54:42.799] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-19 14:54:42.800] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/masks/ace923d9e859": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:54:42.806] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos database: Get "http://localhost:2122/usersInfo/f29aac3d134e": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:54:42.806] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-19 14:54:42.807] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/usersInfo/f29aac3d134e": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-19 14:56:42.982] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:56:43.271] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:56:53.658] [micropagosmessagegateway] [middleware] [info] [3b4ecb0adeb5] New petition received
+[2024-06-19 14:56:53.658] [micropagosmessagegateway] [middleware] [trace] [3b4ecb0adeb5] url: /, method: GET
+[2024-06-19 14:56:53.658] [micropagosmessagegateway] [middleware] [trace] [3b4ecb0adeb5] starting to validate the ahutentication
+[2024-06-19 14:56:53.658] [micropagosmessagegateway] [handler] [info] [3b4ecb0adeb5] starting to get the userdata for the user eaguerre
+[2024-06-19 14:56:53.658] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {24 gvera xTArnkceZoAkU0wCJu1v0adMhhk= 2014-03-25 16:37:44 Oca}
+[2024-06-19 14:56:53.659] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {86 prontows AoMkN6rmv3X6EuXxvrivjC3SZqE= 2020-06-05 15:33:05 Pronto}
+[2024-06-19 14:56:53.659] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {3 pcarriquiry /FY4QCXqL7zvXUgg/w+HNY+U5mU= 2018-10-29 17:20:41 Oca}
+[2024-06-19 14:56:53.659] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {85 itauws AoMkN6rmv3X6EuXxvrivjC3SZqE= 2014-06-04 15:40:24 Itau}
+[2024-06-19 14:56:53.659] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {141 banredws 3m9VOxTd9I3a5G7gBNeWcaukTX4=  IMM}
+[2024-06-19 14:56:53.659] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {4 bparoli AoMkN6rmv3X6EuXxvrivjC3SZqE= 2024-06-17 14:35:32 Micropagos}
+[2024-06-19 14:56:53.660] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {84 glopez xTArnkceZoAkU0wCJu1v0adMhhk= 2012-11-22 12:24:07 Micropagos}
+[2024-06-19 14:56:53.660] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {1 rpiaggio xTArnkceZoAkU0wCJu1v0adMhhk= 2014-05-29 12:33:32 Micropagos}
+[2024-06-19 14:56:53.660] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {80 1747809 xTArnkceZoAkU0wCJu1v0adMhhk= 2012-09-27 13:17:36 Oca}
+[2024-06-19 14:56:53.660] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {2 jborkenztain xTArnkceZoAkU0wCJu1v0adMhhk= 2013-07-24 11:15:55 Micropagos}
+[2024-06-19 14:56:53.660] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {60 fvidal xTArnkceZoAkU0wCJu1v0adMhhk= 2017-05-08 11:21:07 Micropagos}
+[2024-06-19 14:56:53.660] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {163 gvera_moc iEp0Qv5GDsYxMQmLGFP/xG+90Y4= 2013-07-26 12:06:35 Moc}
+[2024-06-19 14:56:53.661] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {164 gvera_pruebamoc xTArnkceZoAkU0wCJu1v0adMhhk= 2013-07-29 13:47:07 Moc}
+[2024-06-19 14:56:53.661] [micropagosmessagegateway] [handler] [trace] [3b4ecb0adeb5] user {5 eaguerre xTArnkceZoAkU0wCJu1v0adMhhk= 2024-06-19 17:00:00 Micropagos}
+[2024-06-19 14:56:53.661] [micropagosmessagegateway] [middleware] [trace] [3b4ecb0adeb5] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-19 14:56:53.662] [micropagosmessagegateway] [middleware] [info] [3b4ecb0adeb5] the user:eaguerre is already authenticated
+[2024-06-19 14:56:53.662] [micropagosmessagegateway] [handlerWelcome] [info] [3b4ecb0adeb5] starting handler welcome
+[2024-06-19 14:56:53.662] [micropagosmessagegateway] [middleware] [info] [3b4ecb0adeb5] Request took 3.7358ms
+[2024-06-19 14:58:17.918] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-19 14:58:18.161] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-19 14:58:25.414] [micropagosmessagegateway] [middleware] [info] [ec273fee389c] New petition received
+[2024-06-19 14:58:25.415] [micropagosmessagegateway] [middleware] [trace] [ec273fee389c] url: /, method: GET
+[2024-06-19 14:58:25.415] [micropagosmessagegateway] [middleware] [trace] [ec273fee389c] starting to validate the ahutentication
+[2024-06-19 14:58:25.415] [micropagosmessagegateway] [handler] [info] [ec273fee389c] starting to get the userdata for the user eaguerres
+[2024-06-19 14:58:25.415] [micropagosmessagegateway] [middleware] [error] [ec273fee389c] error getting user data to the user eaguerres,User does not exist or does not have permission to use the service.
+[2024-06-19 14:58:25.415] [micropagosmessagegateway] [middleware] [error] [ec273fee389c] User does not exist or does not have permission to use the service.
+[2024-06-19 14:58:25.415] [micropagosmessagegateway] [middleware] [info] [ec273fee389c] Request took 525.3µs
+[2024-06-19 14:58:37.963] [micropagosmessagegateway] [middleware] [info] [2831c73c6bea] New petition received
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [middleware] [trace] [2831c73c6bea] url: /, method: GET
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [middleware] [trace] [2831c73c6bea] starting to validate the ahutentication
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [handler] [info] [2831c73c6bea] starting to get the userdata for the user eaguerre
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [middleware] [trace] [2831c73c6bea] formatted password: JRg2LcU23vDkSxS2H96n8YkrkBo=
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [middleware] [error] [2831c73c6bea] Invalid password
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [middleware] [error] [2831c73c6bea] Invalid password
+[2024-06-19 14:58:37.964] [micropagosmessagegateway] [middleware] [info] [2831c73c6bea] Request took 524.8µs
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [middleware] [info] [f233c8a2a435] New petition received
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [middleware] [trace] [f233c8a2a435] url: /, method: GET
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [middleware] [trace] [f233c8a2a435] starting to validate the ahutentication
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [handler] [info] [f233c8a2a435] starting to get the userdata for the user eaguerre
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [middleware] [trace] [f233c8a2a435] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [middleware] [info] [f233c8a2a435] the user:eaguerre is already authenticated
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [handlerWelcome] [info] [f233c8a2a435] starting handler welcome
+[2024-06-19 14:59:30.834] [micropagosmessagegateway] [middleware] [info] [f233c8a2a435] Request took 538.5µs

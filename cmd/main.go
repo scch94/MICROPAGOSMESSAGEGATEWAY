@@ -41,6 +41,8 @@ func main() {
 	// Start scheduled tasks
 	startScheduler(ctx)
 
+	go startUpdatelastLogin(ctx)
+
 	// Start server
 	go startServer(ctx)
 
@@ -74,7 +76,7 @@ func updateMask(ctx context.Context) {
 	}
 }
 
-// esto garantiza que no importa el orden en el que levantes el modulo de la base y el modulo message gateway
+// esto garantiza que no importa el orden en el que levantes el modulo de la base y el modulo message gateway sieempre va  tener datos del user
 func updateUsers(ctx context.Context) {
 	for {
 		UsersInfoResponse, err := client.CallToGetUsers(ctx)
@@ -93,10 +95,10 @@ func updateUsers(ctx context.Context) {
 	}
 }
 
-// proceso automatico que ira actualizando cada n tiempo el mask(el valor del timepo esta en la config)
+// proceso automatico que ira actualizando cada n tiempo el mask y los usuarios (el valor del timepo esta en la config)
 func startScheduler(ctx context.Context) {
 	scheduler := gocron.NewScheduler(time.Local)
-	scheduler.Every(config.Config.UpdateMaskTimeInMinutes).Minutes().Do(func() {
+	scheduler.Every(config.Config.UpdatesTimeInMinutes).Minutes().Do(func() {
 		updateMask(ctx)
 		updateUsers(ctx)
 	})
@@ -150,4 +152,17 @@ func initializeAndWatchLogger(ctx context.Context) {
 
 func getVersion() string {
 	return version
+}
+
+// proceso automatico que ira actualizando cada n tiempo el mask y los usuarios (el valor del timepo esta en la config)
+func startSchedulerUpdatelastLogin(ctx context.Context) {
+	scheduler := gocron.NewScheduler(time.Local)
+	scheduler.Every(config.Config.UpdateLastLoginInMinutes).Minutes().Do(func() {
+		startUpdatelastLogin(ctx)
+	})
+	go scheduler.StartAsync()
+}
+
+func startUpdatelastLogin(ctx context.Context) {
+
 }

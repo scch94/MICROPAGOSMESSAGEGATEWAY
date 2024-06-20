@@ -7,9 +7,15 @@ type GetUsersInfoResponse struct {
 }
 
 type UserInfo struct {
-	UserId        string `json:"user_id"`
-	Username      string `json:"user_username"`
-	UserPassword  string `json:"user_password"`
-	UserLastLogin string `json:"user_last_login"`
-	DomainName    string `json:"domain_name"`
+	UserId          string `json:"user_id"`
+	Username        string `json:"user_username"`
+	UserPassword    string `json:"user_password"`
+	UserLastLogin   string `json:"user_last_login"`
+	DomainName      string `json:"domain_name"`
+	UserUpdateLogin string `json:"user_update_login"`
+}
+
+type UpdateLastLogin struct {
+	UserName  string `json:"user_name"`
+	LoginTime string `json:"login_time"`
 }

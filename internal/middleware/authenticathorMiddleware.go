@@ -8,9 +8,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/client"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
-	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
 	"github.com/scch94/ins_log"
 )
@@ -21,7 +20,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		//traemos el contexto y le setiamos el contexto actual
 		ctx := c.Request.Context()
 		ctx = ins_log.SetPackageNameInContext(ctx, "middleware")
-		ins_log.Infof(ctx, "starting to validate the ahutentication")
+		ins_log.Tracef(ctx, "starting to validate the ahutentication")
 
 		authHeader := c.GetHeader("Authorization")
 		if authHeader == "" {
@@ -55,14 +54,12 @@ func AuthMiddleware() gin.HandlerFunc {
 
 		username := userPass[0]
 		password := userPass[1]
-		ins_log.Infof(ctx, "starting Authentication proccess for %s", username)
 
 		// Aquí validamos que el usuario y la contraseña sea la correcta por ahora quemamos resultado
-		userData, err := getUserData(username, ctx)
+		userData, err := helper.GetUserdata(ctx, username)
 		if err != nil {
-			ins_log.Errorf(ctx, "error getting user data to the user %s", username)
-			ins_log.Errorf(ctx, "Invalid username or password")
-			sendErrorResponse(ctx, c, "Invalid username or password", constants.ERROR_INVALID_USERNAME_OR_PASSWORD)
+			ins_log.Errorf(ctx, "error getting user data to the user %s,User does not exist or does not have permission to use the service.", username)
+			sendErrorResponse(ctx, c, "User does not exist or does not have permission to use the service.", constants.ERROR_INVALID_USERNAME_OR_PASSWORD)
 			return
 		}
 
@@ -71,8 +68,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		ins_log.Tracef(ctx, "formatted password: %s", formatedPassword)
 
 		if username != userData.Username || formatedPassword != userData.Password {
-			ins_log.Errorf(ctx, "Invalid username or password")
-			sendErrorResponse(ctx, c, "Invalid username or password", constants.ERROR_INVALID_USERNAME_OR_PASSWORD)
+			sendErrorResponse(ctx, c, "Invalid password", constants.ERROR_INVALID_USERNAME_OR_PASSWORD)
 			return
 		}
 
@@ -82,23 +78,26 @@ func AuthMiddleware() gin.HandlerFunc {
 		c.Set("username", userData.Username)
 		c.Set("dominio", userData.UserDomain)
 
+		//guardamos la hora en la que el usuario uso el webservices para despues insertarla
+		go helper.UpdatedUserLastLogin(ctx, userData.Username)
+
 		// Si la validación es exitosa, continúa con el próximo handler
 		c.Next()
 	}
 }
 
-// CALL THE CLIENT TO THE DATABASE
-func getUserData(username string, ctx context.Context) (response.UserResponse, error) {
+// CALL THE CLIENT TO THE DATABASE por ahora se dejo de utilizar por que se usa el cache de usuarios
+// func getUserData(username string, ctx context.Context) (response.UserResponse, error) {
 
-	//creamos el request que tendra el username para enviar a la base
-	request := request.NewGetUserRequest(username)
-	userData, err := client.CallToGetUserData(*request, ctx)
-	if err != nil {
-		ins_log.Errorf(ctx, "error getting user data in the database: %v", err)
-		return userData, err
-	}
-	return userData, nil
-}
+// 	//creamos el request que tendra el username para enviar a la base
+// 	request := request.NewGetUserRequest(username)
+// 	userData, err := client.CallToGetUserData(*request, ctx)
+// 	if err != nil {
+// 		ins_log.Errorf(ctx, "error getting user data in the database: %v", err)
+// 		return userData, err
+// 	}
+// 	return userData, nil
+// }
 
 // formateador de password
 func formatPassword(password string) string {

@@ -28,21 +28,22 @@ func Upconfig(ctx context.Context) error {
 }
 
 type MicropagosConfiguration struct {
-	LogLevel                string         `json:"log_level"`
-	Log_name                string         `json:"log_name"`
-	Client                  Client         `json:"client"`
-	GetMask                 EndpointConfig `json:"getMask"`
-	GetUserDomain           EndpointConfig `json:"getUserDomain"`
-	ServPort                string         `json:"server_port"`
-	GetUsersInfo            EndpointConfig `json:"getUsersInfo"`
-	GetFilterDatabase       EndpointConfig `json:"getFilterDatabase"`
-	InsertMessage           EndpointConfig `json:"inserMessage"`
-	SMSGateway              EndpointConfig `json:"smsGateway"`
-	Portabilidad            EndpointConfig `json:"portabilidad"`
-	MaxMessageLength        int            `json:"max_message_length"`
-	MobileRegex             string         `json:"mobil_regex"`
-	Raven                   []RavenService `json:"raven"`
-	UpdateMaskTimeInMinutes int            `json:"update_mask_time_in_minutes"`
+	LogLevel                 string         `json:"log_level"`
+	Log_name                 string         `json:"log_name"`
+	Client                   Client         `json:"client"`
+	GetMask                  EndpointConfig `json:"getMask"`
+	GetUserDomain            EndpointConfig `json:"getUserDomain"`
+	ServPort                 string         `json:"server_port"`
+	GetUsersInfo             EndpointConfig `json:"getUsersInfo"`
+	GetFilterDatabase        EndpointConfig `json:"getFilterDatabase"`
+	InsertMessage            EndpointConfig `json:"inserMessage"`
+	SMSGateway               EndpointConfig `json:"smsGateway"`
+	Portabilidad             EndpointConfig `json:"portabilidad"`
+	MaxMessageLength         int            `json:"max_message_length"`
+	MobileRegex              string         `json:"mobil_regex"`
+	Raven                    []RavenService `json:"raven"`
+	UpdatesTimeInMinutes     int            `json:"updates_time_in_minutes"`
+	UpdateLastLoginInMinutes int            `json:"update_last_login_time_in_minutes"`
 }
 type Client struct {
 	MaxIdleConns           int  `json:"maxIdleConns"`
