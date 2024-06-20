@@ -24,19 +24,23 @@ type ToValidate struct {
 	Priority        string
 	Telco           string
 	Result          string
-	SendMessageTime time.Time
-	StartPetition   time.Time
+	SendMessageTime string
+	StartPetition   string
 	InsertMessage   string
 }
 
 // constructors
 func NewPetition(username string, mobile string, message string, useoriginame string) *ToValidate {
+
+	now := time.Now()
+	formattedTime := now.Format("2006-01-02 15:04:05")
+
 	return &ToValidate{
 		Username:      username,
 		Mobile:        mobile,
 		Message:       message,
 		UseOriginName: useoriginame,
-		StartPetition: time.Now(),
+		StartPetition: formattedTime,
 	}
 }
 

@@ -5,11 +5,13 @@ import (
 	"crypto/sha1"
 	"encoding/base64"
 	"net/http"
-	"strings"
+	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/client"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/constants"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/helper"
+	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/request"
 	"github.com/scch94/MICROPAGOSMESSAGEGATEWAY/internal/models/response"
 	"github.com/scch94/ins_log"
 )
@@ -22,38 +24,18 @@ func AuthMiddleware() gin.HandlerFunc {
 		ctx = ins_log.SetPackageNameInContext(ctx, "middleware")
 		ins_log.Tracef(ctx, "starting to validate the ahutentication")
 
-		authHeader := c.GetHeader("Authorization")
-		if authHeader == "" {
-			ins_log.Errorf(ctx, "missing authorization header")
+		username, password, ok := c.Request.BasicAuth()
+
+		if !ok {
+			c.Header("WWW-Authenticate", `Basic realm="Restricted"`)
 			sendErrorResponse(ctx, c, "missing authorization header", constants.ERROR_UNAUTHORIZED)
 			return
 		}
-
-		// Verifica que el esquema sea "Basic"
-		parts := strings.SplitN(authHeader, " ", 2)
-		if len(parts) != 2 || parts[0] != "Basic" {
-			sendErrorResponse(ctx, c, "missing authorization header", constants.ERROR_UNAUTHORIZED)
-			return
-		}
-
-		// Decodifica el valor base64
-		decoded, err := base64.StdEncoding.DecodeString(parts[1])
-		if err != nil {
-			ins_log.Errorf(ctx, "error decoding de value")
-			sendErrorResponse(ctx, c, "missing authorization header", constants.ERROR_UNAUTHORIZED)
-			return
-		}
-
-		// Separa el usuario y la contraseña
-		userPass := strings.SplitN(string(decoded), ":", 2)
-		if len(userPass) != 2 {
-			ins_log.Errorf(ctx, "Invalid authorization format")
-			sendErrorResponse(ctx, c, "missing authorization header", constants.ERROR_UNAUTHORIZED)
-			return
-		}
-
-		username := userPass[0]
-		password := userPass[1]
+		// if authHeader == "" {
+		// 	ins_log.Errorf(ctx, "missing authorization header")
+		// 	sendErrorResponse(ctx, c, "missing authorization header", constants.ERROR_UNAUTHORIZED)
+		// 	return
+		// }
 
 		// Aquí validamos que el usuario y la contraseña sea la correcta por ahora quemamos resultado
 		userData, err := helper.GetUserdata(ctx, username)
@@ -78,26 +60,13 @@ func AuthMiddleware() gin.HandlerFunc {
 		c.Set("username", userData.Username)
 		c.Set("dominio", userData.UserDomain)
 
-		//guardamos la hora en la que el usuario uso el webservices para despues insertarla
-		go helper.UpdatedUserLastLogin(ctx, userData.Username)
+		//proceso que insertara el valor del last login del usuario
+		go startUpdatelastLogin(ctx, userData.Username)
 
 		// Si la validación es exitosa, continúa con el próximo handler
 		c.Next()
 	}
 }
-
-// CALL THE CLIENT TO THE DATABASE por ahora se dejo de utilizar por que se usa el cache de usuarios
-// func getUserData(username string, ctx context.Context) (response.UserResponse, error) {
-
-// 	//creamos el request que tendra el username para enviar a la base
-// 	request := request.NewGetUserRequest(username)
-// 	userData, err := client.CallToGetUserData(*request, ctx)
-// 	if err != nil {
-// 		ins_log.Errorf(ctx, "error getting user data in the database: %v", err)
-// 		return userData, err
-// 	}
-// 	return userData, nil
-// }
 
 // formateador de password
 func formatPassword(password string) string {
@@ -127,4 +96,29 @@ func sendErrorResponse(ctx context.Context, c *gin.Context, message, code string
 	xmlResponse := response.GenerateXML(results)
 	c.Data(http.StatusUnauthorized, "application/xml", []byte(xmlResponse))
 	c.Abort()
+}
+
+func startUpdatelastLogin(ctx context.Context, username string) {
+
+	// Get the current time
+	now := time.Now()
+	formattedTime := now.Format("2006-01-02 15:04:05")
+
+	UserLastLogin := request.UserData{
+		UserName:  username,
+		LoginTime: formattedTime,
+	}
+
+	userToUpdate := request.UsersToUpdate{
+		Users: []request.UserData{
+			UserLastLogin,
+		},
+	}
+
+	_, err := client.CallToUpdateLastLogin(ctx, userToUpdate)
+	if err != nil {
+		ins_log.Errorf(ctx, "error updating last login: %v", err)
+		return
+	}
+	ins_log.Infof(ctx, "the last login of the user: %s was updated the new value is: %s", username, formattedTime)
 }

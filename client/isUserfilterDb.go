@@ -117,7 +117,7 @@ func callToMicropagosFilterDatabase(req *http.Request, utfi string, ctx context.
 		return filterMessageResponse, err
 	}
 
-	ins_log.Debugf(ctx, "the filter message response was: shortnumber and destinity are filter? : %v", filterMessageResponse.IsFilter)
+	ins_log.Debugf(ctx, "[%v],the filter message response was: shortnumber and destinity are filter? : %v", utfi, filterMessageResponse.IsFilter)
 
 	return filterMessageResponse, nil
 

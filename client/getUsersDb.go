@@ -22,6 +22,10 @@ func CallToGetUsers(ctx context.Context) (response.GetUsersInfoResponse, error) 
 
 	//preparamos el request
 	req, err := prepareGetUsersReq(ctx)
+	if err != nil {
+		//ins_log.Errorf(ctx, "error when we try to prepareGetUserReq()")
+		return Users, err
+	}
 
 	//hacemos el llamado y obtenemos el resultado
 	Users, err = callToMicropagosGetUsersInfo(req, ctx)

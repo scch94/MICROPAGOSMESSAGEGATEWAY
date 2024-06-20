@@ -1,0 +1,440 @@
+[2024-06-20 00:27:55.676] [micropagosmessagegateway] [client] [info] [] Request to database tooks 274.9002ms
+[2024-06-20 00:27:55.676] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 00:27:55.676] [micropagosmessagegateway] [main] [error] [] error updating last login: received non-200 status code: 500
+[2024-06-20 00:27:55.678] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:27:55.945] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:29:13.641] [micropagosmessagegateway] [client] [info] [] Request to database tooks 273.8922ms
+[2024-06-20 00:29:13.642] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 00:29:13.642] [micropagosmessagegateway] [main] [error] [] error updating last login: received non-200 status code: 500
+[2024-06-20 00:29:13.642] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:29:13.906] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:29:52.945] [micropagosmessagegateway] [middleware] [info] [fdfd8a835de2] New petition received
+[2024-06-20 00:29:52.945] [micropagosmessagegateway] [middleware] [trace] [fdfd8a835de2] url: /, method: GET
+[2024-06-20 00:29:52.945] [micropagosmessagegateway] [middleware] [trace] [fdfd8a835de2] starting to validate the ahutentication
+[2024-06-20 00:29:52.946] [micropagosmessagegateway] [handler] [info] [fdfd8a835de2] starting to get the userdata for the user eaguerre
+[2024-06-20 00:29:52.946] [micropagosmessagegateway] [middleware] [trace] [fdfd8a835de2] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:29:52.946] [micropagosmessagegateway] [middleware] [info] [fdfd8a835de2] the user:eaguerre is already authenticated
+[2024-06-20 00:29:52.946] [micropagosmessagegateway] [handlerWelcome] [info] [fdfd8a835de2] starting handler welcome
+[2024-06-20 00:29:52.946] [micropagosmessagegateway] [handler] [trace] [fdfd8a835de2] starting to updated the last login of the user eaguerre
+[2024-06-20 00:29:52.946] [micropagosmessagegateway] [middleware] [info] [fdfd8a835de2] Request took 1.211ms
+[2024-06-20 00:30:13.375] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:30:13.375] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:30:13.375] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/3351fe8af0ea
+[2024-06-20 00:30:13.375] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":null}
+[2024-06-20 00:30:13.487] [micropagosmessagegateway] [middleware] [info] [a6b52ff51996] New petition received
+[2024-06-20 00:30:13.487] [micropagosmessagegateway] [middleware] [trace] [a6b52ff51996] url: /, method: GET
+[2024-06-20 00:30:13.487] [micropagosmessagegateway] [middleware] [trace] [a6b52ff51996] starting to validate the ahutentication
+[2024-06-20 00:30:13.487] [micropagosmessagegateway] [handler] [info] [a6b52ff51996] starting to get the userdata for the user eaguerre
+[2024-06-20 00:30:13.487] [micropagosmessagegateway] [middleware] [trace] [a6b52ff51996] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:30:13.487] [micropagosmessagegateway] [middleware] [info] [a6b52ff51996] the user:eaguerre is already authenticated
+[2024-06-20 00:30:13.488] [micropagosmessagegateway] [handlerWelcome] [info] [a6b52ff51996] starting handler welcome
+[2024-06-20 00:30:13.488] [micropagosmessagegateway] [handler] [trace] [a6b52ff51996] starting to updated the last login of the user eaguerre
+[2024-06-20 00:30:13.488] [micropagosmessagegateway] [middleware] [info] [a6b52ff51996] Request took 528.5µs
+[2024-06-20 00:30:13.613] [micropagosmessagegateway] [client] [info] [] Request to database tooks 238.0237ms
+[2024-06-20 00:30:13.613] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 00:30:13.614] [micropagosmessagegateway] [main] [error] [] error updating last login: received non-200 status code: 500
+[2024-06-20 00:30:25.499] [micropagosmessagegateway] [middleware] [info] [ec8ac5f86d65] New petition received
+[2024-06-20 00:30:25.499] [micropagosmessagegateway] [middleware] [trace] [ec8ac5f86d65] url: /, method: GET
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [middleware] [trace] [ec8ac5f86d65] starting to validate the ahutentication
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [handler] [info] [ec8ac5f86d65] starting to get the userdata for the user eaguerre
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [middleware] [trace] [ec8ac5f86d65] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [middleware] [info] [ec8ac5f86d65] the user:eaguerre is already authenticated
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [handlerWelcome] [info] [ec8ac5f86d65] starting handler welcome
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [handler] [trace] [ec8ac5f86d65] starting to updated the last login of the user eaguerre
+[2024-06-20 00:30:25.500] [micropagosmessagegateway] [middleware] [info] [ec8ac5f86d65] Request took 535.5µs
+[2024-06-20 00:30:32.815] [micropagosmessagegateway] [middleware] [info] [3a3616fbcd47] New petition received
+[2024-06-20 00:30:32.815] [micropagosmessagegateway] [middleware] [trace] [3a3616fbcd47] url: /, method: GET
+[2024-06-20 00:30:32.815] [micropagosmessagegateway] [middleware] [trace] [3a3616fbcd47] starting to validate the ahutentication
+[2024-06-20 00:30:32.815] [micropagosmessagegateway] [handler] [info] [3a3616fbcd47] starting to get the userdata for the user eaguerre
+[2024-06-20 00:30:32.815] [micropagosmessagegateway] [middleware] [trace] [3a3616fbcd47] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:30:32.816] [micropagosmessagegateway] [middleware] [info] [3a3616fbcd47] the user:eaguerre is already authenticated
+[2024-06-20 00:30:32.816] [micropagosmessagegateway] [handlerWelcome] [info] [3a3616fbcd47] starting handler welcome
+[2024-06-20 00:30:32.816] [micropagosmessagegateway] [handler] [trace] [3a3616fbcd47] starting to updated the last login of the user eaguerre
+[2024-06-20 00:30:32.816] [micropagosmessagegateway] [middleware] [info] [3a3616fbcd47] Request took 514.4µs
+[2024-06-20 00:30:52.956] [micropagosmessagegateway] [handler] [trace] [fdfd8a835de2] user eaguerre inserted in the lastlogin data
+[2024-06-20 00:31:13.380] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:31:13.381] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:31:13.381] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/32d704a8f1fd
+[2024-06-20 00:31:13.381] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:30:52"}]}
+[2024-06-20 00:31:13.501] [micropagosmessagegateway] [handler] [trace] [a6b52ff51996] user last login updated to: 2024-06-20 00:31:13
+[2024-06-20 00:31:13.613] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:31:13.613] [micropagosmessagegateway] [client] [info] [] Request to database tooks 232.1589ms
+[2024-06-20 00:31:13.613] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:31:13.613] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":1}
+[2024-06-20 00:31:13.614] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 1
+[2024-06-20 00:31:13.911] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:31:25.503] [micropagosmessagegateway] [handler] [trace] [ec8ac5f86d65] user last login updated to: 2024-06-20 00:31:25
+[2024-06-20 00:31:32.824] [micropagosmessagegateway] [handler] [trace] [3a3616fbcd47] user last login updated to: 2024-06-20 00:31:32
+[2024-06-20 00:31:39.828] [micropagosmessagegateway] [middleware] [info] [43feaf76b2e5] New petition received
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [middleware] [trace] [43feaf76b2e5] url: /, method: GET
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [middleware] [trace] [43feaf76b2e5] starting to validate the ahutentication
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [handler] [info] [43feaf76b2e5] starting to get the userdata for the user eaguerre
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [middleware] [trace] [43feaf76b2e5] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [middleware] [info] [43feaf76b2e5] the user:eaguerre is already authenticated
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [handlerWelcome] [info] [43feaf76b2e5] starting handler welcome
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [handler] [trace] [43feaf76b2e5] starting to updated the last login of the user eaguerre
+[2024-06-20 00:31:39.829] [micropagosmessagegateway] [middleware] [info] [43feaf76b2e5] Request took 528.9µs
+[2024-06-20 00:32:13.389] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:32:13.390] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:32:13.390] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/34b536a05bf3
+[2024-06-20 00:32:13.390] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:30:52"}]}
+[2024-06-20 00:32:13.616] [micropagosmessagegateway] [client] [info] [] Request to database tooks 225.979ms
+[2024-06-20 00:32:13.616] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:32:13.617] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:32:13.617] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:32:39.844] [micropagosmessagegateway] [handler] [trace] [43feaf76b2e5] user last login updated to: 2024-06-20 00:32:39
+[2024-06-20 00:32:56.686] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:32:56.687] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:32:56.687] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/a27c3e9037f5
+[2024-06-20 00:32:56.688] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":null}
+[2024-06-20 00:32:56.946] [micropagosmessagegateway] [client] [info] [] Request to database tooks 258.9539ms
+[2024-06-20 00:32:56.946] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 00:32:56.947] [micropagosmessagegateway] [main] [error] [] error updating last login: received non-200 status code: 500
+[2024-06-20 00:32:56.947] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:32:57.210] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:36:53.711] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:36:53.711] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:36:53.711] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/67655028484e
+[2024-06-20 00:36:53.711] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":null}
+[2024-06-20 00:36:53.776] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos database: Get "http://localhost:2122/masks/61dcd6ec607e": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-20 00:36:53.777] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 00:36:53.776] [micropagosmessagegateway] [client] [error] [] Error when we do the petition to micropagos database: Post "http://localhost:2122/updateLastLogin/67655028484e": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-20 00:36:53.777] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 00:36:53.777] [micropagosmessagegateway] [main] [error] [] error getting mask: Get "http://localhost:2122/masks/61dcd6ec607e": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-20 00:36:53.778] [micropagosmessagegateway] [main] [warn] [] mask is empty after error, retrying...
+[2024-06-20 00:36:53.777] [micropagosmessagegateway] [main] [error] [] error updating last login: Post "http://localhost:2122/updateLastLogin/67655028484e": dial tcp [::1]:2122: connectex: No connection could be made because the target machine actively refused it.
+[2024-06-20 00:37:11.209] [micropagosmessagegateway] [client] [info] [] Request to database tooks 53.7562ms
+[2024-06-20 00:37:11.210] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:37:11.210] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:37:11.210] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:37:11.428] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:37:11.705] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:38:02.420] [micropagosmessagegateway] [middleware] [info] [a45281fdcaf1] New petition received
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [middleware] [trace] [a45281fdcaf1] url: /, method: GET
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [middleware] [trace] [a45281fdcaf1] starting to validate the ahutentication
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [handler] [info] [a45281fdcaf1] starting to get the userdata for the user eaguerre
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [middleware] [trace] [a45281fdcaf1] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [middleware] [info] [a45281fdcaf1] the user:eaguerre is already authenticated
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [handlerWelcome] [info] [a45281fdcaf1] starting handler welcome
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [handler] [trace] [a45281fdcaf1] starting to updated the last login of the user eaguerre
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [handler] [trace] [a45281fdcaf1] user eaguerre inserted in the lastlogin data
+[2024-06-20 00:38:02.421] [micropagosmessagegateway] [middleware] [info] [a45281fdcaf1] Request took 527.1µs
+[2024-06-20 00:38:09.833] [micropagosmessagegateway] [middleware] [info] [76170a099cb0] New petition received
+[2024-06-20 00:38:09.833] [micropagosmessagegateway] [middleware] [trace] [76170a099cb0] url: /, method: GET
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [middleware] [trace] [76170a099cb0] starting to validate the ahutentication
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [handler] [info] [76170a099cb0] starting to get the userdata for the user eaguerre
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [middleware] [trace] [76170a099cb0] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [middleware] [info] [76170a099cb0] the user:eaguerre is already authenticated
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [handlerWelcome] [info] [76170a099cb0] starting handler welcome
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [handler] [trace] [76170a099cb0] starting to updated the last login of the user eaguerre
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [handler] [trace] [76170a099cb0] user last login updated to: 2024-06-20 00:38:09
+[2024-06-20 00:38:09.834] [micropagosmessagegateway] [middleware] [info] [76170a099cb0] Request took 522.4µs
+[2024-06-20 00:38:11.164] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:38:11.164] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:38:11.164] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/0c2d9b457d87
+[2024-06-20 00:38:11.164] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"}]}
+[2024-06-20 00:38:11.415] [micropagosmessagegateway] [client] [info] [] Request to database tooks 250.0321ms
+[2024-06-20 00:38:11.415] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:38:11.416] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":1}
+[2024-06-20 00:38:11.416] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 1
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [middleware] [info] [9a4bb8030211] New petition received
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [middleware] [trace] [9a4bb8030211] url: /, method: GET
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [middleware] [trace] [9a4bb8030211] starting to validate the ahutentication
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [handler] [info] [9a4bb8030211] starting to get the userdata for the user eaguerre
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [middleware] [trace] [9a4bb8030211] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [middleware] [info] [9a4bb8030211] the user:eaguerre is already authenticated
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [handlerWelcome] [info] [9a4bb8030211] starting handler welcome
+[2024-06-20 00:38:45.124] [micropagosmessagegateway] [handler] [trace] [9a4bb8030211] starting to updated the last login of the user eaguerre
+[2024-06-20 00:38:45.125] [micropagosmessagegateway] [handler] [trace] [9a4bb8030211] user last login updated to: 2024-06-20 00:38:45
+[2024-06-20 00:38:45.125] [micropagosmessagegateway] [middleware] [info] [9a4bb8030211] Request took 522.3µs
+[2024-06-20 00:39:08.673] [micropagosmessagegateway] [middleware] [info] [19cd1021ad66] New petition received
+[2024-06-20 00:39:08.673] [micropagosmessagegateway] [middleware] [trace] [19cd1021ad66] url: /, method: GET
+[2024-06-20 00:39:08.673] [micropagosmessagegateway] [middleware] [trace] [19cd1021ad66] starting to validate the ahutentication
+[2024-06-20 00:39:08.673] [micropagosmessagegateway] [handler] [info] [19cd1021ad66] starting to get the userdata for the user eaguerre
+[2024-06-20 00:39:08.674] [micropagosmessagegateway] [middleware] [trace] [19cd1021ad66] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:39:08.674] [micropagosmessagegateway] [middleware] [info] [19cd1021ad66] the user:eaguerre is already authenticated
+[2024-06-20 00:39:08.674] [micropagosmessagegateway] [handlerWelcome] [info] [19cd1021ad66] starting handler welcome
+[2024-06-20 00:39:08.674] [micropagosmessagegateway] [handler] [trace] [19cd1021ad66] starting to updated the last login of the user eaguerre
+[2024-06-20 00:39:08.674] [micropagosmessagegateway] [handler] [trace] [19cd1021ad66] user last login updated to: 2024-06-20 00:39:08
+[2024-06-20 00:39:08.674] [micropagosmessagegateway] [middleware] [info] [19cd1021ad66] Request took 534.1µs
+[2024-06-20 00:39:11.172] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:39:11.172] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:39:11.172] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/d390261003d8
+[2024-06-20 00:39:11.172] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"}]}
+[2024-06-20 00:39:11.392] [micropagosmessagegateway] [client] [info] [] Request to database tooks 219.1394ms
+[2024-06-20 00:39:11.392] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:39:11.392] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:39:11.392] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:39:11.392] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:39:11.675] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [middleware] [info] [9153f83985f2] New petition received
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [middleware] [trace] [9153f83985f2] url: /, method: GET
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [middleware] [trace] [9153f83985f2] starting to validate the ahutentication
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [handler] [info] [9153f83985f2] starting to get the userdata for the user sguinea
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [middleware] [error] [9153f83985f2] error getting user data to the user sguinea,User does not exist or does not have permission to use the service.
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [middleware] [error] [9153f83985f2] User does not exist or does not have permission to use the service.
+[2024-06-20 00:39:19.453] [micropagosmessagegateway] [middleware] [info] [9153f83985f2] Request took 506.2µs
+[2024-06-20 00:39:23.328] [micropagosmessagegateway] [middleware] [info] [126ad3f601f1] New petition received
+[2024-06-20 00:39:23.328] [micropagosmessagegateway] [middleware] [trace] [126ad3f601f1] url: /, method: GET
+[2024-06-20 00:39:23.329] [micropagosmessagegateway] [middleware] [trace] [126ad3f601f1] starting to validate the ahutentication
+[2024-06-20 00:39:23.329] [micropagosmessagegateway] [handler] [info] [126ad3f601f1] starting to get the userdata for the user sguinea
+[2024-06-20 00:39:23.329] [micropagosmessagegateway] [middleware] [error] [126ad3f601f1] error getting user data to the user sguinea,User does not exist or does not have permission to use the service.
+[2024-06-20 00:39:23.329] [micropagosmessagegateway] [middleware] [error] [126ad3f601f1] User does not exist or does not have permission to use the service.
+[2024-06-20 00:39:23.329] [micropagosmessagegateway] [middleware] [info] [126ad3f601f1] Request took 526.4µs
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [middleware] [info] [bdb90e56174d] New petition received
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [middleware] [trace] [bdb90e56174d] url: /, method: GET
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [middleware] [trace] [bdb90e56174d] starting to validate the ahutentication
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [handler] [info] [bdb90e56174d] starting to get the userdata for the user sguinea
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [middleware] [error] [bdb90e56174d] error getting user data to the user sguinea,User does not exist or does not have permission to use the service.
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [middleware] [error] [bdb90e56174d] User does not exist or does not have permission to use the service.
+[2024-06-20 00:39:24.256] [micropagosmessagegateway] [middleware] [info] [bdb90e56174d] Request took 0s
+[2024-06-20 00:40:11.169] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:40:11.170] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:40:11.170] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/1294d1021ec3
+[2024-06-20 00:40:11.170] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"}]}
+[2024-06-20 00:40:11.399] [micropagosmessagegateway] [client] [info] [] Request to database tooks 229.696ms
+[2024-06-20 00:40:11.400] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:40:11.400] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:40:11.400] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:40:53.119] [micropagosmessagegateway] [middleware] [info] [2e8445843e01] New petition received
+[2024-06-20 00:40:53.119] [micropagosmessagegateway] [middleware] [trace] [2e8445843e01] url: /, method: GET
+[2024-06-20 00:40:53.119] [micropagosmessagegateway] [middleware] [trace] [2e8445843e01] starting to validate the ahutentication
+[2024-06-20 00:40:53.119] [micropagosmessagegateway] [handler] [info] [2e8445843e01] starting to get the userdata for the user eaguerre
+[2024-06-20 00:40:53.119] [micropagosmessagegateway] [middleware] [trace] [2e8445843e01] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:40:53.120] [micropagosmessagegateway] [middleware] [info] [2e8445843e01] the user:eaguerre is already authenticated
+[2024-06-20 00:40:53.120] [micropagosmessagegateway] [handlerWelcome] [info] [2e8445843e01] starting handler welcome
+[2024-06-20 00:40:53.120] [micropagosmessagegateway] [handler] [trace] [2e8445843e01] starting to updated the last login of the user eaguerre
+[2024-06-20 00:40:53.120] [micropagosmessagegateway] [handler] [trace] [2e8445843e01] user last login updated to: 2024-06-20 00:40:53
+[2024-06-20 00:40:53.120] [micropagosmessagegateway] [middleware] [info] [2e8445843e01] Request took 527.3µs
+[2024-06-20 00:40:55.680] [micropagosmessagegateway] [middleware] [info] [6f26aabd4a93] New petition received
+[2024-06-20 00:40:55.681] [micropagosmessagegateway] [middleware] [trace] [6f26aabd4a93] url: /, method: GET
+[2024-06-20 00:40:55.681] [micropagosmessagegateway] [middleware] [trace] [6f26aabd4a93] starting to validate the ahutentication
+[2024-06-20 00:40:55.681] [micropagosmessagegateway] [handler] [info] [6f26aabd4a93] starting to get the userdata for the user glopez
+[2024-06-20 00:40:55.681] [micropagosmessagegateway] [middleware] [trace] [6f26aabd4a93] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:40:55.682] [micropagosmessagegateway] [middleware] [info] [6f26aabd4a93] the user:glopez is already authenticated
+[2024-06-20 00:40:55.682] [micropagosmessagegateway] [handlerWelcome] [info] [6f26aabd4a93] starting handler welcome
+[2024-06-20 00:40:55.682] [micropagosmessagegateway] [handler] [trace] [6f26aabd4a93] starting to updated the last login of the user glopez
+[2024-06-20 00:40:55.682] [micropagosmessagegateway] [handler] [trace] [6f26aabd4a93] user glopez inserted in the lastlogin data
+[2024-06-20 00:40:55.682] [micropagosmessagegateway] [middleware] [info] [6f26aabd4a93] Request took 530.2µs
+[2024-06-20 00:41:11.168] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:41:11.169] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:41:11.169] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/a07571b8aeef
+[2024-06-20 00:41:11.169] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:41:11.408] [micropagosmessagegateway] [client] [info] [] Request to database tooks 237.804ms
+[2024-06-20 00:41:11.408] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:41:11.409] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":1}
+[2024-06-20 00:41:11.409] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 1
+[2024-06-20 00:41:11.460] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:41:11.734] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:42:11.177] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:42:11.177] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:42:11.177] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/a8b16fd900dc
+[2024-06-20 00:42:11.177] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:42:11.420] [micropagosmessagegateway] [client] [info] [] Request to database tooks 243.0796ms
+[2024-06-20 00:42:11.420] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:42:11.421] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:42:11.421] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:43:11.167] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:43:11.168] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:43:11.168] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/b33c23c4248d
+[2024-06-20 00:43:11.168] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:43:11.398] [micropagosmessagegateway] [client] [info] [] Request to database tooks 230.0048ms
+[2024-06-20 00:43:11.398] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:43:11.399] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:43:11.399] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:43:11.399] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:43:11.673] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:44:03.119] [micropagosmessagegateway] [middleware] [info] [2b72ed9bfcaf] New petition received
+[2024-06-20 00:44:03.119] [micropagosmessagegateway] [middleware] [trace] [2b72ed9bfcaf] url: /, method: GET
+[2024-06-20 00:44:03.119] [micropagosmessagegateway] [middleware] [trace] [2b72ed9bfcaf] starting to validate the ahutentication
+[2024-06-20 00:44:03.120] [micropagosmessagegateway] [handler] [info] [2b72ed9bfcaf] starting to get the userdata for the user glopez
+[2024-06-20 00:44:03.120] [micropagosmessagegateway] [middleware] [trace] [2b72ed9bfcaf] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:44:03.120] [micropagosmessagegateway] [middleware] [info] [2b72ed9bfcaf] the user:glopez is already authenticated
+[2024-06-20 00:44:03.120] [micropagosmessagegateway] [handlerWelcome] [info] [2b72ed9bfcaf] starting handler welcome
+[2024-06-20 00:44:03.120] [micropagosmessagegateway] [handler] [trace] [2b72ed9bfcaf] starting to updated the last login of the user glopez
+[2024-06-20 00:44:03.121] [micropagosmessagegateway] [handler] [trace] [2b72ed9bfcaf] user last login updated to: 2024-06-20 00:44:03
+[2024-06-20 00:44:03.121] [micropagosmessagegateway] [middleware] [info] [2b72ed9bfcaf] Request took 1.047ms
+[2024-06-20 00:44:06.199] [micropagosmessagegateway] [middleware] [info] [64236244764c] New petition received
+[2024-06-20 00:44:06.199] [micropagosmessagegateway] [middleware] [trace] [64236244764c] url: /, method: GET
+[2024-06-20 00:44:06.199] [micropagosmessagegateway] [middleware] [trace] [64236244764c] starting to validate the ahutentication
+[2024-06-20 00:44:06.199] [micropagosmessagegateway] [handler] [info] [64236244764c] starting to get the userdata for the user eaguerre
+[2024-06-20 00:44:06.199] [micropagosmessagegateway] [middleware] [trace] [64236244764c] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:44:06.199] [micropagosmessagegateway] [middleware] [info] [64236244764c] the user:eaguerre is already authenticated
+[2024-06-20 00:44:06.200] [micropagosmessagegateway] [handlerWelcome] [info] [64236244764c] starting handler welcome
+[2024-06-20 00:44:06.200] [micropagosmessagegateway] [handler] [trace] [64236244764c] starting to updated the last login of the user eaguerre
+[2024-06-20 00:44:06.200] [micropagosmessagegateway] [handler] [trace] [64236244764c] user last login updated to: 2024-06-20 00:44:06
+[2024-06-20 00:44:06.200] [micropagosmessagegateway] [middleware] [info] [64236244764c] Request took 528µs
+[2024-06-20 00:44:11.165] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:44:11.166] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:44:11.167] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/01d02d029abd
+[2024-06-20 00:44:11.167] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:44:11.401] [micropagosmessagegateway] [client] [info] [] Request to database tooks 234.8092ms
+[2024-06-20 00:44:11.401] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:44:11.401] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:44:11.402] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:45:11.171] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:45:11.171] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:45:11.171] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/23016887cd84
+[2024-06-20 00:45:11.171] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:45:11.404] [micropagosmessagegateway] [client] [info] [] Request to database tooks 232.9999ms
+[2024-06-20 00:45:11.404] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:45:11.404] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:45:11.405] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:45:11.406] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:45:11.671] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:45:41.657] [micropagosmessagegateway] [middleware] [info] [b4feace9e013] New petition received
+[2024-06-20 00:45:41.657] [micropagosmessagegateway] [middleware] [trace] [b4feace9e013] url: /, method: GET
+[2024-06-20 00:45:41.657] [micropagosmessagegateway] [middleware] [trace] [b4feace9e013] starting to validate the ahutentication
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [handler] [info] [b4feace9e013] starting to get the userdata for the user eaguerre
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [middleware] [trace] [b4feace9e013] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [middleware] [info] [b4feace9e013] the user:eaguerre is already authenticated
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [handlerWelcome] [info] [b4feace9e013] starting handler welcome
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [handler] [trace] [b4feace9e013] starting to updated the last login of the user eaguerre
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [middleware] [info] [b4feace9e013] Request took 508.2µs
+[2024-06-20 00:45:41.658] [micropagosmessagegateway] [handler] [trace] [b4feace9e013] user last login updated to: 2024-06-20 00:45:41
+[2024-06-20 00:46:11.175] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:46:11.175] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:46:11.176] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/719865948c69
+[2024-06-20 00:46:11.176] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:46:11.414] [micropagosmessagegateway] [client] [info] [] Request to database tooks 238.1584ms
+[2024-06-20 00:46:11.414] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:46:11.414] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:46:11.414] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:47:11.169] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:47:11.169] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:47:11.169] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/9e83e204e7e2
+[2024-06-20 00:47:11.169] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:47:11.410] [micropagosmessagegateway] [client] [info] [] Request to database tooks 241.0772ms
+[2024-06-20 00:47:11.411] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:47:11.411] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:47:11.411] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:47:11.466] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:47:11.751] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:48:11.171] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:48:11.171] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:48:11.171] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/0747d1f4f1f0
+[2024-06-20 00:48:11.171] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:48:11.399] [micropagosmessagegateway] [client] [info] [] Request to database tooks 227.7071ms
+[2024-06-20 00:48:11.400] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:48:11.400] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:48:11.400] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:49:11.167] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:49:11.167] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:49:11.168] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/27530779687a
+[2024-06-20 00:49:11.168] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:49:11.396] [micropagosmessagegateway] [client] [info] [] Request to database tooks 228.3791ms
+[2024-06-20 00:49:11.396] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:49:11.396] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:49:11.397] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:49:11.397] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:49:11.667] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:50:10.051] [micropagosmessagegateway] [middleware] [info] [b4c01fcba56d] New petition received
+[2024-06-20 00:50:10.051] [micropagosmessagegateway] [middleware] [trace] [b4c01fcba56d] url: /, method: GET
+[2024-06-20 00:50:10.051] [micropagosmessagegateway] [middleware] [trace] [b4c01fcba56d] starting to validate the ahutentication
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [handler] [info] [b4c01fcba56d] starting to get the userdata for the user eaguerre
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [middleware] [trace] [b4c01fcba56d] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [middleware] [info] [b4c01fcba56d] the user:eaguerre is already authenticated
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [handlerWelcome] [info] [b4c01fcba56d] starting handler welcome
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [handler] [trace] [b4c01fcba56d] starting to updated the last login of the user eaguerre
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [handler] [trace] [b4c01fcba56d] user last login updated to: 2024-06-20 00:50:10
+[2024-06-20 00:50:10.052] [micropagosmessagegateway] [middleware] [info] [b4c01fcba56d] Request took 1.0502ms
+[2024-06-20 00:50:11.167] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:50:11.167] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:50:11.168] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/9a54c24c50fc
+[2024-06-20 00:50:11.168] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:50:11.400] [micropagosmessagegateway] [client] [info] [] Request to database tooks 232.8348ms
+[2024-06-20 00:50:11.400] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:50:11.401] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:50:11.401] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:50:17.251] [micropagosmessagegateway] [middleware] [info] [fb23183d537b] New petition received
+[2024-06-20 00:50:17.251] [micropagosmessagegateway] [middleware] [trace] [fb23183d537b] url: /, method: GET
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [middleware] [trace] [fb23183d537b] starting to validate the ahutentication
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [handler] [info] [fb23183d537b] starting to get the userdata for the user eaguerre
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [middleware] [trace] [fb23183d537b] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [middleware] [info] [fb23183d537b] the user:eaguerre is already authenticated
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [handlerWelcome] [info] [fb23183d537b] starting handler welcome
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [middleware] [info] [fb23183d537b] Request took 0s
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [handler] [trace] [fb23183d537b] starting to updated the last login of the user eaguerre
+[2024-06-20 00:50:17.252] [micropagosmessagegateway] [handler] [trace] [fb23183d537b] user last login updated to: 2024-06-20 00:50:17
+[2024-06-20 00:51:11.165] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:51:11.165] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:51:11.166] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/dfaef86e4bea
+[2024-06-20 00:51:11.166] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:51:11.398] [micropagosmessagegateway] [client] [info] [] Request to database tooks 231.6998ms
+[2024-06-20 00:51:11.398] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:51:11.398] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:51:11.398] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:51:11.406] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:51:11.686] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:52:11.177] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:52:11.177] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:52:11.178] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/672405c11f78
+[2024-06-20 00:52:11.178] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:52:11.409] [micropagosmessagegateway] [client] [info] [] Request to database tooks 231.6651ms
+[2024-06-20 00:52:11.409] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:52:11.409] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:52:11.409] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:53:11.175] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:53:11.175] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:53:11.176] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/c5aef10fa561
+[2024-06-20 00:53:11.176] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:53:11.410] [micropagosmessagegateway] [client] [info] [] Request to database tooks 234.1511ms
+[2024-06-20 00:53:11.410] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:53:11.410] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:53:11.410] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:53:11.416] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:53:11.690] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:54:11.177] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:54:11.177] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:54:11.177] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/b553bf059718
+[2024-06-20 00:54:11.178] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:54:11.420] [micropagosmessagegateway] [client] [info] [] Request to database tooks 241.4867ms
+[2024-06-20 00:54:11.421] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:54:11.421] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:54:11.421] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:55:11.171] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:55:11.172] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:55:11.172] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/179309a9aa4e
+[2024-06-20 00:55:11.172] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:55:11.403] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:55:11.403] [micropagosmessagegateway] [client] [info] [] Request to database tooks 231.2626ms
+[2024-06-20 00:55:11.404] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:55:11.404] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:55:11.404] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:55:11.668] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:56:11.173] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:56:11.173] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:56:11.174] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/d0b07ddddfff
+[2024-06-20 00:56:11.174] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:56:11.410] [micropagosmessagegateway] [client] [info] [] Request to database tooks 236.6725ms
+[2024-06-20 00:56:11.410] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:56:11.411] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:56:11.411] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:57:11.177] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:57:11.178] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:57:11.178] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/ce41e0e30d7e
+[2024-06-20 00:57:11.178] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:57:11.395] [micropagosmessagegateway] [client] [info] [] Request to database tooks 216.4786ms
+[2024-06-20 00:57:11.401] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:57:11.401] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:57:11.401] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:57:11.453] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:57:11.733] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 00:58:11.170] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:58:11.170] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:58:11.170] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/16dfeddd13e7
+[2024-06-20 00:58:11.170] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:58:11.402] [micropagosmessagegateway] [client] [info] [] Request to database tooks 231.2718ms
+[2024-06-20 00:58:11.402] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:58:11.402] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:58:11.402] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:59:11.164] [micropagosmessagegateway] [client] [trace] [] starting to prepare the URL and the body of the petition
+[2024-06-20 00:59:11.164] [micropagosmessagegateway] [client] [trace] [] petition http created
+[2024-06-20 00:59:11.164] [micropagosmessagegateway] [client] [info] [] Final url : http://localhost:2122/updateLastLogin/595cf567631a
+[2024-06-20 00:59:11.165] [micropagosmessagegateway] [client] [info] [] Final BODY: {"users":[{"user_name":"eaguerre","login_time":"2024-06-20 00:38:02"},{"user_name":"glopez","login_time":"2024-06-20 00:40:55"}]}
+[2024-06-20 00:59:11.387] [micropagosmessagegateway] [client] [info] [] Request to database tooks 222.2051ms
+[2024-06-20 00:59:11.387] [micropagosmessagegateway] [client] [info] [] HTTP Status Response: 200
+[2024-06-20 00:59:11.387] [micropagosmessagegateway] [client] [info] [] RESPONSE BODY: {"response":{"result":0,"message":"updated successfully"},"rowsaffected":0}
+[2024-06-20 00:59:11.387] [micropagosmessagegateway] [main] [info] [] the number of users updated was: 0
+[2024-06-20 00:59:11.387] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 00:59:11.658] [micropagosmessagegateway] [main] [trace] [] users backup was updated

@@ -1,0 +1,118 @@
+[2024-06-20 14:20:14.589] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:14.594] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.581] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.581] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.590] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.591] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.591] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.594] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.591] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.595] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.595] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.595] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.597] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.595] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.594] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.597] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.597] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.599] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.602] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.605] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.602] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.602] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.602] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.656] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.656] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.656] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.656] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.656] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.679] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.688] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:15.692] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.707] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.709] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.721] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.722] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.722] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.729] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.730] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.730] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.730] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.739] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:15.812] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.874] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:15.946] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.018] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.046] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.064] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.071] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.080] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.094] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.095] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.096] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.117] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetMask()
+[2024-06-20 14:20:16.124] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.124] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.124] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.136] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.155] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.156] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.196] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:16.220] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:16.534] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.536] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.536] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.546] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:16.547] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.693] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:16.698] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:16.987] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:16.988] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:17.006] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:17.007] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:17.009] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:17.113] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:17.115] [micropagosmessagegateway] [client] [error] [] error when we try to  callToMicropagosGetUsersInfo()
+[2024-06-20 14:20:17.122] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:17.053] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:20:17.025] [micropagosmessagegateway] [main] [error] [] error getting mask: received non-200 status code: 500
+[2024-06-20 14:21:22.380] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:21:33.225] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:23:09.586] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:23:09.878] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:25:09.669] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:25:09.901] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:27:09.643] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:27:10.212] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:29:09.629] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:29:09.882] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:31:09.962] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:31:10.272] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:33:09.692] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:33:10.095] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:35:09.678] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:35:09.901] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:37:09.613] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:37:09.932] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:39:09.634] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:39:09.882] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:41:09.674] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:41:09.898] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:43:09.642] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:43:09.906] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:45:09.697] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:45:09.944] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:47:09.697] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:47:09.929] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:49:09.871] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:49:10.205] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:51:09.638] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:51:10.037] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:53:09.625] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:53:09.881] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:55:09.686] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:55:10.022] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:57:09.739] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:57:10.100] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 14:59:09.656] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 14:59:09.971] [micropagosmessagegateway] [main] [trace] [] users backup was updated

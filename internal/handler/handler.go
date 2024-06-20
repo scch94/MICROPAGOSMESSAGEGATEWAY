@@ -39,6 +39,8 @@ func SendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 		utfi := ins_log.GenerateUTFI()
 		ins_log.Infof(ctx, "this is the individual identifiar of this petition %v", utfi)
 		i = identifier
+		now := time.Now()
+		startPetition := now.Format("2006-01-02 15:04:05")
 		// Creamos el helper de validación
 		validationStruct := helper.ToValidate{
 			Username:       username,
@@ -51,7 +53,7 @@ func SendmassiveMessage(r *request.SendMessageRequest, username string, ctx cont
 			Priority:       r.Body.SendMassiveMessages.Priority,
 			ShortNumber:    r.Body.SendMassiveMessages.ShortNumber,
 			Result:         "",
-			StartPetition:  time.Now(),
+			StartPetition:  startPetition,
 		}
 		go func(validate *helper.ToValidate, i int) {
 			defer wg.Done()
@@ -237,7 +239,9 @@ func SendSingleMessage(validate *helper.ToValidate, utfi string, ctx context.Con
 	}
 
 	//guardamos la hora en la que enviamos el mensaje !
-	validate.SendMessageTime = time.Now()
+	now := time.Now()
+	processed := now.Format("2006-01-02 15:04:05")
+	validate.SendMessageTime = processed
 	ins_log.Infof(ctx, "[%v], TelcoGatewayResponse: %s", utfi, telcoGatewayResullt.SmsgatewayResult)
 
 	//llenamos el validattionresult con los datos de smsgatewayresult t
@@ -252,7 +256,7 @@ func GetShortNumber(validate *helper.ToValidate, utfi string, ctx context.Contex
 	//llenamos el herper que sera utilizado para el domainresult
 	userDomainResult := helper.UserDomainResult{}
 	ins_log.Infof(ctx, "[%v], checking short number", utfi)
-	if validate.ShortNumber != "" {
+	if validate.ShortNumber != "" && config.Config.UseHarcodeShortNumber {
 
 		//si el shortnumber viene en la peticion usamos ese shortnumber
 		ins_log.Tracef(ctx, "[%v], using short number of the petition", utfi)

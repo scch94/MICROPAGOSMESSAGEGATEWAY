@@ -1,0 +1,529 @@
+[2024-06-20 15:01:08.625] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:01:08.847] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:03:08.461] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:03:08.688] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:03:35.432] [micropagosmessagegateway] [middleware] [info] [e659859529fa] New petition received
+[2024-06-20 15:03:35.433] [micropagosmessagegateway] [middleware] [trace] [e659859529fa] url: /, method: GET
+[2024-06-20 15:03:35.434] [micropagosmessagegateway] [middleware] [trace] [e659859529fa] starting to validate the ahutentication
+[2024-06-20 15:03:35.434] [micropagosmessagegateway] [handler] [info] [e659859529fa] starting to get the userdata for the user eaguerre
+[2024-06-20 15:03:35.434] [micropagosmessagegateway] [middleware] [trace] [e659859529fa] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:03:35.434] [micropagosmessagegateway] [middleware] [info] [e659859529fa] the user:eaguerre is already authenticated
+[2024-06-20 15:03:35.434] [micropagosmessagegateway] [handlerWelcome] [info] [e659859529fa] starting handler welcome
+[2024-06-20 15:03:35.434] [micropagosmessagegateway] [client] [trace] [e659859529fa] starting to prepare the URL and the body of the petition
+[2024-06-20 15:03:35.435] [micropagosmessagegateway] [middleware] [info] [e659859529fa] Request took 1.2332ms
+[2024-06-20 15:03:35.801] [micropagosmessagegateway] [middleware] [info] [e659859529fa] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:03:35
+[2024-06-20 15:03:49.490] [micropagosmessagegateway] [middleware] [info] [2e6361eccc46] New petition received
+[2024-06-20 15:03:49.491] [micropagosmessagegateway] [middleware] [trace] [2e6361eccc46] url: /, method: POST
+[2024-06-20 15:03:49.491] [micropagosmessagegateway] [middleware] [trace] [2e6361eccc46] starting to validate the ahutentication
+[2024-06-20 15:03:49.493] [micropagosmessagegateway] [middleware] [error] [2e6361eccc46] missing authorization header
+[2024-06-20 15:03:49.494] [micropagosmessagegateway] [middleware] [info] [2e6361eccc46] Request took 3.3772ms
+[2024-06-20 15:03:49.500] [micropagosmessagegateway] [middleware] [info] [aca6a5a89b47] New petition received
+[2024-06-20 15:03:49.500] [micropagosmessagegateway] [middleware] [trace] [aca6a5a89b47] url: /, method: POST
+[2024-06-20 15:03:49.501] [micropagosmessagegateway] [middleware] [trace] [aca6a5a89b47] starting to validate the ahutentication
+[2024-06-20 15:03:49.501] [micropagosmessagegateway] [handler] [info] [aca6a5a89b47] starting to get the userdata for the user usuario1
+[2024-06-20 15:03:49.502] [micropagosmessagegateway] [middleware] [error] [aca6a5a89b47] error getting user data to the user usuario1,User does not exist or does not have permission to use the service.
+[2024-06-20 15:03:49.502] [micropagosmessagegateway] [middleware] [error] [aca6a5a89b47] User does not exist or does not have permission to use the service.
+[2024-06-20 15:03:49.503] [micropagosmessagegateway] [middleware] [info] [aca6a5a89b47] Request took 2.0189ms
+[2024-06-20 15:04:30.117] [micropagosmessagegateway] [middleware] [info] [e4c81cfb6a94] New petition received
+[2024-06-20 15:04:30.121] [micropagosmessagegateway] [middleware] [trace] [e4c81cfb6a94] url: /, method: POST
+[2024-06-20 15:04:30.122] [micropagosmessagegateway] [middleware] [trace] [e4c81cfb6a94] starting to validate the ahutentication
+[2024-06-20 15:04:30.123] [micropagosmessagegateway] [middleware] [error] [e4c81cfb6a94] missing authorization header
+[2024-06-20 15:04:30.123] [micropagosmessagegateway] [middleware] [info] [e4c81cfb6a94] Request took 890.4µs
+[2024-06-20 15:04:30.128] [micropagosmessagegateway] [middleware] [info] [cb38a9c94cc0] New petition received
+[2024-06-20 15:04:30.130] [micropagosmessagegateway] [middleware] [trace] [cb38a9c94cc0] url: /, method: POST
+[2024-06-20 15:04:30.131] [micropagosmessagegateway] [middleware] [trace] [cb38a9c94cc0] starting to validate the ahutentication
+[2024-06-20 15:04:30.132] [micropagosmessagegateway] [handler] [info] [cb38a9c94cc0] starting to get the userdata for the user eaguerre
+[2024-06-20 15:04:30.134] [micropagosmessagegateway] [middleware] [trace] [cb38a9c94cc0] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:04:30.135] [micropagosmessagegateway] [middleware] [info] [cb38a9c94cc0] the user:eaguerre is already authenticated
+[2024-06-20 15:04:30.135] [micropagosmessagegateway] [handler] [error] [cb38a9c94cc0] Route  not found: url: /, method: POST
+[2024-06-20 15:04:30.136] [micropagosmessagegateway] [middleware] [info] [cb38a9c94cc0] Request took 4.5526ms
+[2024-06-20 15:04:30.135] [micropagosmessagegateway] [client] [trace] [cb38a9c94cc0] starting to prepare the URL and the body of the petition
+[2024-06-20 15:04:30.683] [micropagosmessagegateway] [middleware] [info] [cb38a9c94cc0] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:04:30
+[2024-06-20 15:04:34.548] [micropagosmessagegateway] [middleware] [info] [455fd5ac1078] New petition received
+[2024-06-20 15:04:34.548] [micropagosmessagegateway] [middleware] [trace] [455fd5ac1078] url: /, method: POST
+[2024-06-20 15:04:34.549] [micropagosmessagegateway] [middleware] [trace] [455fd5ac1078] starting to validate the ahutentication
+[2024-06-20 15:04:34.550] [micropagosmessagegateway] [middleware] [error] [455fd5ac1078] missing authorization header
+[2024-06-20 15:04:34.551] [micropagosmessagegateway] [middleware] [info] [455fd5ac1078] Request took 2.072ms
+[2024-06-20 15:04:34.556] [micropagosmessagegateway] [middleware] [info] [f3248cc89cea] New petition received
+[2024-06-20 15:04:34.557] [micropagosmessagegateway] [middleware] [trace] [f3248cc89cea] url: /, method: POST
+[2024-06-20 15:04:34.557] [micropagosmessagegateway] [middleware] [trace] [f3248cc89cea] starting to validate the ahutentication
+[2024-06-20 15:04:34.557] [micropagosmessagegateway] [handler] [info] [f3248cc89cea] starting to get the userdata for the user eaguerre
+[2024-06-20 15:04:34.558] [micropagosmessagegateway] [middleware] [trace] [f3248cc89cea] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:04:34.558] [micropagosmessagegateway] [middleware] [info] [f3248cc89cea] the user:eaguerre is already authenticated
+[2024-06-20 15:04:34.558] [micropagosmessagegateway] [handler] [error] [f3248cc89cea] Route  not found: url: /, method: POST
+[2024-06-20 15:04:34.558] [micropagosmessagegateway] [middleware] [info] [f3248cc89cea] Request took 1.116ms
+[2024-06-20 15:04:34.558] [micropagosmessagegateway] [client] [trace] [f3248cc89cea] starting to prepare the URL and the body of the petition
+[2024-06-20 15:04:34.827] [micropagosmessagegateway] [middleware] [info] [f3248cc89cea] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:04:34
+[2024-06-20 15:04:49.381] [micropagosmessagegateway] [middleware] [info] [78916aabe9c9] New petition received
+[2024-06-20 15:04:49.381] [micropagosmessagegateway] [middleware] [trace] [78916aabe9c9] url: /, method: POST
+[2024-06-20 15:04:49.381] [micropagosmessagegateway] [middleware] [trace] [78916aabe9c9] starting to validate the ahutentication
+[2024-06-20 15:04:49.382] [micropagosmessagegateway] [handler] [info] [78916aabe9c9] starting to get the userdata for the user eaguerre
+[2024-06-20 15:04:49.382] [micropagosmessagegateway] [middleware] [trace] [78916aabe9c9] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:04:49.382] [micropagosmessagegateway] [middleware] [info] [78916aabe9c9] the user:eaguerre is already authenticated
+[2024-06-20 15:04:49.382] [micropagosmessagegateway] [handler] [error] [78916aabe9c9] Route  not found: url: /, method: POST
+[2024-06-20 15:04:49.382] [micropagosmessagegateway] [middleware] [info] [78916aabe9c9] Request took 1.7305ms
+[2024-06-20 15:04:49.382] [micropagosmessagegateway] [client] [trace] [78916aabe9c9] starting to prepare the URL and the body of the petition
+[2024-06-20 15:04:49.726] [micropagosmessagegateway] [middleware] [info] [78916aabe9c9] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:04:49
+[2024-06-20 15:05:08.479] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:05:08.715] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:07:08.546] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:07:08.817] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:09:08.478] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:09:08.705] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:11:08.495] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:11:08.772] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:13:08.486] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:13:08.767] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:15:08.511] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:15:08.859] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:17:08.534] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:17:08.760] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:19:08.912] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:19:09.148] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:21:08.464] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:21:08.695] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:23:08.593] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:23:08.856] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:25:08.469] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:25:08.728] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:27:08.536] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:27:08.806] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:29:08.460] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:29:08.815] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:29:33.307] [micropagosmessagegateway] [middleware] [info] [95ce64b43525] New petition received
+[2024-06-20 15:29:33.307] [micropagosmessagegateway] [middleware] [trace] [95ce64b43525] url: /ws/SendMessageService, method: POST
+[2024-06-20 15:29:33.307] [micropagosmessagegateway] [middleware] [trace] [95ce64b43525] starting to validate the ahutentication
+[2024-06-20 15:29:33.307] [micropagosmessagegateway] [handler] [info] [95ce64b43525] starting to get the userdata for the user eaguerre
+[2024-06-20 15:29:33.308] [micropagosmessagegateway] [middleware] [trace] [95ce64b43525] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:29:33.308] [micropagosmessagegateway] [middleware] [info] [95ce64b43525] the user:eaguerre is already authenticated
+[2024-06-20 15:29:33.308] [micropagosmessagegateway] [handler] [debug] [95ce64b43525] starting to legacysendMessage method to the user eaguerre
+[2024-06-20 15:29:33.308] [micropagosmessagegateway] [handler] [debug] [95ce64b43525] starting to get the xml
+[2024-06-20 15:29:33.308] [micropagosmessagegateway] [client] [trace] [95ce64b43525] starting to prepare the URL and the body of the petition
+[2024-06-20 15:29:33.310] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] mobile 094326996 match in the regex expression
+[2024-06-20 15:29:33.311] [micropagosmessagegateway] [handler] [info] [95ce64b43525] starting to send massive message
+[2024-06-20 15:29:33.311] [micropagosmessagegateway] [handler] [info] [95ce64b43525] this is the individual identifiar of this petition c1b03da32c55
+[2024-06-20 15:29:33.312] [micropagosmessagegateway] [handler] [debug] [95ce64b43525] [c1b03da32c55], starting to validate the petition 
+[2024-06-20 15:29:33.312] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] this is the number of procced message 1
+[2024-06-20 15:29:33.312] [micropagosmessagegateway] [handler] [debug] [95ce64b43525] [c1b03da32c55] this is the data that we are going to validate : Mobile: 094326996, Message: testing, SendAfter: 06:00, SendBefore: 06:30, 
+[2024-06-20 15:29:33.314] [micropagosmessagegateway] [validation] [info] [95ce64b43525] [c1b03da32c55], starting to validate a regex expression
+[2024-06-20 15:29:33.314] [micropagosmessagegateway] [validation] [trace] [95ce64b43525] [c1b03da32c55], regex expression: ^09\d{7}$ value to validate 094326996
+[2024-06-20 15:29:33.315] [micropagosmessagegateway] [validation] [trace] [95ce64b43525] [c1b03da32c55], value match with the regex expression
+[2024-06-20 15:29:33.316] [micropagosmessagegateway] [validation] [debug] [95ce64b43525] starting to format number
+[2024-06-20 15:29:33.316] [micropagosmessagegateway] [handler] [debug] [95ce64b43525] [c1b03da32c55], the mobile number pass the regex expression and the formatted number is 59894326996
+[2024-06-20 15:29:33.317] [micropagosmessagegateway] [validation] [info] [95ce64b43525] [c1b03da32c55], starting to validate the message length
+[2024-06-20 15:29:33.317] [micropagosmessagegateway] [validation] [trace] [95ce64b43525] [c1b03da32c55], max length: 500 message to validate testing
+[2024-06-20 15:29:33.318] [micropagosmessagegateway] [validation] [trace] [95ce64b43525] [c1b03da32c55], using normal message
+[2024-06-20 15:29:33.318] [micropagosmessagegateway] [handler] [debug] [95ce64b43525] [c1b03da32c55], the message pass the validateMessageLength this is the final message: testing
+[2024-06-20 15:29:33.319] [micropagosmessagegateway] [handler] [info] [95ce64b43525] [c1b03da32c55], checking short number
+[2024-06-20 15:29:33.319] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55], using short number of the config
+[2024-06-20 15:29:33.319] [micropagosmessagegateway] [handler] [info] [95ce64b43525] [c1b03da32c55] this is the originNumber 88277
+[2024-06-20 15:29:33.320] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], startin to prepare the call to portability whit number 59894326996
+[2024-06-20 15:29:33.320] [micropagosmessagegateway] [client] [trace] [95ce64b43525] [c1b03da32c55], petition http created
+[2024-06-20 15:29:33.321] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-06-20 15:29:33.321] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59894326996</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-06-20 15:29:33.631] [micropagosmessagegateway] [middleware] [info] [95ce64b43525] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:29:33
+[2024-06-20 15:29:33.999] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Request to PORTABILIDAD took 677.2394ms
+[2024-06-20 15:29:33.999] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], HTTP Status Response: 200
+[2024-06-20 15:29:33.999] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>3</xsd:telcoCode><xsd:telcoName>MOVISTAR</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-06-20 15:29:34.000] [micropagosmessagegateway] [handler] [info] [95ce64b43525] [c1b03da32c55], TELCONAME: MOVISTAR
+[2024-06-20 15:29:34.001] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55], starting to validate if the the origin number and destiny are filters
+[2024-06-20 15:29:34.001] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], startin to prepare the call to databasegateway checking FILTER
+[2024-06-20 15:29:34.001] [micropagosmessagegateway] [client] [trace] [95ce64b43525] [c1b03da32c55], starting to prepare the URL to the petition
+[2024-06-20 15:29:34.001] [micropagosmessagegateway] [client] [trace] [95ce64b43525] [c1b03da32c55], petition http created
+[2024-06-20 15:29:34.002] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Final url : http://localhost:2122/filter/94326996/88277/c1b03da32c55
+[2024-06-20 15:29:34.441] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Request to database tooks 438.8525ms
+[2024-06-20 15:29:34.441] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], HTTP Status Response: 200
+[2024-06-20 15:29:34.441] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], RESPONSE BODY: {"result":false,"message":""}
+[2024-06-20 15:29:34.442] [micropagosmessagegateway] [client] [debug] [95ce64b43525] the filter message response was: shortnumber and destinity are filter? : false
+[2024-06-20 15:29:34.442] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55], starting to check send after and send before data
+[2024-06-20 15:29:34.442] [micropagosmessagegateway] [validation] [debug] [95ce64b43525] [c1b03da32c55], checking send after and send before 
+[2024-06-20 15:29:34.442] [micropagosmessagegateway] [validation] [debug] [95ce64b43525] [c1b03da32c55]: sendBefore: 06:30:00 sendAfter: 06:00:00
+[2024-06-20 15:29:34.442] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:ok UserDomainMessage:using short number of the config UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:false SendMessage:message is going to send in the future} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:passed}}
+[2024-06-20 15:29:34.443] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55], No error time to insert the message into the database 
+[2024-06-20 15:29:34.443] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], startin to prepare the call to databasegateway to INSERT message
+[2024-06-20 15:29:34.444] [micropagosmessagegateway] [client] [trace] [95ce64b43525] [c1b03da32c55], starting to prepare the URL and the body of the petition
+[2024-06-20 15:29:34.444] [micropagosmessagegateway] [client] [trace] [95ce64b43525] [c1b03da32c55], petition http created
+[2024-06-20 15:29:34.444] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Final url : http://localhost:2122/insertMessage/c1b03da32c55
+[2024-06-20 15:29:34.445] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Final BODY: {"type":"OutboundSMS","content":"testing","mobile_number":"59894326996","mobile_country_iso_code":"UY","short_number":"88277","telco":"MOVISTAR","created":"2024-06-20T15:29:33.3120293-05:00","session_action":"NONE","processed":"2024-06-20T15:29:34.4444076-05:00","session_application_name":"micropagos 2.0","sendafter":"06:00:00","sendbefore":"06:30:00","sent":"0001-01-01T00:00:00Z","status":"PENDING","origin_name":""}
+[2024-06-20 15:29:34.881] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], Request to database tooks 435.0253ms
+[2024-06-20 15:29:34.881] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], HTTP Status Response: 200
+[2024-06-20 15:29:34.882] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19806578","Id":19806578}
+[2024-06-20 15:29:34.882] [micropagosmessagegateway] [client] [info] [95ce64b43525] [c1b03da32c55], this is the id of the message in the database: 19806578
+[2024-06-20 15:29:34.883] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55], transaction with id 19806578 inserted correctly!
+[2024-06-20 15:29:34.883] [micropagosmessagegateway] [handler] [trace] [95ce64b43525] [c1b03da32c55] Ended
+[2024-06-20 15:29:34.883] [micropagosmessagegateway] [middleware] [info] [95ce64b43525] Request took 1.5759398s
+[2024-06-20 15:29:54.801] [micropagosmessagegateway] [middleware] [info] [2b3cdd0c1f59] New petition received
+[2024-06-20 15:29:54.802] [micropagosmessagegateway] [middleware] [trace] [2b3cdd0c1f59] url: /ws/SendMessageService, method: POST
+[2024-06-20 15:29:54.803] [micropagosmessagegateway] [middleware] [trace] [2b3cdd0c1f59] starting to validate the ahutentication
+[2024-06-20 15:29:54.803] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] starting to get the userdata for the user eaguerre
+[2024-06-20 15:29:54.803] [micropagosmessagegateway] [middleware] [trace] [2b3cdd0c1f59] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:29:54.804] [micropagosmessagegateway] [middleware] [info] [2b3cdd0c1f59] the user:eaguerre is already authenticated
+[2024-06-20 15:29:54.804] [micropagosmessagegateway] [handler] [debug] [2b3cdd0c1f59] starting to legacysendMessage method to the user eaguerre
+[2024-06-20 15:29:54.804] [micropagosmessagegateway] [handler] [debug] [2b3cdd0c1f59] starting to get the xml
+[2024-06-20 15:29:54.804] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] starting to prepare the URL and the body of the petition
+[2024-06-20 15:29:54.812] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] mobile 094326996 match in the regex expression
+[2024-06-20 15:29:54.812] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] starting to send massive message
+[2024-06-20 15:29:54.813] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] this is the individual identifiar of this petition 8ebcd356dad5
+[2024-06-20 15:29:54.813] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] this is the number of procced message 1
+[2024-06-20 15:29:54.814] [micropagosmessagegateway] [handler] [debug] [2b3cdd0c1f59] [8ebcd356dad5], starting to validate the petition 
+[2024-06-20 15:29:54.815] [micropagosmessagegateway] [handler] [debug] [2b3cdd0c1f59] [8ebcd356dad5] this is the data that we are going to validate : Mobile: 094326996, Message: testing, 
+[2024-06-20 15:29:54.815] [micropagosmessagegateway] [validation] [info] [2b3cdd0c1f59] [8ebcd356dad5], starting to validate a regex expression
+[2024-06-20 15:29:54.816] [micropagosmessagegateway] [validation] [trace] [2b3cdd0c1f59] [8ebcd356dad5], regex expression: ^09\d{7}$ value to validate 094326996
+[2024-06-20 15:29:54.816] [micropagosmessagegateway] [validation] [trace] [2b3cdd0c1f59] [8ebcd356dad5], value match with the regex expression
+[2024-06-20 15:29:54.817] [micropagosmessagegateway] [validation] [debug] [2b3cdd0c1f59] starting to format number
+[2024-06-20 15:29:54.817] [micropagosmessagegateway] [handler] [debug] [2b3cdd0c1f59] [8ebcd356dad5], the mobile number pass the regex expression and the formatted number is 59894326996
+[2024-06-20 15:29:54.817] [micropagosmessagegateway] [validation] [info] [2b3cdd0c1f59] [8ebcd356dad5], starting to validate the message length
+[2024-06-20 15:29:54.818] [micropagosmessagegateway] [validation] [trace] [2b3cdd0c1f59] [8ebcd356dad5], max length: 500 message to validate testing
+[2024-06-20 15:29:54.818] [micropagosmessagegateway] [validation] [trace] [2b3cdd0c1f59] [8ebcd356dad5], using normal message
+[2024-06-20 15:29:54.819] [micropagosmessagegateway] [handler] [debug] [2b3cdd0c1f59] [8ebcd356dad5], the message pass the validateMessageLength this is the final message: testing
+[2024-06-20 15:29:54.819] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] [8ebcd356dad5], checking short number
+[2024-06-20 15:29:54.819] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5], using short number of the config
+[2024-06-20 15:29:54.819] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] [8ebcd356dad5] this is the originNumber 88277
+[2024-06-20 15:29:54.820] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], startin to prepare the call to portability whit number 59894326996
+[2024-06-20 15:29:54.820] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], petition http created
+[2024-06-20 15:29:54.820] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-06-20 15:29:54.820] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59894326996</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-06-20 15:29:55.091] [micropagosmessagegateway] [middleware] [info] [2b3cdd0c1f59] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:29:54
+[2024-06-20 15:29:55.328] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Request to PORTABILIDAD took 507.6684ms
+[2024-06-20 15:29:55.329] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], HTTP Status Response: 200
+[2024-06-20 15:29:55.330] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>3</xsd:telcoCode><xsd:telcoName>MOVISTAR</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-06-20 15:29:55.331] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] [8ebcd356dad5], TELCONAME: MOVISTAR
+[2024-06-20 15:29:55.331] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5], starting to validate if the the origin number and destiny are filters
+[2024-06-20 15:29:55.331] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], startin to prepare the call to databasegateway checking FILTER
+[2024-06-20 15:29:55.331] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], starting to prepare the URL to the petition
+[2024-06-20 15:29:55.332] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], petition http created
+[2024-06-20 15:29:55.332] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final url : http://localhost:2122/filter/94326996/88277/8ebcd356dad5
+[2024-06-20 15:29:55.841] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Request to database tooks 508.3681ms
+[2024-06-20 15:29:55.841] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], HTTP Status Response: 200
+[2024-06-20 15:29:55.841] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], RESPONSE BODY: {"result":false,"message":""}
+[2024-06-20 15:29:55.842] [micropagosmessagegateway] [client] [debug] [2b3cdd0c1f59] the filter message response was: shortnumber and destinity are filter? : false
+[2024-06-20 15:29:55.842] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5], starting to check send after and send before data
+[2024-06-20 15:29:55.843] [micropagosmessagegateway] [validation] [debug] [2b3cdd0c1f59] [8ebcd356dad5], checking send after and send before 
+[2024-06-20 15:29:55.843] [micropagosmessagegateway] [validation] [trace] [2b3cdd0c1f59] [8ebcd356dad5] senfafter or sendbefore are empity or didnt match with the expected fomat HH:mm
+[2024-06-20 15:29:55.843] [micropagosmessagegateway] [validation] [debug] [2b3cdd0c1f59] [8ebcd356dad5]: sendBefore:  sendAfter: 
+[2024-06-20 15:29:55.843] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], startin to prepare the call to telcoGateway
+[2024-06-20 15:29:55.844] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], starting to prepare the body of the petition
+[2024-06-20 15:29:55.844] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], petition http created
+[2024-06-20 15:29:55.844] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final url : http://localhost:3111
+[2024-06-20 15:29:55.844] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final BODY: {"utfi":"8ebcd356dad5","serviceType":"","origin.number":"88277","destination.number":"59894326996","validity_period":"","schedule_delivery_time":"","protocol_id":0,"esmeClass":0,"priority_flag":3,"registered_delivery":0,"replace_if_present_flag":0,"data":"74657374696E67","data_header_indicator":0,"data_coding_scheme":0,"data_length":7,"messagetype":4,"TLV_tag":515,"TLV_length":8,"TLV_value":"MOVISTAR"}
+[2024-06-20 15:29:55.853] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Request to SMSGATEWAY tooks 8.2814ms
+[2024-06-20 15:29:55.853] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], HTTP Status Response: 200
+[2024-06-20 15:29:55.854] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], RESPONSE BODY: {"Description":"No errors","forwardRef":"3","status":"0"}
+[2024-06-20 15:29:55.854] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], this is the code of the response: 0
+[2024-06-20 15:29:55.854] [micropagosmessagegateway] [handler] [info] [2b3cdd0c1f59] [8ebcd356dad5], TelcoGatewayResponse: 0
+[2024-06-20 15:29:55.854] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:ok UserDomainMessage:using short number of the config UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:true SendMessage:message is going to send now} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:No errors}}
+[2024-06-20 15:29:55.855] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5], No error time to insert the message into the database 
+[2024-06-20 15:29:55.855] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], startin to prepare the call to databasegateway to INSERT message
+[2024-06-20 15:29:55.855] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], starting to prepare the URL and the body of the petition
+[2024-06-20 15:29:55.856] [micropagosmessagegateway] [client] [trace] [2b3cdd0c1f59] [8ebcd356dad5], petition http created
+[2024-06-20 15:29:55.856] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final url : http://localhost:2122/insertMessage/8ebcd356dad5
+[2024-06-20 15:29:55.856] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Final BODY: {"type":"OutboundSMS","content":"testing","mobile_number":"94326996","mobile_country_iso_code":"UY","short_number":"88277","telco":"MOVISTAR","created":"2024-06-20T15:29:54.8134968-05:00","session_action":"NONE","processed":"2024-06-20T15:29:55.855845-05:00","session_application_name":"micropagos 2.0","sendafter":"","sendbefore":"","sent":"2024-06-20T15:29:55.8541897-05:00","status":"SENT","origin_name":""}
+[2024-06-20 15:29:56.332] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], Request to database tooks 471.4056ms
+[2024-06-20 15:29:56.332] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], HTTP Status Response: 200
+[2024-06-20 15:29:56.332] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19806579","Id":19806579}
+[2024-06-20 15:29:56.333] [micropagosmessagegateway] [client] [info] [2b3cdd0c1f59] [8ebcd356dad5], this is the id of the message in the database: 19806579
+[2024-06-20 15:29:56.333] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5], transaction with id 19806579 inserted correctly!
+[2024-06-20 15:29:56.333] [micropagosmessagegateway] [handler] [trace] [2b3cdd0c1f59] [8ebcd356dad5] Ended
+[2024-06-20 15:29:56.334] [micropagosmessagegateway] [middleware] [info] [2b3cdd0c1f59] Request took 1.5311508s
+[2024-06-20 15:31:08.475] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:31:08.694] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:33:08.500] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:33:08.737] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:35:08.505] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:35:09.017] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:36:10.102] [micropagosmessagegateway] [middleware] [info] [94f0cac22117] New petition received
+[2024-06-20 15:36:10.103] [micropagosmessagegateway] [middleware] [trace] [94f0cac22117] url: /ws/SendMessageService, method: POST
+[2024-06-20 15:36:10.103] [micropagosmessagegateway] [middleware] [trace] [94f0cac22117] starting to validate the ahutentication
+[2024-06-20 15:36:10.103] [micropagosmessagegateway] [handler] [info] [94f0cac22117] starting to get the userdata for the user eaguerre
+[2024-06-20 15:36:10.104] [micropagosmessagegateway] [middleware] [trace] [94f0cac22117] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:36:10.104] [micropagosmessagegateway] [middleware] [info] [94f0cac22117] the user:eaguerre is already authenticated
+[2024-06-20 15:36:10.104] [micropagosmessagegateway] [handler] [debug] [94f0cac22117] starting to legacysendMessage method to the user eaguerre
+[2024-06-20 15:36:10.105] [micropagosmessagegateway] [handler] [debug] [94f0cac22117] starting to get the xml
+[2024-06-20 15:36:10.104] [micropagosmessagegateway] [client] [trace] [94f0cac22117] starting to prepare the URL and the body of the petition
+[2024-06-20 15:36:10.106] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] mobile 094326996 match in the regex expression
+[2024-06-20 15:36:10.106] [micropagosmessagegateway] [handler] [info] [94f0cac22117] starting to send massive message
+[2024-06-20 15:36:10.107] [micropagosmessagegateway] [handler] [info] [94f0cac22117] this is the individual identifiar of this petition 5df19cd5ecfe
+[2024-06-20 15:36:10.107] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] this is the number of procced message 1
+[2024-06-20 15:36:10.107] [micropagosmessagegateway] [handler] [debug] [94f0cac22117] [5df19cd5ecfe], starting to validate the petition 
+[2024-06-20 15:36:10.108] [micropagosmessagegateway] [handler] [debug] [94f0cac22117] [5df19cd5ecfe] this is the data that we are going to validate : Mobile: 094326996, Message: testing, ShortNumber: 321312312312312312, 
+[2024-06-20 15:36:10.108] [micropagosmessagegateway] [validation] [info] [94f0cac22117] [5df19cd5ecfe], starting to validate a regex expression
+[2024-06-20 15:36:10.108] [micropagosmessagegateway] [validation] [trace] [94f0cac22117] [5df19cd5ecfe], regex expression: ^09\d{7}$ value to validate 094326996
+[2024-06-20 15:36:10.109] [micropagosmessagegateway] [validation] [trace] [94f0cac22117] [5df19cd5ecfe], value match with the regex expression
+[2024-06-20 15:36:10.109] [micropagosmessagegateway] [validation] [debug] [94f0cac22117] starting to format number
+[2024-06-20 15:36:10.109] [micropagosmessagegateway] [handler] [debug] [94f0cac22117] [5df19cd5ecfe], the mobile number pass the regex expression and the formatted number is 59894326996
+[2024-06-20 15:36:10.109] [micropagosmessagegateway] [validation] [info] [94f0cac22117] [5df19cd5ecfe], starting to validate the message length
+[2024-06-20 15:36:10.110] [micropagosmessagegateway] [validation] [trace] [94f0cac22117] [5df19cd5ecfe], max length: 500 message to validate testing
+[2024-06-20 15:36:10.110] [micropagosmessagegateway] [validation] [trace] [94f0cac22117] [5df19cd5ecfe], using normal message
+[2024-06-20 15:36:10.110] [micropagosmessagegateway] [handler] [debug] [94f0cac22117] [5df19cd5ecfe], the message pass the validateMessageLength this is the final message: testing
+[2024-06-20 15:36:10.110] [micropagosmessagegateway] [handler] [info] [94f0cac22117] [5df19cd5ecfe], checking short number
+[2024-06-20 15:36:10.111] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe], using short number of the config
+[2024-06-20 15:36:10.111] [micropagosmessagegateway] [handler] [info] [94f0cac22117] [5df19cd5ecfe] this is the originNumber 88277
+[2024-06-20 15:36:10.112] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], startin to prepare the call to portability whit number 59894326996
+[2024-06-20 15:36:10.112] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], petition http created
+[2024-06-20 15:36:10.112] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-06-20 15:36:10.112] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59894326996</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-06-20 15:36:10.377] [micropagosmessagegateway] [middleware] [info] [94f0cac22117] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:36:10
+[2024-06-20 15:36:10.585] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Request to PORTABILIDAD took 472.7492ms
+[2024-06-20 15:36:10.586] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], HTTP Status Response: 200
+[2024-06-20 15:36:10.586] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>3</xsd:telcoCode><xsd:telcoName>MOVISTAR</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-06-20 15:36:10.588] [micropagosmessagegateway] [handler] [info] [94f0cac22117] [5df19cd5ecfe], TELCONAME: MOVISTAR
+[2024-06-20 15:36:10.588] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe], starting to validate if the the origin number and destiny are filters
+[2024-06-20 15:36:10.595] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], startin to prepare the call to databasegateway checking FILTER
+[2024-06-20 15:36:10.595] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], starting to prepare the URL to the petition
+[2024-06-20 15:36:10.596] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], petition http created
+[2024-06-20 15:36:10.596] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final url : http://localhost:2122/filter/94326996/88277/5df19cd5ecfe
+[2024-06-20 15:36:11.040] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Request to database tooks 443.8569ms
+[2024-06-20 15:36:11.041] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], HTTP Status Response: 200
+[2024-06-20 15:36:11.041] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], RESPONSE BODY: {"result":false,"message":""}
+[2024-06-20 15:36:11.041] [micropagosmessagegateway] [client] [debug] [94f0cac22117] the filter message response was: shortnumber and destinity are filter? : false
+[2024-06-20 15:36:11.042] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe], starting to check send after and send before data
+[2024-06-20 15:36:11.042] [micropagosmessagegateway] [validation] [debug] [94f0cac22117] [5df19cd5ecfe], checking send after and send before 
+[2024-06-20 15:36:11.043] [micropagosmessagegateway] [validation] [trace] [94f0cac22117] [5df19cd5ecfe] senfafter or sendbefore are empity or didnt match with the expected fomat HH:mm
+[2024-06-20 15:36:11.043] [micropagosmessagegateway] [validation] [debug] [94f0cac22117] [5df19cd5ecfe]: sendBefore:  sendAfter: 
+[2024-06-20 15:36:11.043] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], startin to prepare the call to telcoGateway
+[2024-06-20 15:36:11.044] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], starting to prepare the body of the petition
+[2024-06-20 15:36:11.044] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], petition http created
+[2024-06-20 15:36:11.044] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final url : http://localhost:3111
+[2024-06-20 15:36:11.045] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final BODY: {"utfi":"5df19cd5ecfe","serviceType":"","origin.number":"88277","destination.number":"59894326996","validity_period":"","schedule_delivery_time":"","protocol_id":0,"esmeClass":0,"priority_flag":3,"registered_delivery":0,"replace_if_present_flag":0,"data":"74657374696E67","data_header_indicator":0,"data_coding_scheme":0,"data_length":7,"messagetype":4,"TLV_tag":515,"TLV_length":8,"TLV_value":"MOVISTAR"}
+[2024-06-20 15:36:11.056] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Request to SMSGATEWAY tooks 9.7569ms
+[2024-06-20 15:36:11.056] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], HTTP Status Response: 200
+[2024-06-20 15:36:11.057] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], RESPONSE BODY: {"Description":"No errors","forwardRef":"3","status":"0"}
+[2024-06-20 15:36:11.057] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], this is the code of the response: 0
+[2024-06-20 15:36:11.057] [micropagosmessagegateway] [handler] [info] [94f0cac22117] [5df19cd5ecfe], TelcoGatewayResponse: 0
+[2024-06-20 15:36:11.057] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:ok UserDomainMessage:using short number of the config UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:true SendMessage:message is going to send now} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:No errors}}
+[2024-06-20 15:36:11.058] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe], No error time to insert the message into the database 
+[2024-06-20 15:36:11.058] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], startin to prepare the call to databasegateway to INSERT message
+[2024-06-20 15:36:11.058] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], starting to prepare the URL and the body of the petition
+[2024-06-20 15:36:11.059] [micropagosmessagegateway] [client] [trace] [94f0cac22117] [5df19cd5ecfe], petition http created
+[2024-06-20 15:36:11.059] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final url : http://localhost:2122/insertMessage/5df19cd5ecfe
+[2024-06-20 15:36:11.059] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Final BODY: {"type":"OutboundSMS","content":"testing","mobile_number":"94326996","mobile_country_iso_code":"UY","short_number":"88277","telco":"MOVISTAR","created":"2024-06-20T15:36:10.1073987-05:00","session_action":"NONE","processed":"2024-06-20T15:36:11.0587591-05:00","session_application_name":"micropagos 2.0","sendafter":"","sendbefore":"","sent":"2024-06-20T15:36:11.0575731-05:00","status":"SENT","origin_name":""}
+[2024-06-20 15:36:11.496] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], Request to database tooks 435.7618ms
+[2024-06-20 15:36:11.497] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], HTTP Status Response: 200
+[2024-06-20 15:36:11.497] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19806580","Id":19806580}
+[2024-06-20 15:36:11.497] [micropagosmessagegateway] [client] [info] [94f0cac22117] [5df19cd5ecfe], this is the id of the message in the database: 19806580
+[2024-06-20 15:36:11.497] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe], transaction with id 19806580 inserted correctly!
+[2024-06-20 15:36:11.498] [micropagosmessagegateway] [handler] [trace] [94f0cac22117] [5df19cd5ecfe] Ended
+[2024-06-20 15:36:11.498] [micropagosmessagegateway] [middleware] [info] [94f0cac22117] Request took 1.3951081s
+[2024-06-20 15:37:08.534] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:37:08.784] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:37:12.912] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:37:13.143] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:37:29.627] [micropagosmessagegateway] [middleware] [info] [68a5e71d8e2d] New petition received
+[2024-06-20 15:37:29.628] [micropagosmessagegateway] [middleware] [trace] [68a5e71d8e2d] url: /ws/SendMessageService, method: POST
+[2024-06-20 15:37:29.628] [micropagosmessagegateway] [middleware] [trace] [68a5e71d8e2d] starting to validate the ahutentication
+[2024-06-20 15:37:29.629] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] starting to get the userdata for the user eaguerre
+[2024-06-20 15:37:29.629] [micropagosmessagegateway] [middleware] [trace] [68a5e71d8e2d] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:37:29.629] [micropagosmessagegateway] [middleware] [info] [68a5e71d8e2d] the user:eaguerre is already authenticated
+[2024-06-20 15:37:29.629] [micropagosmessagegateway] [handler] [debug] [68a5e71d8e2d] starting to legacysendMessage method to the user eaguerre
+[2024-06-20 15:37:29.629] [micropagosmessagegateway] [handler] [debug] [68a5e71d8e2d] starting to get the xml
+[2024-06-20 15:37:29.629] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] starting to prepare the URL and the body of the petition
+[2024-06-20 15:37:29.630] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] mobile 094326996 match in the regex expression
+[2024-06-20 15:37:29.630] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] starting to send massive message
+[2024-06-20 15:37:29.631] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] this is the individual identifiar of this petition eaca353510f4
+[2024-06-20 15:37:29.631] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] this is the number of procced message 1
+[2024-06-20 15:37:29.631] [micropagosmessagegateway] [handler] [debug] [68a5e71d8e2d] [eaca353510f4], starting to validate the petition 
+[2024-06-20 15:37:29.631] [micropagosmessagegateway] [handler] [debug] [68a5e71d8e2d] [eaca353510f4] this is the data that we are going to validate : Mobile: 094326996, Message: testing, ShortNumber: 321312312312312312, 
+[2024-06-20 15:37:29.632] [micropagosmessagegateway] [validation] [info] [68a5e71d8e2d] [eaca353510f4], starting to validate a regex expression
+[2024-06-20 15:37:29.632] [micropagosmessagegateway] [validation] [trace] [68a5e71d8e2d] [eaca353510f4], regex expression: ^09\d{7}$ value to validate 094326996
+[2024-06-20 15:37:29.632] [micropagosmessagegateway] [validation] [trace] [68a5e71d8e2d] [eaca353510f4], value match with the regex expression
+[2024-06-20 15:37:29.632] [micropagosmessagegateway] [validation] [debug] [68a5e71d8e2d] starting to format number
+[2024-06-20 15:37:29.633] [micropagosmessagegateway] [handler] [debug] [68a5e71d8e2d] [eaca353510f4], the mobile number pass the regex expression and the formatted number is 59894326996
+[2024-06-20 15:37:29.633] [micropagosmessagegateway] [validation] [info] [68a5e71d8e2d] [eaca353510f4], starting to validate the message length
+[2024-06-20 15:37:29.634] [micropagosmessagegateway] [validation] [trace] [68a5e71d8e2d] [eaca353510f4], max length: 500 message to validate testing
+[2024-06-20 15:37:29.634] [micropagosmessagegateway] [validation] [trace] [68a5e71d8e2d] [eaca353510f4], using normal message
+[2024-06-20 15:37:29.634] [micropagosmessagegateway] [handler] [debug] [68a5e71d8e2d] [eaca353510f4], the message pass the validateMessageLength this is the final message: testing
+[2024-06-20 15:37:29.637] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] [eaca353510f4], checking short number
+[2024-06-20 15:37:29.637] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4], using short number of the petition
+[2024-06-20 15:37:29.638] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] [eaca353510f4] this is the originNumber 321312312312312312
+[2024-06-20 15:37:29.639] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], startin to prepare the call to portability whit number 59894326996
+[2024-06-20 15:37:29.640] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], petition http created
+[2024-06-20 15:37:29.640] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-06-20 15:37:29.640] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59894326996</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-06-20 15:37:29.926] [micropagosmessagegateway] [middleware] [info] [68a5e71d8e2d] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:37:29
+[2024-06-20 15:37:30.135] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Request to PORTABILIDAD took 493.8981ms
+[2024-06-20 15:37:30.135] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], HTTP Status Response: 200
+[2024-06-20 15:37:30.138] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>3</xsd:telcoCode><xsd:telcoName>MOVISTAR</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-06-20 15:37:30.140] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] [eaca353510f4], TELCONAME: MOVISTAR
+[2024-06-20 15:37:30.140] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4], starting to validate if the the origin number and destiny are filters
+[2024-06-20 15:37:30.140] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], startin to prepare the call to databasegateway checking FILTER
+[2024-06-20 15:37:30.141] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], starting to prepare the URL to the petition
+[2024-06-20 15:37:30.141] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], petition http created
+[2024-06-20 15:37:30.141] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final url : http://localhost:2122/filter/94326996/321312312312312312/eaca353510f4
+[2024-06-20 15:37:30.586] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Request to database tooks 444.1755ms
+[2024-06-20 15:37:30.586] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], HTTP Status Response: 200
+[2024-06-20 15:37:30.587] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], RESPONSE BODY: {"result":false,"message":""}
+[2024-06-20 15:37:30.588] [micropagosmessagegateway] [client] [debug] [68a5e71d8e2d] the filter message response was: shortnumber and destinity are filter? : false
+[2024-06-20 15:37:30.588] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4], starting to check send after and send before data
+[2024-06-20 15:37:30.588] [micropagosmessagegateway] [validation] [debug] [68a5e71d8e2d] [eaca353510f4], checking send after and send before 
+[2024-06-20 15:37:30.588] [micropagosmessagegateway] [validation] [trace] [68a5e71d8e2d] [eaca353510f4] senfafter or sendbefore are empity or didnt match with the expected fomat HH:mm
+[2024-06-20 15:37:30.589] [micropagosmessagegateway] [validation] [debug] [68a5e71d8e2d] [eaca353510f4]: sendBefore:  sendAfter: 
+[2024-06-20 15:37:30.589] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], startin to prepare the call to telcoGateway
+[2024-06-20 15:37:30.589] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], starting to prepare the body of the petition
+[2024-06-20 15:37:30.589] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], petition http created
+[2024-06-20 15:37:30.590] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final url : http://localhost:3111
+[2024-06-20 15:37:30.590] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final BODY: {"utfi":"eaca353510f4","serviceType":"","origin.number":"321312312312312312","destination.number":"59894326996","validity_period":"","schedule_delivery_time":"","protocol_id":0,"esmeClass":0,"priority_flag":3,"registered_delivery":0,"replace_if_present_flag":0,"data":"74657374696E67","data_header_indicator":0,"data_coding_scheme":0,"data_length":7,"messagetype":4,"TLV_tag":515,"TLV_length":8,"TLV_value":"MOVISTAR"}
+[2024-06-20 15:37:30.602] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Request to SMSGATEWAY tooks 11.0992ms
+[2024-06-20 15:37:30.605] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], HTTP Status Response: 200
+[2024-06-20 15:37:30.606] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], RESPONSE BODY: {"Description":"No errors","forwardRef":"3","status":"0"}
+[2024-06-20 15:37:30.606] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], this is the code of the response: 0
+[2024-06-20 15:37:30.607] [micropagosmessagegateway] [handler] [info] [68a5e71d8e2d] [eaca353510f4], TelcoGatewayResponse: 0
+[2024-06-20 15:37:30.607] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:ok UserDomainMessage:using short of the petition UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:true SendMessage:message is going to send now} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:No errors}}
+[2024-06-20 15:37:30.607] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4], No error time to insert the message into the database 
+[2024-06-20 15:37:30.609] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], startin to prepare the call to databasegateway to INSERT message
+[2024-06-20 15:37:30.610] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], starting to prepare the URL and the body of the petition
+[2024-06-20 15:37:30.611] [micropagosmessagegateway] [client] [trace] [68a5e71d8e2d] [eaca353510f4], petition http created
+[2024-06-20 15:37:30.611] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final url : http://localhost:2122/insertMessage/eaca353510f4
+[2024-06-20 15:37:30.611] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Final BODY: {"type":"OutboundSMS","content":"testing","mobile_number":"94326996","mobile_country_iso_code":"UY","short_number":"321312312312312312","telco":"MOVISTAR","created":"2024-06-20T15:37:29.6312775-05:00","session_action":"NONE","processed":"2024-06-20T15:37:30.6106903-05:00","session_application_name":"micropagos 2.0","sendafter":"","sendbefore":"","sent":"2024-06-20T15:37:30.607038-05:00","status":"SENT","origin_name":""}
+[2024-06-20 15:37:31.074] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], Request to database tooks 462.4266ms
+[2024-06-20 15:37:31.075] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], HTTP Status Response: 200
+[2024-06-20 15:37:31.075] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19806581","Id":19806581}
+[2024-06-20 15:37:31.075] [micropagosmessagegateway] [client] [info] [68a5e71d8e2d] [eaca353510f4], this is the id of the message in the database: 19806581
+[2024-06-20 15:37:31.075] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4], transaction with id 19806581 inserted correctly!
+[2024-06-20 15:37:31.076] [micropagosmessagegateway] [handler] [trace] [68a5e71d8e2d] [eaca353510f4] Ended
+[2024-06-20 15:37:31.076] [micropagosmessagegateway] [middleware] [info] [68a5e71d8e2d] Request took 1.4480524s
+[2024-06-20 15:39:12.842] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:39:13.061] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:40:27.256] [micropagosmessagegateway] [middleware] [info] [b19197071ec4] New petition received
+[2024-06-20 15:40:27.257] [micropagosmessagegateway] [middleware] [trace] [b19197071ec4] url: /ws/SendMessageService, method: POST
+[2024-06-20 15:40:27.257] [micropagosmessagegateway] [middleware] [trace] [b19197071ec4] starting to validate the ahutentication
+[2024-06-20 15:40:27.258] [micropagosmessagegateway] [handler] [info] [b19197071ec4] starting to get the userdata for the user eaguerre
+[2024-06-20 15:40:27.258] [micropagosmessagegateway] [middleware] [trace] [b19197071ec4] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:40:27.258] [micropagosmessagegateway] [middleware] [info] [b19197071ec4] the user:eaguerre is already authenticated
+[2024-06-20 15:40:27.258] [micropagosmessagegateway] [handler] [debug] [b19197071ec4] starting to legacysendMessage method to the user eaguerre
+[2024-06-20 15:40:27.258] [micropagosmessagegateway] [handler] [debug] [b19197071ec4] starting to get the xml
+[2024-06-20 15:40:27.258] [micropagosmessagegateway] [client] [trace] [b19197071ec4] starting to prepare the URL and the body of the petition
+[2024-06-20 15:40:27.259] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] mobile 094326996 match in the regex expression
+[2024-06-20 15:40:27.259] [micropagosmessagegateway] [handler] [info] [b19197071ec4] starting to send massive message
+[2024-06-20 15:40:27.260] [micropagosmessagegateway] [handler] [info] [b19197071ec4] this is the individual identifiar of this petition 0b5e5f9aa39e
+[2024-06-20 15:40:27.262] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] this is the number of procced message 1
+[2024-06-20 15:40:27.262] [micropagosmessagegateway] [handler] [debug] [b19197071ec4] [0b5e5f9aa39e], starting to validate the petition 
+[2024-06-20 15:40:27.262] [micropagosmessagegateway] [handler] [debug] [b19197071ec4] [0b5e5f9aa39e] this is the data that we are going to validate : Mobile: 094326996, Message: testing, SendAfter: 06:00, SendBefore: 06:30, 
+[2024-06-20 15:40:27.262] [micropagosmessagegateway] [validation] [info] [b19197071ec4] [0b5e5f9aa39e], starting to validate a regex expression
+[2024-06-20 15:40:27.263] [micropagosmessagegateway] [validation] [trace] [b19197071ec4] [0b5e5f9aa39e], regex expression: ^09\d{7}$ value to validate 094326996
+[2024-06-20 15:40:27.263] [micropagosmessagegateway] [validation] [trace] [b19197071ec4] [0b5e5f9aa39e], value match with the regex expression
+[2024-06-20 15:40:27.264] [micropagosmessagegateway] [validation] [debug] [b19197071ec4] starting to format number
+[2024-06-20 15:40:27.264] [micropagosmessagegateway] [handler] [debug] [b19197071ec4] [0b5e5f9aa39e], the mobile number pass the regex expression and the formatted number is 59894326996
+[2024-06-20 15:40:27.264] [micropagosmessagegateway] [validation] [info] [b19197071ec4] [0b5e5f9aa39e], starting to validate the message length
+[2024-06-20 15:40:27.264] [micropagosmessagegateway] [validation] [trace] [b19197071ec4] [0b5e5f9aa39e], max length: 500 message to validate testing
+[2024-06-20 15:40:27.265] [micropagosmessagegateway] [validation] [trace] [b19197071ec4] [0b5e5f9aa39e], using normal message
+[2024-06-20 15:40:27.265] [micropagosmessagegateway] [handler] [debug] [b19197071ec4] [0b5e5f9aa39e], the message pass the validateMessageLength this is the final message: testing
+[2024-06-20 15:40:27.265] [micropagosmessagegateway] [handler] [info] [b19197071ec4] [0b5e5f9aa39e], checking short number
+[2024-06-20 15:40:27.265] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e], using short number of the config
+[2024-06-20 15:40:27.265] [micropagosmessagegateway] [handler] [info] [b19197071ec4] [0b5e5f9aa39e] this is the originNumber 88277
+[2024-06-20 15:40:27.266] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], startin to prepare the call to portability whit number 59894326996
+[2024-06-20 15:40:27.266] [micropagosmessagegateway] [client] [trace] [b19197071ec4] [0b5e5f9aa39e], petition http created
+[2024-06-20 15:40:27.266] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-06-20 15:40:27.267] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59894326996</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-06-20 15:40:27.535] [micropagosmessagegateway] [middleware] [info] [b19197071ec4] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:40:27
+[2024-06-20 15:40:27.737] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Request to PORTABILIDAD took 470.3242ms
+[2024-06-20 15:40:27.738] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], HTTP Status Response: 200
+[2024-06-20 15:40:27.739] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>3</xsd:telcoCode><xsd:telcoName>MOVISTAR</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-06-20 15:40:27.740] [micropagosmessagegateway] [handler] [info] [b19197071ec4] [0b5e5f9aa39e], TELCONAME: MOVISTAR
+[2024-06-20 15:40:27.740] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e], starting to validate if the the origin number and destiny are filters
+[2024-06-20 15:40:27.740] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], startin to prepare the call to databasegateway checking FILTER
+[2024-06-20 15:40:27.740] [micropagosmessagegateway] [client] [trace] [b19197071ec4] [0b5e5f9aa39e], starting to prepare the URL to the petition
+[2024-06-20 15:40:27.741] [micropagosmessagegateway] [client] [trace] [b19197071ec4] [0b5e5f9aa39e], petition http created
+[2024-06-20 15:40:27.741] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Final url : http://localhost:2122/filter/94326996/88277/0b5e5f9aa39e
+[2024-06-20 15:40:28.163] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Request to database tooks 421.4083ms
+[2024-06-20 15:40:28.164] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], HTTP Status Response: 200
+[2024-06-20 15:40:28.164] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], RESPONSE BODY: {"result":false,"message":""}
+[2024-06-20 15:40:28.164] [micropagosmessagegateway] [client] [debug] [b19197071ec4] the filter message response was: shortnumber and destinity are filter? : false
+[2024-06-20 15:40:28.164] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e], starting to check send after and send before data
+[2024-06-20 15:40:28.165] [micropagosmessagegateway] [validation] [debug] [b19197071ec4] [0b5e5f9aa39e], checking send after and send before 
+[2024-06-20 15:40:28.165] [micropagosmessagegateway] [validation] [debug] [b19197071ec4] [0b5e5f9aa39e]: sendBefore: 06:30:00 sendAfter: 06:00:00
+[2024-06-20 15:40:28.165] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:ok UserDomainMessage:using short number of the config UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:false SendMessage:message is going to send in the future} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:passed}}
+[2024-06-20 15:40:28.166] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e], No error time to insert the message into the database 
+[2024-06-20 15:40:28.166] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], startin to prepare the call to databasegateway to INSERT message
+[2024-06-20 15:40:28.166] [micropagosmessagegateway] [client] [trace] [b19197071ec4] [0b5e5f9aa39e], starting to prepare the URL and the body of the petition
+[2024-06-20 15:40:28.167] [micropagosmessagegateway] [client] [trace] [b19197071ec4] [0b5e5f9aa39e], petition http created
+[2024-06-20 15:40:28.167] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Final url : http://localhost:2122/insertMessage/0b5e5f9aa39e
+[2024-06-20 15:40:28.167] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Final BODY: {"type":"OutboundSMS","content":"testing","mobile_number":"59894326996","mobile_country_iso_code":"UY","short_number":"88277","telco":"MOVISTAR","created":"2024-06-20T15:40:27.2624316-05:00","session_action":"NONE","processed":"2024-06-20T15:40:28.1668337-05:00","session_application_name":"micropagos 2.0","sendafter":"06:00:00","sendbefore":"06:30:00","sent":"0001-01-01T00:00:00Z","status":"PENDING","origin_name":""}
+[2024-06-20 15:40:28.618] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], Request to database tooks 450.0571ms
+[2024-06-20 15:40:28.619] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], HTTP Status Response: 200
+[2024-06-20 15:40:28.619] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19806582","Id":19806582}
+[2024-06-20 15:40:28.620] [micropagosmessagegateway] [client] [info] [b19197071ec4] [0b5e5f9aa39e], this is the id of the message in the database: 19806582
+[2024-06-20 15:40:28.620] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e], transaction with id 19806582 inserted correctly!
+[2024-06-20 15:40:28.620] [micropagosmessagegateway] [handler] [trace] [b19197071ec4] [0b5e5f9aa39e] Ended
+[2024-06-20 15:40:28.620] [micropagosmessagegateway] [middleware] [info] [b19197071ec4] Request took 1.3632413s
+[2024-06-20 15:41:12.851] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:41:13.096] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:43:12.885] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:43:13.122] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:45:12.898] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:45:13.165] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:47:12.874] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:47:13.175] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:49:12.839] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:49:13.077] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:51:12.901] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:51:13.140] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:51:46.100] [micropagosmessagegateway] [middleware] [info] [14efd2f41e94] New petition received
+[2024-06-20 15:51:46.101] [micropagosmessagegateway] [middleware] [trace] [14efd2f41e94] url: /ws/SendMessageService, method: POST
+[2024-06-20 15:51:46.101] [micropagosmessagegateway] [middleware] [trace] [14efd2f41e94] starting to validate the ahutentication
+[2024-06-20 15:51:46.101] [micropagosmessagegateway] [handler] [info] [14efd2f41e94] starting to get the userdata for the user eaguerre
+[2024-06-20 15:51:46.101] [micropagosmessagegateway] [middleware] [trace] [14efd2f41e94] formatted password: xTArnkceZoAkU0wCJu1v0adMhhk=
+[2024-06-20 15:51:46.102] [micropagosmessagegateway] [middleware] [info] [14efd2f41e94] the user:eaguerre is already authenticated
+[2024-06-20 15:51:46.102] [micropagosmessagegateway] [handler] [debug] [14efd2f41e94] starting to legacysendMessage method to the user eaguerre
+[2024-06-20 15:51:46.103] [micropagosmessagegateway] [handler] [debug] [14efd2f41e94] starting to get the xml
+[2024-06-20 15:51:46.102] [micropagosmessagegateway] [client] [trace] [14efd2f41e94] starting to prepare the URL and the body of the petition
+[2024-06-20 15:51:46.103] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] mobile 094326996 match in the regex expression
+[2024-06-20 15:51:46.103] [micropagosmessagegateway] [handler] [info] [14efd2f41e94] starting to send massive message
+[2024-06-20 15:51:46.104] [micropagosmessagegateway] [handler] [info] [14efd2f41e94] this is the individual identifiar of this petition a7d429fe72d0
+[2024-06-20 15:51:46.104] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] this is the number of procced message 1
+[2024-06-20 15:51:46.104] [micropagosmessagegateway] [handler] [debug] [14efd2f41e94] [a7d429fe72d0], starting to validate the petition 
+[2024-06-20 15:51:46.104] [micropagosmessagegateway] [handler] [debug] [14efd2f41e94] [a7d429fe72d0] this is the data that we are going to validate : Mobile: 094326996, Message: testing, SendAfter: 06:00, SendBefore: 06:30, 
+[2024-06-20 15:51:46.105] [micropagosmessagegateway] [validation] [info] [14efd2f41e94] [a7d429fe72d0], starting to validate a regex expression
+[2024-06-20 15:51:46.105] [micropagosmessagegateway] [validation] [trace] [14efd2f41e94] [a7d429fe72d0], regex expression: ^09\d{7}$ value to validate 094326996
+[2024-06-20 15:51:46.105] [micropagosmessagegateway] [validation] [trace] [14efd2f41e94] [a7d429fe72d0], value match with the regex expression
+[2024-06-20 15:51:46.105] [micropagosmessagegateway] [validation] [debug] [14efd2f41e94] starting to format number
+[2024-06-20 15:51:46.107] [micropagosmessagegateway] [handler] [debug] [14efd2f41e94] [a7d429fe72d0], the mobile number pass the regex expression and the formatted number is 59894326996
+[2024-06-20 15:51:46.107] [micropagosmessagegateway] [validation] [info] [14efd2f41e94] [a7d429fe72d0], starting to validate the message length
+[2024-06-20 15:51:46.108] [micropagosmessagegateway] [validation] [trace] [14efd2f41e94] [a7d429fe72d0], max length: 500 message to validate testing
+[2024-06-20 15:51:46.109] [micropagosmessagegateway] [validation] [trace] [14efd2f41e94] [a7d429fe72d0], using normal message
+[2024-06-20 15:51:46.110] [micropagosmessagegateway] [handler] [debug] [14efd2f41e94] [a7d429fe72d0], the message pass the validateMessageLength this is the final message: testing
+[2024-06-20 15:51:46.111] [micropagosmessagegateway] [handler] [info] [14efd2f41e94] [a7d429fe72d0], checking short number
+[2024-06-20 15:51:46.113] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0], using short number of the config
+[2024-06-20 15:51:46.113] [micropagosmessagegateway] [handler] [info] [14efd2f41e94] [a7d429fe72d0] this is the originNumber 88277
+[2024-06-20 15:51:46.114] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], startin to prepare the call to portability whit number 59894326996
+[2024-06-20 15:51:46.114] [micropagosmessagegateway] [client] [trace] [14efd2f41e94] [a7d429fe72d0], petition http created
+[2024-06-20 15:51:46.115] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Final url : http://192.168.27.41:7000/portabilidad.portabilidadHttpSoap11Endpoint/
+[2024-06-20 15:51:46.123] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Final BODY: <Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us">\n	<soapenv:Header></soapenv:Header>\n	<soapenv:Body>\n		<web:getTelco>\n			<web:msisdn>59894326996</web:msisdn>\n		</web:getTelco>\n	</soapenv:Body>\n</Envelope>
+[2024-06-20 15:51:46.439] [micropagosmessagegateway] [middleware] [info] [14efd2f41e94] the last login of the user: eaguerre was updated the new value is: 2024-06-20 15:51:46
+[2024-06-20 15:51:46.932] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Request to PORTABILIDAD took 807.8413ms
+[2024-06-20 15:51:46.934] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], HTTP Status Response: 200
+[2024-06-20 15:51:46.934] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], RESPONSE BODY: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.push.inswitch.us" xmlns:xsd="http://user.dto.webservices.push.inswitch.us/xsd"><soapenv:Header/><soapenv:Body><web:getTelcoResponse><web:return><xsd:telcoCode>3</xsd:telcoCode><xsd:telcoName>MOVISTAR</xsd:telcoName></web:return></web:getTelcoResponse></soapenv:Body></soapenv:Envelope>
+[2024-06-20 15:51:46.935] [micropagosmessagegateway] [handler] [info] [14efd2f41e94] [a7d429fe72d0], TELCONAME: MOVISTAR
+[2024-06-20 15:51:46.935] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0], starting to validate if the the origin number and destiny are filters
+[2024-06-20 15:51:46.935] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], startin to prepare the call to databasegateway checking FILTER
+[2024-06-20 15:51:46.935] [micropagosmessagegateway] [client] [trace] [14efd2f41e94] [a7d429fe72d0], starting to prepare the URL to the petition
+[2024-06-20 15:51:46.936] [micropagosmessagegateway] [client] [trace] [14efd2f41e94] [a7d429fe72d0], petition http created
+[2024-06-20 15:51:46.936] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Final url : http://localhost:2122/filter/94326996/88277/a7d429fe72d0
+[2024-06-20 15:51:47.382] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Request to database tooks 445.9128ms
+[2024-06-20 15:51:47.382] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], HTTP Status Response: 200
+[2024-06-20 15:51:47.383] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], RESPONSE BODY: {"result":false,"message":""}
+[2024-06-20 15:51:47.383] [micropagosmessagegateway] [client] [debug] [14efd2f41e94] the filter message response was: shortnumber and destinity are filter? : false
+[2024-06-20 15:51:47.384] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0], starting to check send after and send before data
+[2024-06-20 15:51:47.384] [micropagosmessagegateway] [validation] [debug] [14efd2f41e94] [a7d429fe72d0], checking send after and send before 
+[2024-06-20 15:51:47.384] [micropagosmessagegateway] [validation] [debug] [14efd2f41e94] [a7d429fe72d0]: sendBefore: 06:30:00 sendAfter: 06:00:00
+[2024-06-20 15:51:47.385] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0], this is the data of the validation result {PassedValidation:true ValidationMessage: UserDomainResult:{UserDomainResult:ok UserDomainMessage:using short number of the config UserDomainError:<nil>} PortabilidadResult:{PassedPortabilidad:true PortabilidadMessage:OK} FilterResult:{IsFilter:false FilterMessage: Error:<nil>} WhenSendResult:{SendNow:false SendMessage:message is going to send in the future} SmsgatewayResult:{PassedSmsgateway:true SmsgatewayResult:0 SmsgatewayDescription:passed}}
+[2024-06-20 15:51:47.385] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0], No error time to insert the message into the database 
+[2024-06-20 15:51:47.386] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], startin to prepare the call to databasegateway to INSERT message
+[2024-06-20 15:51:47.386] [micropagosmessagegateway] [client] [trace] [14efd2f41e94] [a7d429fe72d0], starting to prepare the URL and the body of the petition
+[2024-06-20 15:51:47.386] [micropagosmessagegateway] [client] [trace] [14efd2f41e94] [a7d429fe72d0], petition http created
+[2024-06-20 15:51:47.387] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Final url : http://localhost:2122/insertMessage/a7d429fe72d0
+[2024-06-20 15:51:47.387] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Final BODY: {"type":"OutboundSMS","content":"testing","mobile_number":"59894326996","mobile_country_iso_code":"UY","short_number":"88277","telco":"MOVISTAR","created":"2024-06-20T15:51:46.1041665-05:00","session_action":"NONE","processed":"2024-06-20T15:51:47.3862678-05:00","session_application_name":"micropagos 2.0","sendafter":"06:00:00","sendbefore":"06:30:00","sent":"0001-01-01T00:00:00Z","status":"PENDING","origin_name":""}
+[2024-06-20 15:51:47.858] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], Request to database tooks 470.8335ms
+[2024-06-20 15:51:47.858] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], HTTP Status Response: 200
+[2024-06-20 15:51:47.859] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], RESPONSE BODY: {"result":0,"message":"el mensaje se inserto correctamente con el id19806583","Id":19806583}
+[2024-06-20 15:51:47.859] [micropagosmessagegateway] [client] [info] [14efd2f41e94] [a7d429fe72d0], this is the id of the message in the database: 19806583
+[2024-06-20 15:51:47.859] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0], transaction with id 19806583 inserted correctly!
+[2024-06-20 15:51:47.860] [micropagosmessagegateway] [handler] [trace] [14efd2f41e94] [a7d429fe72d0] Ended
+[2024-06-20 15:51:47.860] [micropagosmessagegateway] [middleware] [info] [14efd2f41e94] Request took 1.7590327s
+[2024-06-20 15:53:12.852] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:53:13.116] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:55:12.832] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:55:13.058] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:57:12.861] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:57:13.091] [micropagosmessagegateway] [main] [trace] [] users backup was updated
+[2024-06-20 15:59:12.838] [micropagosmessagegateway] [main] [trace] [] mask was updated
+[2024-06-20 15:59:13.231] [micropagosmessagegateway] [main] [trace] [] users backup was updated

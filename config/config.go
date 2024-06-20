@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"strings"
 
 	"github.com/scch94/Gconfiguration"
 	"github.com/scch94/ins_log"
@@ -33,6 +34,7 @@ type MicropagosConfiguration struct {
 	Client                   Client         `json:"client"`
 	GetMask                  EndpointConfig `json:"getMask"`
 	GetUserDomain            EndpointConfig `json:"getUserDomain"`
+	UpdateUsersLastLogin     EndpointConfig `json:"updateUsersLastLogin"`
 	ServPort                 string         `json:"server_port"`
 	GetUsersInfo             EndpointConfig `json:"getUsersInfo"`
 	GetFilterDatabase        EndpointConfig `json:"getFilterDatabase"`
@@ -44,6 +46,7 @@ type MicropagosConfiguration struct {
 	Raven                    []RavenService `json:"raven"`
 	UpdatesTimeInMinutes     int            `json:"updates_time_in_minutes"`
 	UpdateLastLoginInMinutes int            `json:"update_last_login_time_in_minutes"`
+	UseHarcodeShortNumber    bool           `json:"use_harcode_short_number"`
 }
 type Client struct {
 	MaxIdleConns           int  `json:"maxIdleConns"`
@@ -78,8 +81,9 @@ func (m MicropagosConfiguration) ConfigurationString() string {
 }
 
 func (m MicropagosConfiguration) SearchShortNumber(name string) string {
+	name = strings.ToLower(strings.TrimSpace(name))
 	for _, raven := range m.Raven {
-		if raven.Name == name {
+		if strings.ToLower(strings.TrimSpace(raven.Name)) == name {
 			return fmt.Sprint(raven.ShortNumber)
 
 		}

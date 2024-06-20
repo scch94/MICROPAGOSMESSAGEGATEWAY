@@ -10,6 +10,10 @@
         "petitionsTimeOut":40000,
         "disableKeepAlives":true
     },
+    "updateUsersLastLogin":{
+        "url":"http://localhost:2122/updateLastLogin",
+        "method":"POST"
+    },
     "getUsersInfo":{
         "url":"http://localhost:2122/usersInfo",
         "method":"GET"
@@ -42,47 +46,47 @@
     },
     "raven": [
         {
-            "name": "testing",
+            "name": "Testing",
             "sendMail": false,
             "shortNumber": 88277
         },
         {
-            "name": "pronto",
+            "name": "Pronto",
             "sendMail": false,
             "shortNumber": 17800
         },
         {
-            "name": "oca",
+            "name": "Oca",
             "sendMail": false,
             "shortNumber": 1730
         },
         {
-            "name": "creditel",
+            "name": "Creditel",
             "sendMail": false,
             "shortNumber": 4242
         },
         {
-            "name": "itau",
+            "name": "Itau",
             "sendMail": false,
             "shortNumber": 1784
         },
         {
-            "name": "facilcel",
+            "name": "Facilcel",
             "sendMail": false,
             "shortNumber": 3031
         },
         {
-            "name": "santander",
+            "name": "Santander",
             "sendMail": false,
             "shortNumber": 1320
         },
         {
-            "name": "creditosDirectos",
+            "name": "CreditosDirectos",
             "sendMail": false,
             "shortNumber": 18919
         },
         {
-            "name": "firstdata",
+            "name": "Firstdata",
             "sendMail": false,
             "shortNumber": 2992
         },
@@ -96,5 +100,6 @@
     "mobil_regex": "^09\\d{7}$",
     "server_port": ":1000",
     "updates_time_in_minutes":2,
-    "update_last_login_time_in_minutes":2
+    "update_last_login_time_in_minutes":1,
+    "use_harcode_short_number":true
 }

@@ -14,8 +14,3 @@ type UserInfo struct {
 	DomainName      string `json:"domain_name"`
 	UserUpdateLogin string `json:"user_update_login"`
 }
-
-type UpdateLastLogin struct {
-	UserName  string `json:"user_name"`
-	LoginTime string `json:"login_time"`
-}
